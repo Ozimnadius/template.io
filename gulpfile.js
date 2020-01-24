@@ -29,62 +29,66 @@ const moduleJS = [
 const vendorJs = [
     'node_modules/jquery/dist/jquery.js',
     'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
+    'node_modules/swiper/dist/js/swiper.js',
 ];
 
 
 const vendorCss = [
     'node_modules/font-awesome/css/font-awesome.css',
     'node_modules/normalize.css/normalize.css',
+    'node_modules/swiper/dist/css/swiper.css',
 ];
 
 
 //scss
-gulp.task('sass', function () { // Создаем таск "sass"
-    return gulp.src(tempFolder + 'css/main.scss') // Берем источник
+gulp.task('sass', function (done) { // Создаем таск "sass"
+    gulp.src(tempFolder + 'css/main.scss') // Берем источник
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError)) // Преобразуем Sass в CSS посредством gulp-sass
-        // .pipe(gcmq())
         .pipe(autoprefixer('last 2 versions'))
         .pipe(sourcemaps.write(''))
-        .pipe(gulp.dest(tempFolder + 'css/')) // Выгружаем результата в папку app/css
-    // .pipe(browserSync.stream());
+        .pipe(gulp.dest(tempFolder + 'css/')); // Выгружаем результата в папку app/css
+
+    done();
 });
 
 // scripts JS
-gulp.task('build:js', function () {
-    return gulp.src(moduleJS)
+gulp.task('build:js', function (done) {
+    gulp.src(moduleJS)
         .pipe(sourcemaps.init())
         .pipe(concat('script.min.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write('maps'))
-        .pipe(gulp.dest(tempFolder + 'js/'))
+        .pipe(gulp.dest(tempFolder + 'js/'));
+    done();
 });
 
 /* -------- Объединение всех подключаемых плагинов в один файл -------- */
-gulp.task('vendor:js', function () {
-    return gulp
-        .src(vendorJs)
+gulp.task('vendor:js', function (done) {
+    gulp.src(vendorJs)
         .pipe(concat('vendor.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('js/'));
+
+    done();
 });
 
 
 /*css*/
-gulp.task('vendor:css', function () {
-    return gulp
-        .src(vendorCss)
+gulp.task('vendor:css', function (done) {
+    gulp.src(vendorCss)
         .pipe(concat('vendor.min.css'))
         .pipe(minifycss())
         .pipe(gulp.dest(tempFolder + 'css/'));
+    done();
 });
 /*-------------------------------END----------------------------------------*/
 
 /*SVG*/
 // svg
-gulp.task('build:svg', function () {
-    return gulp.src(tempFolder + 'images/icons/*.svg')
-    // минифицируем svg
+gulp.task('build:svg', function (done) {
+    gulp.src(tempFolder + 'images/icons/*.svg')
+        // минифицируем svg
         .pipe(svgmin({
             js2svg: {
                 pretty: true
@@ -115,47 +119,16 @@ gulp.task('build:svg', function () {
             }
         }))
         .pipe(gulp.dest(tempFolder + 'images/icons/'));
+    done();
 });
 /*END SVG*/
 
-
-// watcher
-gulp.task('watch', function () {
-    gulp.watch(tempFolder + 'scss/**/*.scss', ['sass']);
-    gulp.watch(tempFolder + 'js/*.js', ['build:js']);
-});
-
 // Выполнить билд проекта
-gulp.task('build', function (callback) {
-    runSequence([
-        'sass',
-        // 'build:js',
-        'vendor:js',
-        'vendor:css',
-        'build:svg'
-    ], callback);
-});
+gulp.task('build',
+    gulp.series('sass', 'vendor:js', 'vendor:css', 'build:svg', function (done) {
+    done();
+}));
 
 
-// default
-gulp.task('default', ['watch']);
 
-
-/*// default
-gulp.task('default', ['browser-sync', 'watch']);*/
-
-// запускаем сервер надо разбираться
-gulp.task('browser-sync', [
-    'sass',
-    'build:js',
-    'vendor:jsPre',
-    'vendor:jsPost',
-    'vendor:css'
-], function () {
-    browserSync.init({
-        proxy: "default"
-    });
-    // наблюдаем и обновляем
-    browserSync.watch(['./**/*.*', '!**/*.css'], browserSync.reload);
-});
 

@@ -1,3 +1,56 @@
-.button {
+.btn {
+  width: 177px;
+  border-radius: 4px;
+  background-color: $main1;
+  display: inline-block;
 
+  color: $bg;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 142%;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 10px;
+  @include tr;
+
+  &:hover,&:focus{
+    background-color: $main2;
+    color: $bg;
+  }
+
+  &:active{
+    background-color: $main1;
+  }
+}
+
+.btn2{
+  @extend .btn;
+  border: 1px solid $main1;
+  background-color: transparent;
+  color: $main1;
+}
+
+.arr{
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  background-color: rgba($bg,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: $main1;
+  @include tr;
+
+  &:hover,&:focus{
+    background-color: $bg;
+  }
+
+  &:active{
+    background-color: rgba($bg,.5);
+  }
+
+  &__svg{
+    width: 11px;
+    height: 19px;
+  }
 }

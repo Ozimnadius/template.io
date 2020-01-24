@@ -1,0 +1,184 @@
+.index {
+
+}
+
+.ibanner {
+
+  &__slider{
+    position: relative;
+
+    &_arr{
+      .ibanner{
+        &__prev,&__next{
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+
+    &:hover{
+      .ibanner{
+        &__prev,&__next{
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+  }
+
+  &__slide {
+    height: 738px;
+    box-sizing: border-box;
+
+
+    &-imgs {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &-img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+
+      &_t {
+        display: none;
+      }
+
+      &_m {
+        display: none;
+      }
+    }
+
+    &-container{
+      height: 100%;
+      position: relative;
+      z-index: 20;
+    }
+
+    &-row{
+      padding-top: 220px;
+      padding-bottom: 55px;
+      height: 100%;
+      align-items: center;
+    }
+
+    &-content {
+      @include col;
+      @include size(20);
+      @include shift(2);
+    }
+
+    &-title {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+
+    &-txt {
+      color: $headers;
+      font-size: 24px;
+      margin-bottom: 40px;
+      line-height: lh(24,27.5);
+    }
+
+    &-links {
+      display: flex;
+    }
+
+    &-link{
+      margin-right: 20px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+
+  }
+
+  &__nav{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+
+    &-container{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding-top: 220px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__arrs{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__prev,&__next{
+    opacity: 0;
+    pointer-events: none;
+    @include tr;
+  }
+
+  &__pag{
+    position: static;
+    width: 100%;
+    pointer-events: all;
+
+    .swiper-pagination-bullet{
+      width: 50px;
+      height: 4px;
+      background: $bg;
+      opacity: 1;
+      border-radius: 0;
+      margin: 0 10px;
+      outline: none;
+      @include tr;
+
+      &-active{
+        height: 8px;
+        background: $main1;
+      }
+    }
+  }
+}
+
+.iadvs{
+  &__svg{
+
+
+    .fill{
+      &-bg2{
+        fill: $bg2;
+      }
+
+      &-main1{
+        fill: $main1
+      }
+
+      &-bg{
+        fill: $bg;
+      }
+    }
+
+    .stroke{
+      &-icon{
+        stroke: $icon;
+      }
+
+      &-main1{
+        stroke: $main1;
+      }
+    }
+  }
+}

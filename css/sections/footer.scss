@@ -1,3 +1,142 @@
 .footer {
+  background-color: #333333;
 
+  &__top{
+    padding-top: 70px;
+    padding-bottom: 45px;
+
+    &-left{
+      @include col;
+      @include size(18);
+      @include shift-right(1);
+    }
+
+    &-right{
+      @include col;
+      @include size(5);
+    }
+  }
+
+  &__col{
+    @include col;
+    @include size(6);
+  }
+
+  &__title{
+    color: $bg;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 17px;
+    display: block;
+    @include tr;
+
+    &:hover{
+      color: $main1;
+    }
+  }
+
+  &__item{
+    display: block;
+    color: $bg;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 7px 0;
+    @include tr;
+
+    &:hover{
+      color: $main1;
+    }
+  }
+
+  &__contacts {
+    margin-bottom: 40px;
+  }
+
+  &__contact{
+    display: block;
+    color: $bg;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    @include tr;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    &:hover{
+      color: $main1;
+    }
+  }
+
+  &__bottom{
+    background-color: #2d2d2d;
+    padding: 25px 0;
+
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__copy {
+    color: $bg;
+    font-weight: 300;
+  }
+
+}
+
+.socials{
+
+  &__title {
+    color: $bg;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  &__item{
+    width: 50px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    fill: rgba($bg,.8);
+    @include tr;
+
+    &:hover{
+      fill: $main1;
+    }
+
+    &-svg{
+      max-height: 100%;
+      max-width: 100%;
+
+
+    }
+  }
+}
+
+.developer {
+  display: flex;
+  align-items: center;
+  color: $bg;
+
+  &:hover{
+    text-decoration: underline;
+  }
+
+  &__txt{
+
+    font-weight: 300;
+    margin-right: 10px;
+  }
 }

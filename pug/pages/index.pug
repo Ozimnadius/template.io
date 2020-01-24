@@ -2,7 +2,53 @@ extends ../main
 
 block variables
     - var title = 'Главная'
+    - var main = true
 
 block content
-    h1 Страничка "Главная"
-        +icon('001-twitter', 'svg')
+    main.index
+        section.index__banner
+            .ibanner
+                //Настройка видимости стелочек регулируется классом ibanner__slider_arr, если есть этот класс - они всегда видны
+                div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').ibanner__slider.ibanner__slider_arr
+                    .swiper-container.ibanner__container
+                        //- slider
+                        .swiper-wrapper
+                            each i in [1,2,3,4,5]
+                                .swiper-slide.ibanner__slide
+                                    .ibanner__slide-imgs
+                                        +image('images/content/index/banner/img.jpg','ibanner__slide-img')
+                                        +image('images/content/index/banner/img-t.jpg','ibanner__slide-img ibanner__slide-img_t')
+                                        +image('images/content/index/banner/img-m.jpg','ibanner__slide-img ibanner__slide-img_m')
+                                    .container.ibanner__slide-container
+                                        .row.ibanner__slide-row
+                                            .ibanner__slide-content
+                                                h2.ibanner__slide-title Строительные товары
+                                                .ibanner__slide-txt
+                                                    | Качественные товары оптом и в
+                                                    br
+                                                    | розницу. Начни строительство с умом.
+                                                .ibanner__slide-links
+                                                    a(href='product.html').ibanner__slide-link.btn Подробнее
+                                                    a(href='catalog.html').ibanner__slide-link.btn2 В каталог
+
+                    .ibanner__nav
+                        .container.ibanner__nav-container
+                            .ibanner__arrs
+                                //- nav
+                                .ibanner__prev
+                                    button(type='button').arr.ibanner__prev-btn
+                                        +icon('arr-l','arr__svg')
+                                .ibanner__next
+                                    button(type='button').arr.ibanner__next-btn
+                                        +icon('arr-r','arr__svg')
+                            //- pag
+                            .swiper-pagination.ibanner__pag
+        section.ibanner__advs
+            .iadvs
+                .container
+
+
+
+
+
+

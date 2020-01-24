@@ -20,55 +20,126 @@ $vh: 1080;
   @return $size/$vh *100*1vh;
 }
 
+@mixin tr(){
+  transition: .3s;
+}
+
 @mixin content() {
-  ul {
-    margin: 1em 0;
-    padding-left: 40px;
-    li {
-      list-style: disc;
+
+  * {
+    &:first-child {
+      margin-top: 0;
     }
   }
 
-  h1 {
-    margin: 0.67em 0;
+  h1, h2, h3, h4 {
+    margin: 40px 0;
   }
-  h2 {
-    margin: 0.83em 0;
-  }
-  h3 {
-    margin: 1em 0;
-  }
-  h4 {
-    margin: 1.33em 0;
-  }
-  h5 {
-    margin: 1.67em 0;
-  }
-  h5 {
-    margin: 2.33em 0;
-  }
-  p {
-    margin: 1em 0;
-  }
-}
 
-@mixin headers() {
-  h1 {
-    font-size: 2rem;
+  h5, h6, p {
+    margin-bottom: 30px;
   }
-  h2 {
-    font-size: 1.5rem;
+
+  table {
+    margin-bottom: 40px;
   }
-  h3 {
-    font-size: 1.25rem;
+
+
+  ul {
+    margin-bottom: 30px;
+    margin-left: 20px;
+
+    li {
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 6px;
+        height: 6px;
+        background-color: #ffb800;
+        border-radius: 50%;
+        margin-right: 20px;
+        line-height: inherit;
+        position: relative;
+        top: -2px;
+      }
+
+      ol {
+        margin-bottom: 0;
+        counter-reset: li;
+
+        li {
+          &:before {
+            counter-increment: li;
+            content: counters(li, ".") ". ";
+            margin-right: 20px;
+            display: inline-block;
+            width: auto;
+            height: auto;
+            background: none;
+            top: 0;
+          }
+        }
+      }
+
+      ul {
+        margin-bottom: 0;
+        li {
+          &:before {
+            border: 1px solid #ffb800;
+            background-color: transparent;
+          }
+        }
+      }
+    }
   }
-  h4 {
-    font-size: 1rem;
+
+  ol {
+    margin-bottom: 30px;
+    counter-reset: li;
+    margin-left: 20px;
+
+    li {
+      &:before {
+        counter-increment: li;
+        content: counters(li, ".") ". ";
+        margin-right: 20px;
+        display: inline-block;
+      }
+
+      ul {
+        margin-bottom: 0;
+        counter-reset: none;
+
+        li {
+          &:before {
+            content: '';
+          }
+        }
+      }
+
+      ol{
+        margin-bottom: 0;
+      }
+    }
+
   }
-  h5 {
-    font-size: 0.875rem;
+
+  a{
+    color: $main1;
+    display: inline-block;
+    margin-bottom: 30px;
+    @include tr;
+
+    &:hover{
+      color: $headers;
+    }
   }
-  h6 {
-    font-size: 0.75rem;
+
+  blockquote{
+    padding: 18px 20px;
+    margin-bottom: 30px;
+    color: $headers;
+    border-left: 6px solid $main1;
   }
 }

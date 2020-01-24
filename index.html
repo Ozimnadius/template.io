@@ -7,52 +7,305 @@
     <title>Portfolio | Главная</title>
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <!-- Для изменений после верстки-->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <nav class="nav">
-          <div class="nav__item">Page1</div>
-          <div class="nav__item">Page2</div>
-          <div class="nav__item">Page3</div>
-        </nav>
+        <div class="header__top">
+          <div class="container">
+            <div class="header__top-row">
+              <div class="header__top-left">
+                <button class="header__city" type="button">Москва</button>
+              </div>
+              <div class="header__top-right">
+                <div class="header__controls"><a class="header__control jsSearch" href="#">
+                    <svg class="header__control-svg">
+                      <use xlink:href="/images/icons/sprite.svg#magnifier"></use>
+                    </svg><span class="header__control-txt">Поиск</span></a><a class="header__control" href="cabinet.html">
+                    <svg class="header__control-svg">
+                      <use xlink:href="/images/icons/sprite.svg#cabinet"></use>
+                    </svg><span class="header__control-txt">Войти</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__middle">
+          <div class="container">
+            <div class="header__middle-row row">
+              <div class="header__middle-left">
+                <div class="header__logo"><a class="logo header__logo-img" href="/"><img src="images/icons/logo.png" alt="logo__img"/></a>
+                  <div class="header__logo-txt">Лучшие товары<br>по лучшим
+                    ценам
+                  </div>
+                </div>
+              </div>
+              <div class="header__middle-right">
+                <div class="header__info">
+                  <div class="worktime">
+                    <div class="worktime__left">
+                      <svg class="worktime__svg">
+                        <use xlink:href="/images/icons/sprite.svg#time"></use>
+                      </svg>
+                    </div>
+                    <div class="worktime__right">
+                      <div class="worktime__title">График работы:</div>
+                      <div class="worktime__txt">09:00 - 18:00</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header__links"><a class="header__link" href="mailto:info@web-comp">
+                    <svg class="header__link-svg">
+                      <use xlink:href="/images/icons/sprite.svg#email"></use>
+                    </svg><span class="header__link-txt">info@web-comp</span></a><a class="header__link" href="https://yandex.ru/maps/-/CKEMaK--">
+                    <svg class="header__link-svg">
+                      <use xlink:href="/images/icons/sprite.svg#pin"></use>
+                    </svg><span class="header__link-txt">г.Москва, ул.Нижние поля дом 31</span></a></div>
+                <div class="header__phones">
+                  <div class="header__phone phone"><a class="phone__phone" href="tel:+7(495)111-11-11">
+                      <svg class="phone__phone-svg">
+                        <use xlink:href="/images/icons/sprite.svg#tel"></use>
+                      </svg><span class="phone__phone-link">+7 (495) 111-11-11</span></a>
+                    <div class="phone__drop"><a class="phone__drop-link" href="tel:+7(495)000-00-00">+7 (495) 000-00-00</a></div>
+                  </div>
+                  <button class="header__call jsCall" type="button">Заказать звонок</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container">
+            <div class="header__bottom-row">
+              <div class="header__menu menu">
+                <nav class="menu__item"><a class="menu__link_sub menu__link" href="">Каталог</a></nav>
+                <nav class="menu__item"><a class="menu__link_sub menu__link" href="">Услуги</a></nav>
+                <nav class="menu__item"><a class="menu__link" href="">Доставка</a></nav>
+                <nav class="menu__item"><a class="menu__link" href="">Оплата</a></nav>
+                <nav class="menu__item"><a class="menu__link" href="">Компания</a></nav>
+                <nav class="menu__item"><a class="menu__link" href="">Контакты</a></nav>
+                <nav class="menu__item"><a class="menu__link" href="">Акции</a></nav>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
       <div class="page">
-        <h1>Страничка "Главная"
-          <svg class="svg">
-            <use xlink:href="/images/icons/sprite.svg#001-twitter"></use>
-          </svg>
-        </h1>
+        <main class="index">
+          <section class="index__banner">
+            <div class="ibanner">
+              <!--Настройка видимости стелочек регулируется классом ibanner__slider_arr, если есть этот класс - они всегда видны-->
+              <div class="ibanner__slider ibanner__slider_arr" data-speed="500" data-autoplay="true" data-autoplayDelay="7000" data-pagination="true">
+                <div class="swiper-container ibanner__container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide ibanner__slide">
+                      <div class="ibanner__slide-imgs"><img class="ibanner__slide-img" src="images/content/index/banner/img.jpg" alt="lorem"/><img class="ibanner__slide-img ibanner__slide-img_t" src="images/content/index/banner/img-t.jpg" alt="lorem"/><img class="ibanner__slide-img ibanner__slide-img_m" src="images/content/index/banner/img-m.jpg" alt="lorem"/>
+                      </div>
+                      <div class="container ibanner__slide-container">
+                        <div class="row ibanner__slide-row">
+                          <div class="ibanner__slide-content">
+                            <h2 class="ibanner__slide-title">Строительные товары</h2>
+                            <div class="ibanner__slide-txt">Качественные товары оптом и в<br>розницу. Начни строительство с умом.</div>
+                            <div class="ibanner__slide-links"><a class="ibanner__slide-link btn" href="product.html">Подробнее</a><a class="ibanner__slide-link btn2" href="catalog.html">В каталог</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide ibanner__slide">
+                      <div class="ibanner__slide-imgs"><img class="ibanner__slide-img" src="images/content/index/banner/img.jpg" alt="lorem"/><img class="ibanner__slide-img ibanner__slide-img_t" src="images/content/index/banner/img-t.jpg" alt="lorem"/><img class="ibanner__slide-img ibanner__slide-img_m" src="images/content/index/banner/img-m.jpg" alt="lorem"/>
+                      </div>
+                      <div class="container ibanner__slide-container">
+                        <div class="row ibanner__slide-row">
+                          <div class="ibanner__slide-content">
+                            <h2 class="ibanner__slide-title">Строительные товары</h2>
+                            <div class="ibanner__slide-txt">Качественные товары оптом и в<br>розницу. Начни строительство с умом.</div>
+                            <div class="ibanner__slide-links"><a class="ibanner__slide-link btn" href="product.html">Подробнее</a><a class="ibanner__slide-link btn2" href="catalog.html">В каталог</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide ibanner__slide">
+                      <div class="ibanner__slide-imgs"><img class="ibanner__slide-img" src="images/content/index/banner/img.jpg" alt="lorem"/><img class="ibanner__slide-img ibanner__slide-img_t" src="images/content/index/banner/img-t.jpg" alt="lorem"/><img class="ibanner__slide-img ibanner__slide-img_m" src="images/content/index/banner/img-m.jpg" alt="lorem"/>
+                      </div>
+                      <div class="container ibanner__slide-container">
+                        <div class="row ibanner__slide-row">
+                          <div class="ibanner__slide-content">
+                            <h2 class="ibanner__slide-title">Строительные товары</h2>
+                            <div class="ibanner__slide-txt">Качественные товары оптом и в<br>розницу. Начни строительство с умом.</div>
+                            <div class="ibanner__slide-links"><a class="ibanner__slide-link btn" href="product.html">Подробнее</a><a class="ibanner__slide-link btn2" href="catalog.html">В каталог</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide ibanner__slide">
+                      <div class="ibanner__slide-imgs"><img class="ibanner__slide-img" src="images/content/index/banner/img.jpg" alt="lorem"/><img class="ibanner__slide-img ibanner__slide-img_t" src="images/content/index/banner/img-t.jpg" alt="lorem"/><img class="ibanner__slide-img ibanner__slide-img_m" src="images/content/index/banner/img-m.jpg" alt="lorem"/>
+                      </div>
+                      <div class="container ibanner__slide-container">
+                        <div class="row ibanner__slide-row">
+                          <div class="ibanner__slide-content">
+                            <h2 class="ibanner__slide-title">Строительные товары</h2>
+                            <div class="ibanner__slide-txt">Качественные товары оптом и в<br>розницу. Начни строительство с умом.</div>
+                            <div class="ibanner__slide-links"><a class="ibanner__slide-link btn" href="product.html">Подробнее</a><a class="ibanner__slide-link btn2" href="catalog.html">В каталог</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide ibanner__slide">
+                      <div class="ibanner__slide-imgs"><img class="ibanner__slide-img" src="images/content/index/banner/img.jpg" alt="lorem"/><img class="ibanner__slide-img ibanner__slide-img_t" src="images/content/index/banner/img-t.jpg" alt="lorem"/><img class="ibanner__slide-img ibanner__slide-img_m" src="images/content/index/banner/img-m.jpg" alt="lorem"/>
+                      </div>
+                      <div class="container ibanner__slide-container">
+                        <div class="row ibanner__slide-row">
+                          <div class="ibanner__slide-content">
+                            <h2 class="ibanner__slide-title">Строительные товары</h2>
+                            <div class="ibanner__slide-txt">Качественные товары оптом и в<br>розницу. Начни строительство с умом.</div>
+                            <div class="ibanner__slide-links"><a class="ibanner__slide-link btn" href="product.html">Подробнее</a><a class="ibanner__slide-link btn2" href="catalog.html">В каталог</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ibanner__nav">
+                  <div class="container ibanner__nav-container">
+                    <div class="ibanner__arrs">
+                      <div class="ibanner__prev">
+                        <button class="arr ibanner__prev-btn" type="button">
+                          <svg class="arr__svg">
+                            <use xlink:href="/images/icons/sprite.svg#arr-l"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="ibanner__next">
+                        <button class="arr ibanner__next-btn" type="button">
+                          <svg class="arr__svg">
+                            <use xlink:href="/images/icons/sprite.svg#arr-r"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination ibanner__pag"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="ibanner__advs">
+            <div class="iadvs">
+              <div class="container"></div>
+            </div>
+          </section>
+        </main>
       </div>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container">
+            <div class="row footer__top-row">
+              <div class="footer__top-left">
+                <div class="row">
+                  <div class="footer__col"><a class="footer__title" href="about.html">О компании</a>
+                    <div class="footer__list"><a class="footer__item" href="news.html">Новости</a><a class="footer__item" href="catalog.html">Каталог</a><a class="footer__item" href="reviews.html">Отзывы</a><a class="footer__item" href="portfolio.html">Портфолио</a><a class="footer__item" href="delivery.html">Доставка</a>
+                    </div>
+                  </div>
+                  <div class="footer__col"><a class="footer__title" href="catalog.html">Каталог</a>
+                    <div class="footer__list"><a class="footer__item" href="catalog.html">Мобильные устройства</a><a class="footer__item" href="catalog.html">Компьютеры</a><a class="footer__item" href="catalog.html">Умный дом</a><a class="footer__item" href="catalog.html">Умные тренажеры</a><a class="footer__item" href="catalog.html">Наручные часы</a>
+                    </div>
+                  </div>
+                  <div class="footer__col"><a class="footer__title" href="services.html">Услуги компании</a>
+                    <div class="footer__list"><a class="footer__item" href="service.html">Ремонт техники по гарантии</a><a class="footer__item" href="service.html">Настройка умного дома</a><a class="footer__item" href="service.html">Монтаж кондиционеров</a><a class="footer__item" href="service.html">Настройка электроники</a><a class="footer__item" href="service.html">Сборка мебели</a>
+                    </div>
+                  </div>
+                  <div class="footer__col"><a class="footer__title" href="info.html">Информация</a>
+                    <div class="footer__list"><a class="footer__item" href="actions.html">Акции</a><a class="footer__item" href="pay.html">Оплата</a><a class="footer__item" href="delivery.html">Доставка</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__top-right"><a class="footer__title" href="contacts.html">Контакты</a>
+                <div class="footer__contacts"><a class="footer__contact" href="tel:+7(000)000-00-00">+7 000 000-00-00</a><a class="footer__contact" href="mailto:info@web-comp">info@web-comp</a><a class="footer__contact" href="https://yandex.ru/maps/-/CKEMaK--">г.Москва, ул. Пушкина 19</a></div>
+                <div class="footer__socials">
+                  <div class="socials">
+                    <div class="socials__title">Мы в соц. сетях</div>
+                    <div class="socials__list">
+                      <div class="socials__row"><a class="socials__item" href="https://vk.com/">
+                          <svg class="socials__item-svg">
+                            <use xlink:href="/images/icons/sprite.svg#vk"></use>
+                          </svg></a><a class="socials__item" href="https://www.instagram.com/">
+                          <svg class="socials__item-svg">
+                            <use xlink:href="/images/icons/sprite.svg#inst"></use>
+                          </svg></a><a class="socials__item" href="https://ru-ru.facebook.com/">
+                          <svg class="socials__item-svg">
+                            <use xlink:href="/images/icons/sprite.svg#fb"></use>
+                          </svg></a><a class="socials__item" href="https://www.youtube.com/">
+                          <svg class="socials__item-svg">
+                            <use xlink:href="/images/icons/sprite.svg#yt"></use>
+                          </svg></a>
+                      </div>
+                      <div class="socials__row"><a class="socials__item" href="https://vk.com/">
+                          <svg class="socials__item-svg">
+                            <use xlink:href="/images/icons/sprite.svg#vk"></use>
+                          </svg></a><a class="socials__item" href="https://www.instagram.com/">
+                          <svg class="socials__item-svg">
+                            <use xlink:href="/images/icons/sprite.svg#inst"></use>
+                          </svg></a><a class="socials__item" href="https://ru-ru.facebook.com/">
+                          <svg class="socials__item-svg">
+                            <use xlink:href="/images/icons/sprite.svg#fb"></use>
+                          </svg></a><a class="socials__item" href="https://www.youtube.com/">
+                          <svg class="socials__item-svg">
+                            <use xlink:href="/images/icons/sprite.svg#yt"></use>
+                          </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container">
+            <div class="footer__bottom-row">
+              <div class="footer__copy">2020 © Название вашей компании</div><a class="footer__developer developer" href="https://web-comp.ru/"><span class="developer__txt">Cоздание и продвижение сайтов</span><img class="developer__img" src="images/icons/developer.png" alt="lorem"/></a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-  </body>
-  <div class="debug">
-    <div>
+    <div class="debug">
       <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="js/vendor.min.js"></script>
-  <script src="js/main.js"></script>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <!-- Для изменений после верстки-->
+    <script src="js/custom.js"></script>
+  </body>
 </html>

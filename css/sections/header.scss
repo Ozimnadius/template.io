@@ -1,3 +1,293 @@
 .header {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
 
+  &__top {
+    background-color: rgba($black, .25);
+    padding: 9px 0;
+
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__city {
+    color: $bg;
+    display: flex;
+    align-items: center;
+    @include tr;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 3px 0 3px;
+      border-color: $bg transparent transparent transparent;
+      margin-left: 12px;
+      @include tr;
+    }
+
+    &:hover{
+      color: $main1;
+      &:after{
+        border-color: $main1 transparent transparent transparent;
+      }
+    }
+  }
+
+  &__controls{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__control{
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    color: $bg;
+    fill: $bg;
+    @include tr;
+
+    &:hover{
+      color: $main2;
+      fill: $main2;
+    }
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &-svg{
+      width: 19px;
+      height: 19px;
+      margin-right: 6px;
+    }
+
+    &-txt{
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+
+  &__middle {
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    &-left{
+      @include col;
+      @include size(10);
+    }
+
+    &-right{
+      @include col;
+      @include size(14);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+  }
+
+  &__logo{
+    display: flex;
+    align-items: center;
+
+    &-img{
+      margin-right: 75px;
+      max-width: 213px;
+    }
+
+    &-txt{
+      color: $black;
+      font-size: 18px;
+      font-style: italic;
+      letter-spacing: 0.54px;
+    }
+  }
+
+  &__links{
+
+  }
+
+  &__link{
+    display: flex;
+    align-items: center;
+    color: $headers;
+    @include tr;
+
+    &:hover{
+      color: $main1;
+    }
+
+    &-svg{
+      max-width: 16px;
+      max-height: 18px;
+      fill: $main1;
+      margin-right: 14px;
+    }
+
+    &-txt{
+
+      font-size: 14px;
+    }
+  }
+
+  &__phones{
+
+  }
+
+  &__phone{
+
+  }
+
+  &__call{
+    color: $headers;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    margin-left: 20px;
+    @include tr;
+
+    &:hover{
+      color: $main1;
+    }
+  }
+
+  &__bottom {
+
+  }
+}
+
+.worktime{
+  display: flex;
+  color: $headers;
+  font-size: 14px;
+
+  &__left{
+    margin-right: 10px;
+  }
+
+  &__svg{
+    width: 15px;
+    height: 15px;
+    fill: $main1;
+    margin-top: 4px;
+  }
+
+  &__title{
+
+  }
+
+}
+
+.phone{
+  display: block;
+
+
+  &__phone{
+    display: flex;
+    align-items: center;
+
+    &-svg{
+      width: 13px;
+      height: 19px;
+      fill: $main1;
+      margin-right: 6px;
+    }
+
+    &-link{
+      color: $headers;
+      font-size: 18px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      @include tr;
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 3px 0 3px;
+        border-color: $headers transparent transparent transparent;
+        margin-left: 6px;
+        @include tr;
+      }
+
+      &:hover{
+        color: $main1;
+
+        &:after{
+          border-color: $main1 transparent transparent transparent;
+        }
+      }
+    }
+  }
+
+  &__drop{
+    display: none;
+  }
+
+
+
+}
+
+.menu{
+  background-color: $main1;
+  border-radius: 4px;
+  display: flex;
+
+  &__item{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 6px 0;
+    @include tr;
+
+    &:hover{
+      background-color: $main2;
+    }
+
+    &:last-child{
+      .menu__link{
+        border-right: 1px solid transparent;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $bg;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 45px;
+    width: 100%;
+    border-right: 1px solid rgba($bg, 0.2);
+
+    &_sub{
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 3px 0 3px;
+        border-color: $bg transparent transparent transparent;
+        margin-left: 12px;
+      }
+    }
+
+
+  }
 }
