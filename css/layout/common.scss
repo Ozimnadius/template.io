@@ -54,3 +54,43 @@
     height: 19px;
   }
 }
+
+.title{
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__subtitle{
+    color: $text2;
+    text-transform: uppercase;
+    @include tr;
+
+    &:hover{
+      color: $main1;
+    }
+  }
+
+}
+
+.pag{
+  margin-left: -10px;
+  margin-right: -10px;
+  display: flex;
+
+  .swiper-pagination-bullet{
+    width: 50px;
+    height: 4px;
+    background-color: $icon;
+    opacity: 0.6;
+    border-radius: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    outline: none;
+
+    &-active{
+      background-color: $main1;
+      opacity: 1;
+    }
+  }
+}

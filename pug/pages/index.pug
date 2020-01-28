@@ -6,6 +6,7 @@ block variables
 
 block content
     main.index
+        //- banner
         section.index__banner
             .ibanner
                 //Настройка видимости стелочек регулируется классом ibanner__slider_arr, если есть этот класс - они всегда видны
@@ -43,9 +44,104 @@ block content
                                         +icon('arr-r','arr__svg')
                             //- pag
                             .swiper-pagination.ibanner__pag
-        section.ibanner__advs
-            .iadvs
+        //- advantages
+        section.ibanner__advantages
+            .iadvantages
                 .container
+                    .iadvantages__row
+                        each i in advantages
+                            .iadvantage
+                                .iadvantage__img
+                                    +image(i.src,'iadvantage__img-img')
+                                .iadvantage__title= i.title
+                                .iadvantage__txt= i.txt
+        //- services
+        section.index__services
+            .iservices
+                .container
+                    +title('Наши услуги','Все услуги','services.html','iservices')
+                    .iservices__bottom
+                        .row
+                            each i in iservices
+                                a(href='service.html').iservice
+                                    span.iservice__left
+                                        span.iservice__title= i.title
+                                        +icon('arrow','iservice__svg')
+                                    span.iservice__right
+                                        +image(i.src,'iservice__img')
+        //- projects
+        section.index__projects
+            .iprojects
+                //- top
+                .container
+                    +title('Сданные проекты','ВСЕ РАБОТЫ','projects.html','iprojects')
+                //- bottom
+                .iprojects__bottom
+                    div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').iprojects__slider
+                        //- slider
+                        .swiper-container.iprojects__container
+                            .swiper-wrapper
+                                each i in iprojects
+                                    a(href='project.html').swiper-slide.iproject
+                                        +image(i.src,'iproject__img')
+                                        span.iproject__content
+                                            span.iproject__title= i.title
+                                            span.iproject__txt= i.txt
+                                            +icon('arrow','iproject__svg')
+
+                        //- pagination
+                        .iprojects__pag
+                            .pag
+        //- popular
+        section.index__popular
+            .ipops
+                .container
+                    //- top
+                    +title('Популярные виды работ','ВСЕ МАТЕРИАЛЫ','works.html','ipops')
+                    //- bottom
+                    .ipops__bottom
+                        .row
+                            each i in ipops
+                                a(href='work.html').ipop
+                                    span.ipop__img
+                                        +image(i.src,'ipop__img-img')
+                                    span.ipop__title= i.title
+                                    span.ipop__bottom
+                                        span.ipop__prices
+                                            span(class=i.priceCls).ipop__price= i.price
+                                            if i.priceOld
+                                                span.ipop__priceold= i.priceOld
+                                        +icon('arrow','ipop__svg')
+        //- reccomended
+        section.index__reccomended
+            .irecom
+                .container
+                    //- top
+                    +title('Стоит приглядеться','ВСЯ ПРОДУКЦИЯ','catalog.html','irecom')
+                    //- bottom
+                    .irecom__bottom
+                        .irecom__tabs
+                            .irecom__tab
+                                div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').irecom__slider.irecom__slider_arr
+                                    .swiper-container.irecom__container
+                                        .swiper-wrapper
+                                            .swiper-slide.irecom__item
+                                                a(href='product.html').item
+                                                    span.item__img
+                                                        span.item__sticks
+                                                    span.item__bottom
+                                                        span.item__avible
+
+                                                        span.item__prices
+
+                                                        span.item__title
+
+                                                        button(type='button').item__buy.jsAdd.added
+
+                                                        button(type='button').item__fast.jsFast
+
+
+
 
 
 

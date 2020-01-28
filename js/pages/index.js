@@ -26,23 +26,64 @@ $(function () {
                     let params = this.params,
                         data = ibanner.dataset,
                         speed = parseInt(data.speed) || 300,
-                        autoplay = data.autoplay || false,
+                        autoplay = (data.autoplay == 'true'),
                         delay = parseInt(data.autoplayDelay) || 5000,
                         pagination = (data.pagination == 'true');
 
                     params.speed = speed;
 
-                    if (autoplay){
+                    if (autoplay) {
                         params.autoplay.enabled = autoplay;
                         params.autoplay.delay = delay;
                     }
 
 
-                    if(!pagination){
+                    if (!pagination) {
                         params.pagination = {};
                     }
                 },
             },
         });
     }
+
+    const iprojects = document.querySelector('.iprojects__slider');
+    if (ibanner) {
+        let iprojectsSlider = new Swiper('.iprojects__container', {
+            slidesPerView: 'auto',
+            effect: 'slide',
+            spaceBetween: 20,
+            loop: true,
+            // If we need pagination
+            pagination: {
+                el: '.iprojects__pag .pag',
+                clickable: true
+            },
+            on: {
+                init: function () {
+
+                    let params = this.params,
+                        data = iprojects.dataset,
+                        speed = parseInt(data.speed) || 300,
+                        autoplay = (data.autoplay == 'true'),
+                        delay = parseInt(data.autoplayDelay) || 5000,
+                        pagination = (data.pagination == 'true');
+
+                    params.speed = speed;
+
+                    if (autoplay) {
+                        params.autoplay.enabled = autoplay;
+                        params.autoplay.delay = delay;
+                    }
+
+
+                    if (!pagination) {
+                        params.pagination = {};
+                    }
+                },
+
+            }
+        });
+    }
+
+
 });

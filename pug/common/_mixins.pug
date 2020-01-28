@@ -1,20 +1,18 @@
 mixin icon(iconName, iconClass)
-  svg(class=`${iconClass}`)
-    use(xlink:href=`/images/icons/sprite.svg#${iconName}`)
+    svg(class=`${iconClass}`)
+        use(xlink:href=`/images/icons/sprite.svg#${iconName}`)
 
 mixin iconPath(iconPath,iconName, iconClass)
-  svg(class=`${iconClass}`)
-    use(xlink:href=`${iconPath}/sprite.svg#${iconName}`)
-
-mixin iconSVG(name, url)
-  - mod = mod || ''
-  a(href="#{url}" class="#{name}_link")
-    svg(class="icon icon-" + name)
-      use(xlink:href="images/content/index/advs/2.svg")
+    svg(class=`${iconClass}`)
+        use(xlink:href=`${iconPath}/sprite.svg#${iconName}`)
 
 mixin image(imagePath, imageClass, imageAlt)
-  if !imageAlt
-    - var alt = 'lorem'
-  else
-    - var alt = imageAlt
-  img(src=`${imagePath}`, alt=`${alt}`, class=`${imageClass}`)
+    if !imageAlt
+        - var alt = 'lorem'
+    else
+        - var alt = imageAlt
+    img(src=`${imagePath}`, alt=`${alt}`, class=`${imageClass}`)
+mixin title (title, sub, href, cls)
+    div(class=cls + '__top').title
+        h2(class=cls+'__title').title__title= title
+        a(href=href class=cls+'sub').title__subtitle= sub
