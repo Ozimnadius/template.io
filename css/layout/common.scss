@@ -13,72 +13,163 @@
   padding: 10px 10px;
   @include tr;
 
-  &:hover,&:focus{
+  &:hover, &:focus {
     background-color: $main2;
     color: $bg;
   }
 
-  &:active{
+  &:active {
     background-color: $main1;
   }
 }
 
-.btn2{
+.btn2 {
   @extend .btn;
   border: 1px solid $main1;
   background-color: transparent;
   color: $main1;
 }
 
-.arr{
+.btn3 {
+  display: flex;
+  align-items: center;
+  fill: $text2;
+  color: $text2;
+  @include tr;
+
+
+  &:hover {
+    fill: $main1;
+    color: $main1;
+  }
+
+  &__svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+
+  &__txt {
+
+    font-size: 14px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+  }
+}
+
+.add {
+  width: 180px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid $main1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include tr;
+
+  &__svg {
+    width: 11px;
+    height: 9px;
+    fill: $bg;
+    display: none;
+    margin-right: 12px;
+  }
+
+  &__txt {
+    color: $main1;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include tr;
+  }
+
+  &__txt2 {
+    color: $bg;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: none;
+  }
+
+  &:hover {
+    background-color: $main1;
+
+    .add {
+      &__txt {
+        color: $bg;
+      }
+    }
+  }
+
+  &_in {
+    background-color: $main1;
+
+    .add {
+      &__svg {
+        display: flex;
+      }
+
+      &__txt {
+        display: none;
+      }
+
+      &__txt2 {
+        display: flex;
+      }
+    }
+  }
+
+}
+
+.arr {
   width: 59px;
   height: 59px;
   border-radius: 50%;
-  background-color: rgba($bg,.5);
+  background-color: rgba($bg, .5);
   display: flex;
   align-items: center;
   justify-content: center;
   fill: $main1;
   @include tr;
 
-  &:hover,&:focus{
+  &:hover, &:focus {
     background-color: $bg;
   }
 
-  &:active{
-    background-color: rgba($bg,.5);
+  &:active {
+    background-color: rgba($bg, .5);
   }
 
-  &__svg{
+  &__svg {
     width: 11px;
     height: 19px;
   }
 }
 
-.title{
+.title {
   margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  &__subtitle{
+  &__subtitle {
     color: $text2;
     text-transform: uppercase;
     @include tr;
 
-    &:hover{
+    &:hover {
       color: $main1;
     }
   }
 
 }
 
-.pag{
+.pag {
   margin-left: -10px;
   margin-right: -10px;
   display: flex;
 
-  .swiper-pagination-bullet{
+  .swiper-pagination-bullet {
     width: 50px;
     height: 4px;
     background-color: $icon;
@@ -88,9 +179,87 @@
     margin-right: 10px;
     outline: none;
 
-    &-active{
+    &-active {
       background-color: $main1;
       opacity: 1;
     }
+  }
+}
+
+.price {
+  color: $headers;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &_green {
+    color: $main3;
+  }
+}
+
+.priceold {
+  color: $text2;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: line-through;
+}
+
+.tabset {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__label{
+    color: $text2;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 8px;
+    border-bottom: 4px solid transparent;
+    margin-right: 30px;
+    cursor: pointer;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+
+  &__input {
+    display: none;
+
+    &:checked +.tabset__label{
+      color: $black;
+      //font-weight: 600;
+      border-bottom: 4px solid $main1;
+    }
+
+    @for $i from 1 through 5 {
+      &:nth-of-type(#{$i}):checked ~ .tabset__tabs {
+        .tabset__tab:nth-child(#{$i}) {
+          position: relative;
+          z-index: 1;
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+
+  &__tabs{
+    width: 100%;
+    margin-top: 80px;
+    position: relative;
+  }
+
+  &__tab {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    width: 100%;
   }
 }

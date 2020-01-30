@@ -12,7 +12,54 @@ mixin image(imagePath, imageClass, imageAlt)
     else
         - var alt = imageAlt
     img(src=`${imagePath}`, alt=`${alt}`, class=`${imageClass}`)
+
 mixin title (title, sub, href, cls)
     div(class=cls + '__top').title
-        h2(class=cls+'__title').title__title= title
-        a(href=href class=cls+'sub').title__subtitle= sub
+        h2(class=cls + '__title').title__title= title
+        a(href=href class=cls + 'sub').title__subtitle= sub
+
+mixin sticks()
+    span.sticks
+        span.stick.stick_hit Хит
+        span.stick.stick_recom Советуем
+        span.stick.stick_new Новинка
+        span.stick.stick_action Акция
+
+mixin item(props)
+    // Дополнительные классы - nopadding, noheight
+    a(href='product.html').item
+        span.item__top
+            span.item__img
+                +image(props.src,'item__img-img')
+                span.item__sticks
+                    if props.sticks
+                        +sticks()
+                span.item__controls
+                    button(type='button').item__control.item__control_compare.jsCompare
+                        +icon('compare','item__control-svg')
+                    button(type='button').item__control.item__control_favorite.jsFavorite.active
+                        +icon('heart','item__control-svg')
+
+
+        span.item__bottom
+            if props.enable
+                span.item__avaible
+                    span.item__avaible__round
+                    span.item__avaible__txt В наличии
+
+            span.item__prices
+                span.item__price.price= props.price
+                span.item__priceold.priceold= props.priceOld
+
+            //- Максимальная длина 90 символов, вместе с точками
+            span.item__title= props.title
+
+            button(type='button' class=props.inbasket?'add_in':'').item__buy.jsAdd.add
+                +icon('check','add__svg')
+                span.add__txt ДОБАВИТЬ В КОРЗИНУ
+                span.add__txt2 ТОВАР В КОРЗИНЕ
+
+
+            button(type='button').item__fast.jsFast.btn3
+                +icon('one','btn3__svg')
+                span.btn3__txt Купить в 1 клик

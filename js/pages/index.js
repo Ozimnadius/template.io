@@ -47,7 +47,7 @@ $(function () {
     }
 
     const iprojects = document.querySelector('.iprojects__slider');
-    if (ibanner) {
+    if (iprojects) {
         let iprojectsSlider = new Swiper('.iprojects__container', {
             slidesPerView: 'auto',
             effect: 'slide',
@@ -84,6 +84,22 @@ $(function () {
             }
         });
     }
+
+    const irecom = document.querySelector('.irecom__slider');
+    if (irecom) {
+        let iprojectsSlider = new Swiper('.irecom__container', {
+            slidesPerView: 4,
+            effect: 'slide',
+            spaceBetween: 20,
+            loop: true
+        });
+    }
+
+    // $('.irecom__input').on('change', function (e) {
+    //     let slider = $(this).closest()
+    // });
+
+
 
 
 });

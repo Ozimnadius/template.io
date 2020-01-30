@@ -430,22 +430,11 @@
   }
 
   &__price{
-    color: $headers;
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
 
-    &_green{
-      color: $main3;
-    }
   }
 
   &__priceold{
-    color: $text2;
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: line-through;
+
     margin-left: 7px;
   }
 
@@ -461,4 +450,16 @@
 .irecom{
   padding-top: 60px;
   padding-bottom: 85px;
+
+  &__container{
+    padding: 5px 10px 15px 10px;
+  }
+
+  &__item{
+    height: auto;
+
+    .item{
+      height: 100%;
+    }
+  }
 }
