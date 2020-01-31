@@ -7,7 +7,7 @@
   color: $bg;
   font-size: 16px;
   font-weight: 500;
-  line-height: 142%;
+  line-height: 1.42;
   text-transform: uppercase;
   text-align: center;
   padding: 10px 10px;
@@ -28,6 +28,19 @@
   border: 1px solid $main1;
   background-color: transparent;
   color: $main1;
+
+  &_w{
+    border: 2px solid $bg;
+    color: $bg;
+    font-size: 14px;
+    padding: 9px 20px;
+
+    &:hover{
+      background-color: $bg;
+      border: 2px solid $bg;
+      color: $main1;
+    }
+  }
 }
 
 .btn3 {
@@ -54,6 +67,27 @@
     font-size: 14px;
     text-decoration: underline;
     text-decoration-style: dashed;
+  }
+}
+
+.btn4{
+  height: 44px;
+  border-radius: 100px;
+  background-color: $main1;
+  display: inline-block;
+
+  color: $black;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 40px;
+  @include tr;
+
+  &:hover,&:focus{
+    background-color: $main2;
+  }
+
+  &:active{
+    background-color: $main1;
   }
 }
 
@@ -219,6 +253,7 @@
     border-bottom: 4px solid transparent;
     margin-right: 30px;
     cursor: pointer;
+    user-select: none;
 
     &:last-child{
       margin-right: 0;
@@ -261,5 +296,67 @@
     right: 0;
     opacity: 0;
     width: 100%;
+  }
+}
+
+.arrow{
+  fill:$main1;
+  stroke: $bg;
+  @include tr;
+
+
+  &:hover,&:focus{
+    fill: $main2;
+  }
+
+  &:active{
+    fill:$main1;
+  }
+
+  &__svg{
+    width: 30px;
+    height: 60px;
+  }
+}
+
+.link{
+  display: flex;
+  align-items: center;
+  fill: $text2;
+  @include tr;
+
+  &__txt{
+    font-size: 14px;
+    margin-right: 7px;
+  }
+
+  &__svg{
+    width: 29px;
+    height: 8px;
+  }
+}
+
+.rating{
+  display: flex;
+
+  &__star{
+    margin-right: 12px;
+
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    &.active{
+      .rating__star-svg{
+        fill: $link;
+      }
+    }
+
+    &-svg{
+      width: 24px;
+      height: 24px;
+      fill: $icon;
+    }
   }
 }

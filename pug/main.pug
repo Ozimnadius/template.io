@@ -100,7 +100,7 @@ html(lang="ru")
                             .header__menu.menu
                                 each i in menu
                                     nav.menu__item
-                                        a(href=i.href class=i.submenu ? 'menu__link_sub':'').menu__link= i.title
+                                        a(href=i.href class=i.submenu ? 'menu__link_sub' : '').menu__link= i.title
 
 
 
@@ -110,6 +110,24 @@ html(lang="ru")
 
             //- footer
             footer.footer
+                //- feed
+                form.footer__feed.ffeed
+                    .container
+                        .row.ffeed__row
+                            //- left
+                            .ffeed__left
+                                .ffeed__title Укажите свое имя и контактный номер и мы свами свяжемся
+
+                            //- right
+                            .ffeed__right
+                                .row
+                                    .ffeed__field
+                                        input(type='text' name='name' placeholder='Имя').ffeed__input
+                                    .ffeed__field
+                                        input(type='tel' name='tel' placeholder='+7(__) ___-__-__').ffeed__input
+                                    .ffeed__field
+                                        button(type='submit').btn2.btn2_w.ffeed__submit заказать звонок
+
                 //- top
                 .footer__top
                     .container

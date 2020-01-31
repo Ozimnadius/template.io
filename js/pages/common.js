@@ -32,3 +32,16 @@ function imageResize(src) {
 // imageResize('https://loremflickr.com/320/440');
 
 const wWidth = $(window).width();
+
+// $.validator.methods.tel = function (value, element) {
+//     let re = new RegExp(/\d/g),
+//         str = value.match(re);
+//
+//     if (str.length == 11) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// };
+
+$('input[type=tel]').mask('+7 (999) 999-99-99');

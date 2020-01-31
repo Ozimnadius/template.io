@@ -140,3 +140,43 @@
     margin-right: 10px;
   }
 }
+
+.ffeed{
+  background-color: $main1;
+  padding: 40px 0;
+
+  &__row{
+    align-items: center;
+  }
+
+  &__left{
+    @include col;
+    @include size(11.4);
+  }
+
+  &__title{
+    color: $bg;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__right{
+    @include col;
+    @include size(12.6);
+  }
+
+  &__field{
+    @include col;
+    @include size(8);
+  }
+
+  &__input{
+    width: 100%;
+    border-radius: 4px;
+    background-color: $bg;
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+
+
+}

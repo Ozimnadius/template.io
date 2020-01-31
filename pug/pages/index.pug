@@ -126,11 +126,183 @@ block content
                                 label(for='irecom' + swx).irecom__label.tabset__label= sw.title
 
                             .irecom__tabs.tabset__tabs
-                                each tab in irecom.tabs
+                                each tab,tabx in irecom.tabs
                                     .irecom__tab.tabset__tab
-                                        div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').irecom__slider.irecom__slider_arr
-                                            .swiper-container.irecom__container
+                                        div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').irecom__slider
+                                            button(type='button' class='irecom__prev-' + tabx).arrow.irecom__prev
+                                                +icon('prev','arrow__svg')
+                                            div(class='irecom__container-' + tabx).swiper-container.irecom__container
                                                 .swiper-wrapper
                                                     each i in tab.list
                                                         .swiper-slide.irecom__item
                                                             +item(i)
+                                            button(type='button' class='irecom__next-' + tabx).arrow.irecom__next
+                                                +icon('next','arrow__svg')
+                                        //- pag
+                                        div(class='irecom__pag-' + tabx).irecom__pag
+                                            .pag
+        //- promo
+        section.index__promo
+            div(style='background-image:url(images/content/index/promo/bg.jpg)').ipromo
+                .ipromo__wrapper
+                    .container.ipromo__container
+                        .ipromo__content
+                            h2.ipromo__title Перфоратор сетевой INGCO
+                            .ipromo__txt
+                                | Успей купить перфоратор
+                                br
+                                | по специальной цене до 31.12.2019
+                            a(href='product.html').btn4.ipromo__link ПОДРОБНЕЕ
+        //- categories
+        section.index__cats
+            .icats
+                .container
+                    //- top
+                    +title('Популярные категории','КАТАЛОГ','catalog.html','icats')
+                    //- bottom
+                    .icats__bottom
+                        .row
+                            each i in icats
+                                a(href='catalog.html').icat
+                                    span.icat__img
+                                        +image(i.src,'icat__img-img')
+                                    span.icat__bottom
+                                        span.icat__title= i.title
+        //- actions
+        section.index__actions
+            .iactions
+                .container
+                    //- top
+                    +title('Акции','ВСЕ АКЦИИ','actions.html','iactions')
+                    //- bottom
+                    .iactions__bottom
+                        div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').iactions__slider
+                            button(type='button').arrow.iactions__prev
+                                +icon('prev','arrow__svg')
+                            .swiper-container.iactions__container
+                                .swiper-wrapper
+                                    each i in iactions
+                                        a(href='action.html').swiper-slide.iaction
+                                            span.iaction__img
+                                                +image(i.src,'iaction__img-img')
+                                            span.iaction__bottom
+                                                span.iaction__date= i.date
+                                                span.iaction__title= i.title
+
+                            button(type='button').arrow.iactions__next
+                                +icon('next','arrow__svg')
+                        //- pag
+                        .iactions__pag
+                            .pag
+        //- news
+        section.index__news
+            .inews
+                .container
+                    //- top
+                    +title('Новости и обзоры','ВСЕ МАТЕРИАЛЫ','news.html','inews')
+                    //- bottom
+                    .iactions__bottom
+                        .row
+                            each i in inews
+                                a(href='new.html').inew
+                                    span.inew__img
+                                        +image(i.src,'inew__img-img')
+                                    span.inew__bottom
+                                        span.inew__date= i.date
+                                        span.inew__title= i.title
+                                        span.inew__txt= i.txt
+                                        span.inew__link.link
+                                            span.inew__link-txt.link__txt Подробнее
+                                            +icon('arrow-s','inew__link-svg link__svg')
+
+        //-about
+        section.index__about
+            .iabout
+                .container
+                    .row.iabout__row
+                        //- left
+                        .iabout__left
+                            +image('images/content/index/about/img.jpg','iabout__img')
+
+                        //- right
+                        .iabout__right
+                            .iabout__top
+                                .iabout__bread О КОМПАНИИ
+                                h2.iabout__title
+                                    | Интернет магазин
+                                    br
+                                    | “Стройшоп”
+                            .iabout__content Это новый шаблон от Web-Comp. Здесь всё устроено так, чтобы вам было удобно покупать онлайн: все продавцы проверены, заказы доставляются быстро и когда вам удобно, а на популярные товары всегда можно найти скидки. Наслаждайтесь покупками, наши сотрдуники позаботятся о надёжных поставщиках, удобной доставке и безопасной оплате
+
+                            .iabout__btns
+                                a(href='about.html').btn.iabout__link ПОДРОБНЕЕ
+                                a(href='catalog.html').btn2.iabout__catalog ПЕРЕЙТИ В КАТАЛОГ
+        //- reviews
+        section.index__revs
+            .irevs
+                .container
+                    //- top
+                    +title('Отзывы','ВСЕ ОТЗЫВЫ','reviews.html','irevs')
+                    //- bottom
+                    .irevs__bottom
+                        //- slider
+                        div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').irevs__slider
+                            button(type='button').arrow.irevs__prev
+                                +icon('prev','arrow__svg')
+                            .swiper-container.irevs__container
+                                .swiper-wrapper
+                                    each i in irevs
+                                        a(href='action.html').swiper-slide.irev
+                                            span.irev__img
+                                                span.irev__img-wrap
+                                                    +image(i.src,'irev__img-img')
+                                            span.irev__bottom
+                                                span.irev__title= i.title
+                                                span.irev__prof= i.prof
+                                                span.irev__rating
+                                                    .rating
+                                                        .rating__star.active
+                                                            +icon('star','rating__star-svg')
+                                                        .rating__star.active
+                                                            +icon('star','rating__star-svg')
+                                                        .rating__star.active
+                                                            +icon('star','rating__star-svg')
+                                                        .rating__star
+                                                            +icon('star','rating__star-svg')
+                                                        .rating__star
+                                                            +icon('star','rating__star-svg')
+                                                span.irev__txt Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах. В целом, очень удобная площадка.
+                                                span.irev__link.link
+                                                    span.inew__link-txt.link__txt Подробнее
+                                                    +icon('arrow-s','inew__link-svg link__svg')
+
+
+                            button(type='button').arrow.irevs__next
+                                +icon('next','arrow__svg')
+                        //- pag
+                        .irevs__pag
+                            .pag
+                        //- btn
+                        button(type='button').irevs__btn.btn.jsAddReview Оставить отзыв
+        //- brands
+        section.index__brands
+            .ibrands
+                .container
+                    //- top
+                    +title('Бренды','БРЕНДЫ','brands.html','ibrands')
+                    //- bottom
+                    .ibrands__bottom
+                        //- slider
+                        div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').ibrands__slider
+                            button(type='button').arrow.ibrands__prev
+                                +icon('prev','arrow__svg')
+                            .swiper-container.ibrands__container
+                                .swiper-wrapper
+                                     each i in [1,2,3,4,5,6]
+                                         a(href='action.html').swiper-slide.ibrand
+                                            +image('images/content/index/brands/'+i+'.png','ibrand__img')
+                            button(type='button').arrow.ibrands__next
+                                +icon('next','arrow__svg')
+                        //- pag
+                        .ibrands__pag
+                            .pag
