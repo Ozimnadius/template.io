@@ -21,7 +21,7 @@ $(function () {
 
             on: {
                 init: function () {
-                    initParams(this,ibanner);
+                    initParams(this, ibanner);
                 },
             },
         });
@@ -41,7 +41,7 @@ $(function () {
             },
             on: {
                 init: function () {
-                    initParams(this,iprojects);
+                    initParams(this, iprojects);
                 },
 
             }
@@ -49,13 +49,13 @@ $(function () {
     }
 
     const irecom = $('.irecom__slider');
-    if (irecom.length>0) {
+    if (irecom.length > 0) {
         let irecomSliders = {};
 
         irecom.each(function (x, i) {
             let slider = i;
 
-            irecomSliders['iprojectsSlider' + x] = new Swiper('.irecom__container-'+x, {
+            irecomSliders['iprojectsSlider' + x] = new Swiper('.irecom__container-' + x, {
                 slidesPerView: 4,
                 effect: 'slide',
                 spaceBetween: 20,
@@ -63,17 +63,17 @@ $(function () {
                 watchOverflow: true,
                 // Navigation arrows
                 navigation: {
-                    nextEl: '.irecom__next-'+x,
-                    prevEl: '.irecom__prev-'+x,
+                    nextEl: '.irecom__next-' + x,
+                    prevEl: '.irecom__prev-' + x,
                 },
                 // If we need pagination
                 pagination: {
-                    el: '.irecom__pag-'+x+' .pag',
+                    el: '.irecom__pag-' + x + ' .pag',
                     clickable: true
                 },
                 on: {
                     init: function () {
-                        initParams(this,slider);
+                        initParams(this, slider);
                     },
                 }
             });
@@ -103,7 +103,7 @@ $(function () {
             },
             on: {
                 init: function () {
-                    initParams(this,iprojects);
+                    initParams(this, iprojects);
                 },
             }
         });
@@ -129,7 +129,7 @@ $(function () {
             },
             on: {
                 init: function () {
-                    initParams(this,irevs);
+                    initParams(this, irevs);
                 },
             }
         });
@@ -155,15 +155,14 @@ $(function () {
             },
             on: {
                 init: function () {
-                    initParams(this,ibrands);
+                    initParams(this, ibrands);
                 },
             }
         });
     }
 
 
-
-    function initParams(item,slider) {
+    function initParams(item, slider) {
 
         let params = item.params,
             data = slider.dataset,
@@ -184,5 +183,29 @@ $(function () {
             params.pagination = {};
         }
     }
+
+    let $menus = $('.menu'),
+        menusObj = {};
+
+    $menus.each(function (x, i) {
+        let menu = $(i);
+        menusObj['menu' + x] = new AdaptiveMenu(menu);
+        menusObj['menu' + x].init();
+    });
+
+    const headerFixed = $('.fixmenu'),
+        headerMain = $('.header');
+
+    $(window).on('scroll', function (e) {
+        let height = headerMain.outerHeight(),
+            scrollTop = $(this).scrollTop();
+
+        if (scrollTop> height){
+            headerFixed.addClass('active');
+        } else {
+            headerFixed.removeClass('active');
+        }
+
+    });
 
 });

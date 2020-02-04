@@ -35,20 +35,21 @@
       @include tr;
     }
 
-    &:hover{
+    &:hover {
       color: $main1;
-      &:after{
+
+      &:after {
         border-color: $main1 transparent transparent transparent;
       }
     }
   }
 
-  &__controls{
+  &__controls {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &__control{
+  &__control {
     display: flex;
     align-items: center;
     margin-right: 25px;
@@ -56,22 +57,26 @@
     fill: $bg;
     @include tr;
 
-    &:hover{
+    &:hover {
       color: $main2;
       fill: $main2;
     }
 
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
 
-    &-svg{
+    &_black{
+      fill: $headers;
+    }
+
+    &-svg {
       width: 19px;
       height: 19px;
       margin-right: 6px;
     }
 
-    &-txt{
+    &-txt {
       font-size: 12px;
       font-weight: 300;
     }
@@ -81,12 +86,12 @@
     padding-top: 40px;
     padding-bottom: 20px;
 
-    &-left{
+    &-left {
       @include col;
       @include size(10);
     }
 
-    &-right{
+    &-right {
       @include col;
       @include size(14);
       display: flex;
@@ -97,16 +102,16 @@
 
   }
 
-  &__logo{
+  &__logo {
     display: flex;
     align-items: center;
 
-    &-img{
+    &-img {
       margin-right: 75px;
       max-width: 213px;
     }
 
-    &-txt{
+    &-txt {
       color: $black;
       font-size: 18px;
       font-style: italic;
@@ -114,42 +119,42 @@
     }
   }
 
-  &__links{
+  &__links {
 
   }
 
-  &__link{
+  &__link {
     display: flex;
     align-items: center;
     color: $headers;
     @include tr;
 
-    &:hover{
+    &:hover {
       color: $main1;
     }
 
-    &-svg{
+    &-svg {
       max-width: 16px;
       max-height: 18px;
       fill: $main1;
       margin-right: 14px;
     }
 
-    &-txt{
+    &-txt {
 
       font-size: 14px;
     }
   }
 
-  &__phones{
+  &__phones {
 
   }
 
-  &__phone{
+  &__phone {
 
   }
 
-  &__call{
+  &__call {
     color: $headers;
     font-size: 12px;
     text-transform: uppercase;
@@ -158,7 +163,7 @@
     margin-left: 20px;
     @include tr;
 
-    &:hover{
+    &:hover {
       color: $main1;
     }
   }
@@ -168,44 +173,51 @@
   }
 }
 
-.worktime{
+.worktime {
   display: flex;
   color: $headers;
   font-size: 14px;
 
-  &__left{
+  &__left {
     margin-right: 10px;
   }
 
-  &__svg{
+  &__svg {
     width: 15px;
     height: 15px;
     fill: $main1;
     margin-top: 4px;
   }
 
-  &__title{
+  &__title {
 
   }
 
 }
 
-.phone{
+.phone {
   display: block;
+  position: relative;
+
+  &:hover{
+    .phone__drop{
+      display: flex;
+    }
+  }
 
 
-  &__phone{
+  &__phone {
     display: flex;
     align-items: center;
 
-    &-svg{
+    &-svg {
       width: 13px;
       height: 19px;
       fill: $main1;
       margin-right: 6px;
     }
 
-    &-link{
+    &-link {
       color: $headers;
       font-size: 18px;
       font-weight: 700;
@@ -224,44 +236,213 @@
         @include tr;
       }
 
-      &:hover{
+      &:hover {
         color: $main1;
 
-        &:after{
+        &:after {
           border-color: $main1 transparent transparent transparent;
         }
       }
     }
   }
 
-  &__drop{
+  &__drop {
+    position: absolute;
+    z-index: 20;
+    top: 100%;
+    left: -10px;
+    width: 230px;
     display: none;
-  }
+    flex-direction: column;
+    border-radius: 2px;
+    background-color: $bg;
 
+    &-item{
+      display: flex;
+      flex-direction: column;
+      padding: 15px 10px 15px 30px;
+      border-bottom: 1px solid $icon;
+
+      &:hover{
+        .phone__drop-link{
+          color: $main1;
+        }
+      }
+
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+
+    &-link{
+      color: $headers;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 0;
+      @include tr;
+    }
+
+    &-title{
+      color: $icon;
+      font-size: 14px;
+    }
+  }
 
 
 }
 
-.menu{
+.menu {
   background-color: $main1;
   border-radius: 4px;
+  position: relative;
   display: flex;
+  width: 100%;
 
-  &__item{
+  &_white{
+    background-color: $bg;
+
+    .menu{
+
+      &__item{
+        &:hover {
+          background-color: $bg;
+
+          .menu__link{
+            color: $main1;
+
+            &:after{
+              border-color: $main1 transparent transparent transparent;
+            }
+          }
+        }
+      }
+
+      &__link{
+        color: $headers;
+        @include tr;
+
+        &_sub {
+          &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 4px 3px 0 3px;
+            border-color: $headers transparent transparent transparent;
+            margin-left: 12px;
+            @include tr;
+          }
+        }
+      }
+    }
+
+    .mmore{
+      height: auto;
+      &:hover {
+        background-color: $bg;
+
+        .mmore__btn-round{
+          background: $main1;
+        }
+      }
+
+      &__btn{
+
+        &-round{
+          background: $headers;
+        }
+      }
+
+    }
+  }
+
+  &_small{
+    position: static;
+    height: 100%;
+
+    .menu{
+      &__link_sub{
+        &:before{
+          content: '';
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: -1000px;
+          height: 100vh;
+          width: 1000vw;
+          background: rgba($black,.2);
+          pointer-events: none;
+        }
+      }
+
+      &__link{
+        font-size: 16px;
+        padding: 20px;
+      }
+    }
+
+    .mmore{
+      &__btn{
+
+        &-round{
+          width: 4px;
+          height: 4px;
+          margin-right: 4px;
+          background: $headers;
+        }
+      }
+    }
+
+  }
+
+  &.cut{
+    .mmore{
+      display: flex;
+    }
+  }
+
+  &__list{
+    display: flex;
+    flex-grow: 1;
+
+    &.nogrow{
+      flex-grow: 0;
+    }
+  }
+
+  &__item {
     display: flex;
     justify-content: center;
     flex-grow: 1;
-    padding: 6px 0;
+    position: relative;
     @include tr;
 
-    &:hover{
-      background-color: $main2;
+
+    &_catalog {
+      position: static;
     }
 
-    &:last-child{
-      .menu__link{
-        border-right: 1px solid transparent;
+    &:hover {
+      background-color: $main2;
+
+      .menu__link {
+        &:before {
+          display: block;
+        }
       }
+
+      .submenu {
+        display: flex;
+      }
+
+      >.submenu2{
+        display: block;
+      }
+    }
+
+    &:first-child{
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
     }
   }
 
@@ -272,11 +453,10 @@
     color: $bg;
     font-size: 18px;
     font-weight: 600;
-    padding: 12px 45px;
+    padding: 18px 45px;
     width: 100%;
-    border-right: 1px solid rgba($bg, 0.2);
 
-    &_sub{
+    &_sub {
       &:after {
         content: '';
         width: 0;
@@ -288,6 +468,325 @@
       }
     }
 
+  }
 
+}
+
+.mmore{
+  display: none;
+  align-items: center;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  position: relative;
+  @include tr;
+
+  &:hover {
+    background-color: $main2;
+    .mmore__list{
+      display: block;
+    }
+  }
+
+  &.active{
+    display: flex;
+  }
+
+  &__btn{
+    display: flex;
+    padding: 15px;
+    height: 61px;
+
+    &-round{
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $bg;
+      margin-right: 6px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__list{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 295px;
+    background: $bg2;
+    padding: 0 25px;
+    box-shadow: inset 0px 4px 8px -4px rgba($black, 0.15);
+  }
+
+  &__item{
+    display: block;
+    padding: 15px 0;
+    padding-right: 12px;
+    border-bottom: 1px solid $icon;
+    position: relative;
+    color: $headers;
+    @include tr;
+
+    &:last-child{
+      border-bottom: none;
+    }
+
+    &:hover{
+      color: $main1;
+    }
   }
 }
+
+.submenu {
+  display: none;
+  //display: flex;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 410px;
+  background: $bg2;
+  flex-wrap: wrap;
+  padding-top: 39px;
+  overflow-y: auto;
+  box-shadow: inset 0px 4px 8px -4px rgba($black, 0.15);
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: $bg2;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $bg2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: $main1;
+  }
+
+  &__cat {
+    width: calc(100% / 4);
+    padding: 0 60px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 10px;
+      width: 1px;
+      background: rgba($icon, .7);
+    }
+
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: block;
+    margin-bottom: 13px;
+
+    padding: 6px 0;
+
+    &:hover {
+      .submenu__title-title {
+        color: $main1;
+      }
+    }
+
+    &-svg {
+      position: absolute;
+      left: -40px;
+      top: 50%;
+      margin-top: -10px;
+      width: 23px;
+      height: 19px;
+      fill: $main1;
+    }
+
+    &-title {
+      color: $black;
+      font-weight: 500;
+      @include tr;
+    }
+  }
+
+  &__list {
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    display: block;
+    color: $text2;
+    font-size: 14px;
+    padding: 6px 0;
+    @include tr;
+
+    &:hover {
+      color: $main1;
+    }
+  }
+
+  &__more {
+    display: flex;
+    justify-content: flex-start;
+    padding: 6px 0;
+    align-self: flex-start;
+
+    &:hover {
+      .submenu__more-round {
+        background-color: $text2;
+      }
+    }
+
+    &-round {
+      width: 6px;
+      height: 6px;
+      background-color: $main1;
+      border-radius: 50%;
+      margin-right: 6px;
+      @include tr;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.submenu2 {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+  width: 295px;
+  background: $bg2;
+  padding: 0 25px;
+  box-shadow: inset 0px 4px 8px -4px rgba($black, 0.15);
+
+
+  &_right {
+    top: 0;
+    bottom: 0;
+    left: 100%;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 100%;
+      width: 25px;
+    }
+  }
+
+  &__item {
+
+    &:last-child {
+      >.submenu2__link {
+        border-bottom: none;
+      }
+    }
+
+    &:hover{
+      >.submenu2{
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 15px 0;
+    padding-right: 12px;
+    border-bottom: 1px solid $icon;
+    position: relative;
+    color: $headers;
+    @include tr;
+
+    &:last-child{
+      border-bottom: none;
+    }
+
+    &:hover{
+      color: $main1;
+    }
+
+    &_arr {
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 22px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 0 4px 4px;
+        border-color: transparent transparent transparent $main1;
+      }
+
+    }
+  }
+}
+
+.fixmenu{
+  position: fixed;
+  z-index: 100;
+  top: -300px;
+  left: 0;
+  right: 0;
+  background-color: $bg;
+  box-shadow: 0 4px 8px rgba($black, 0.15);
+  @include tr;
+
+  &.active{
+    top: 0;
+  }
+
+  &__row {
+    align-items: center;
+    position: relative;
+    flex-wrap: nowrap;
+  }
+
+  &__logo{
+    @include col;
+    @include size(3.7);
+  }
+
+  &__menu{
+    @include col;
+    @include size(14.3);
+    align-self: stretch;
+  }
+
+  &__controls{
+    @include col;
+    @include size(2);
+  }
+
+  &__phones {
+    @include col;
+    @include size(4);
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+

@@ -41,7 +41,7 @@
           <div class="container">
             <div class="header__middle-row row">
               <div class="header__middle-left">
-                <div class="header__logo"><a class="logo header__logo-img" href="/"><img src="images/icons/logo.png" alt="logo__img"/></a>
+                <div class="header__logo"><a class="header__logo-img logo" href="/"><img src="images/icons/logo.png" alt="logo__img"/></a>
                   <div class="header__logo-txt">Лучшие товары<br>по лучшим
                     ценам
                   </div>
@@ -73,7 +73,7 @@
                       <svg class="phone__phone-svg">
                         <use xlink:href="/images/icons/sprite.svg#tel"></use>
                       </svg><span class="phone__phone-link">+7 (495) 111-11-11</span></a>
-                    <div class="phone__drop"><a class="phone__drop-link" href="tel:+7(495)000-00-00">+7 (495) 000-00-00</a></div>
+                    <div class="phone__drop"><a class="phone__drop-item" href="tel:+7(495)000-00-00"><span class="phone__drop-link">+7 (495) 000-00-00</span><span class="phone__drop-title">Отдел продаж</span></a><a class="phone__drop-item" href="tel:+7(495)000-00-00"><span class="phone__drop-link">+7 (495) 000-00-00</span><span class="phone__drop-title">Бухгалтерия</span></a></div>
                   </div>
                   <button class="header__call jsCall" type="button">Заказать звонок</button>
                 </div>
@@ -84,15 +84,124 @@
         <div class="header__bottom">
           <div class="container">
             <div class="header__bottom-row">
-              <div class="header__menu menu">
-                <nav class="menu__item"><a class="menu__link_sub menu__link" href="">Каталог</a></nav>
-                <nav class="menu__item"><a class="menu__link_sub menu__link" href="">Услуги</a></nav>
-                <nav class="menu__item"><a class="menu__link" href="">Доставка</a></nav>
-                <nav class="menu__item"><a class="menu__link" href="">Оплата</a></nav>
-                <nav class="menu__item"><a class="menu__link" href="">Компания</a></nav>
-                <nav class="menu__item"><a class="menu__link" href="">Контакты</a></nav>
-                <nav class="menu__item"><a class="menu__link" href="">Акции</a></nav>
-              </div>
+              <nav class="header__menu menu">
+                <div class="menu__list">
+                  <div class="menu__item_catalog menu__item"><a class="menu__link_sub menu__link" href="category.html" rel="">Каталог</a>
+                    <div class="submenu">
+                      <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="">
+                          <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                          </svg><span class="submenu__title-title">Мобильные устройства</span></a>
+                        <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="">Умная спортивная одежда</a>
+                        </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                      </div>
+                      <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="">
+                          <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                          </svg><span class="submenu__title-title">Компьютеры</span></a>
+                        <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="">Умная спортивная одежда</a>
+                        </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                      </div>
+                      <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="">
+                          <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                          </svg><span class="submenu__title-title">Умный дом</span></a>
+                        <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="">Умная спортивная одежда</a>
+                        </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                      </div>
+                      <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="">
+                          <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                          </svg><span class="submenu__title-title">Умные тренажеры</span></a>
+                        <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="">Умная спортивная одежда</a>
+                        </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                      </div>
+                      <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="">
+                          <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                          </svg><span class="submenu__title-title">Наручные часы</span></a>
+                        <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="">Умная спортивная одежда</a>
+                        </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                      </div>
+                      <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="">
+                          <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                          </svg><span class="submenu__title-title">Умная одежда</span></a>
+                        <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="">Умная спортивная одежда</a>
+                        </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                      </div>
+                      <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="">
+                          <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                          </svg><span class="submenu__title-title">Игровые приставки</span></a>
+                        <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="">Умная спортивная одежда</a>
+                        </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                      </div>
+                      <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="">
+                          <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                          </svg><span class="submenu__title-title">Бытовая техника</span></a>
+                        <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="">Умная спортивная одежда</a>
+                        </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="menu__item"><a class="menu__link_sub menu__link" href="services.html" rel="">Услуги</a>
+                    <div class="submenu2">
+                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                        <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
+                        </div>
+                      </div>
+                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                        <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
+                        </div>
+                      </div>
+                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                        <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
+                        </div>
+                      </div>
+                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                        <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
+                        </div>
+                      </div>
+                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                        <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
+                        </div>
+                      </div>
+                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                        <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
+                        </div>
+                      </div>
+                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                        <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
+                        </div>
+                      </div>
+                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                        <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="menu__item"><a class="menu__link" href="delivery.html" rel="">Доставка</a>
+                  </div>
+                  <div class="menu__item"><a class="menu__link" href="pay.html" rel="">Оплата</a>
+                  </div>
+                  <div class="menu__item"><a class="menu__link" href="about.html" rel="">Компания</a>
+                  </div>
+                  <div class="menu__item"><a class="menu__link" href="contacts.html" rel="">Контакты</a>
+                  </div>
+                  <div class="menu__item"><a class="menu__link" href="actions.html" rel="">Акции</a>
+                  </div>
+                </div>
+                <div class="menu__more mmore">
+                  <button class="mmore__btn" type="button">
+                    <div class="mmore__btn-round"></div>
+                    <div class="mmore__btn-round"></div>
+                    <div class="mmore__btn-round"></div>
+                  </button>
+                  <div class="mmore__list"></div>
+                </div>
+              </nav>
             </div>
           </div>
         </div>
@@ -1302,5 +1411,151 @@
     <script src="js/main.min.js"></script>
     <!-- Для изменений после верстки-->
     <script src="js/custom.js"></script>
+    <div class="fixmenu">
+      <div class="container">
+        <div class="fixmenu__row row">
+          <div class="fixmenu__logo"><a class="logo" href="/"><img src="images/icons/logo.png" alt="logo__img"/></a>
+          </div>
+          <div class="fixmenu__menu">
+            <nav class="menu_small menu_white menu">
+              <div class="menu__list">
+                <div class="menu__item_catalog menu__item"><a class="menu__link_sub menu__link" href="category.html" rel="nofollow">Каталог</a>
+                  <div class="submenu">
+                    <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="nofollow">
+                        <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                        </svg><span class="submenu__title-title">Мобильные устройства</span></a>
+                      <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="nofollow">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="nofollow">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Умная спортивная одежда</a>
+                      </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                    </div>
+                    <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="nofollow">
+                        <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                        </svg><span class="submenu__title-title">Компьютеры</span></a>
+                      <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="nofollow">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="nofollow">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Умная спортивная одежда</a>
+                      </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                    </div>
+                    <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="nofollow">
+                        <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                        </svg><span class="submenu__title-title">Умный дом</span></a>
+                      <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="nofollow">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="nofollow">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Умная спортивная одежда</a>
+                      </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                    </div>
+                    <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="nofollow">
+                        <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                        </svg><span class="submenu__title-title">Умные тренажеры</span></a>
+                      <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="nofollow">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="nofollow">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Умная спортивная одежда</a>
+                      </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                    </div>
+                    <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="nofollow">
+                        <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                        </svg><span class="submenu__title-title">Наручные часы</span></a>
+                      <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="nofollow">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="nofollow">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Умная спортивная одежда</a>
+                      </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                    </div>
+                    <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="nofollow">
+                        <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                        </svg><span class="submenu__title-title">Умная одежда</span></a>
+                      <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="nofollow">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="nofollow">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Умная спортивная одежда</a>
+                      </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                    </div>
+                    <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="nofollow">
+                        <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                        </svg><span class="submenu__title-title">Игровые приставки</span></a>
+                      <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="nofollow">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="nofollow">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Умная спортивная одежда</a>
+                      </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                    </div>
+                    <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="nofollow">
+                        <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z"></path>
+                        </svg><span class="submenu__title-title">Бытовая техника</span></a>
+                      <div class="submenu__list"><a class="submenu__item" href="catalog.html" rel="nofollow">Беговые дорожки</a><a class="submenu__item" href="catalog.html" rel="nofollow">Велотренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Универсльные тренажеры</a><a class="submenu__item" href="catalog.html" rel="nofollow">Умная спортивная одежда</a>
+                      </div><a class="submenu__more" href="category.html"><span class="submenu__more-round"></span><span class="submenu__more-round"></span><span class="submenu__more-round"></span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__item"><a class="menu__link_sub menu__link" href="services.html" rel="nofollow">Услуги</a>
+                  <div class="submenu2">
+                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                      <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
+                      </div>
+                    </div>
+                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                      <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
+                      </div>
+                    </div>
+                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                      <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
+                      </div>
+                    </div>
+                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                      <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
+                      </div>
+                    </div>
+                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                      <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
+                      </div>
+                    </div>
+                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                      <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
+                      </div>
+                    </div>
+                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                      <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
+                      </div>
+                    </div>
+                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                      <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__item"><a class="menu__link" href="delivery.html" rel="nofollow">Доставка</a>
+                </div>
+                <div class="menu__item"><a class="menu__link" href="pay.html" rel="nofollow">Оплата</a>
+                </div>
+                <div class="menu__item"><a class="menu__link" href="about.html" rel="nofollow">Компания</a>
+                </div>
+                <div class="menu__item"><a class="menu__link" href="contacts.html" rel="nofollow">Контакты</a>
+                </div>
+                <div class="menu__item"><a class="menu__link" href="actions.html" rel="nofollow">Акции</a>
+                </div>
+              </div>
+              <div class="menu__more mmore">
+                <button class="mmore__btn" type="button">
+                  <div class="mmore__btn-round"></div>
+                  <div class="mmore__btn-round"></div>
+                  <div class="mmore__btn-round"></div>
+                </button>
+                <div class="mmore__list"></div>
+              </div>
+            </nav>
+          </div>
+          <div class="fixmenu__controls header__controls"><a class="header__control jsSearch header__control_black" href="#">
+              <svg class="header__control-svg">
+                <use xlink:href="/images/icons/sprite.svg#magnifier"></use>
+              </svg></a><a class="header__control header__control_black" href="cabinet.html">
+              <svg class="header__control-svg">
+                <use xlink:href="/images/icons/sprite.svg#cabinet"></use>
+              </svg></a></div>
+          <div class="fixmenu__phones">
+            <div class="fixmenu__phones-wrap">
+              <div class="header__phone phone"><a class="phone__phone" href="tel:+7(495)111-11-11">
+                  <svg class="phone__phone-svg">
+                    <use xlink:href="/images/icons/sprite.svg#tel"></use>
+                  </svg><span class="phone__phone-link">+7 (495) 111-11-11</span></a>
+                <div class="phone__drop"><a class="phone__drop-item" href="tel:+7(495)000-00-00"><span class="phone__drop-link">+7 (495) 000-00-00</span><span class="phone__drop-title">Отдел продаж</span></a><a class="phone__drop-item" href="tel:+7(495)000-00-00"><span class="phone__drop-link">+7 (495) 000-00-00</span><span class="phone__drop-title">Бухгалтерия</span></a></div>
+              </div>
+              <button class="header__call jsCall" type="button">Заказать звонок</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

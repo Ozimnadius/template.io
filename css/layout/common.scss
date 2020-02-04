@@ -185,6 +185,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: baseline;
 
   &__subtitle {
     color: $text2;
@@ -284,7 +285,7 @@
 
   &__tabs{
     width: 100%;
-    margin-top: 80px;
+    margin-top: 40px;
     position: relative;
   }
 

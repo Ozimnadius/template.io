@@ -54,8 +54,7 @@ html(lang="ru")
                             .header__middle-left
                                 //- logo
                                 .header__logo
-                                    a(href='/').logo.header__logo-img
-                                        +image('images/icons/logo.png','','logo__img')
+                                    +logo('header__logo-img')
                                     .header__logo-txt
                                         | Лучшие товары
                                         br
@@ -85,25 +84,14 @@ html(lang="ru")
 
                                 //- phones
                                 .header__phones
-                                    .header__phone.phone
-                                        a(href='tel:+7(495)111-11-11').phone__phone
-                                            +icon('tel','phone__phone-svg')
-                                            span.phone__phone-link +7 (495) 111-11-11
-                                        .phone__drop
-                                            a(href='tel:+7(495)000-00-00').phone__drop-link +7 (495) 000-00-00
+                                    +phone('header__phone')
                                     button(type='button').header__call.jsCall Заказать звонок
 
                 //- bottom
                 .header__bottom
                     .container
                         .header__bottom-row
-                            .header__menu.menu
-                                each i in menu
-                                    nav.menu__item
-                                        a(href=i.href class=i.submenu ? 'menu__link_sub' : '').menu__link= i.title
-
-
-
+                            +menu(main ? 'header__menu' : 'menu_white header__menu')
             //- pages
             div(class=main ? '' : 'page_second').page
                 block content
@@ -201,3 +189,31 @@ html(lang="ru")
         script(src='js/main.min.js')
         // Для изменений после верстки
         script(src='js/custom.js')
+        //- fixed menu
+        .fixmenu
+            .container
+                .fixmenu__row.row
+                    //- logo
+                    .fixmenu__logo
+                        +logo()
+
+                    //- menu
+                    .fixmenu__menu
+                        +menu('menu_small menu_white', true)
+
+                    //- controls
+                    .fixmenu__controls.header__controls
+                        a(href='#').header__control.jsSearch.header__control_black
+                            +icon('magnifier','header__control-svg')
+                        a(href='cabinet.html').header__control.header__control_black
+                            +icon('cabinet','header__control-svg')
+
+
+
+                    //- phones
+                    .fixmenu__phones
+                        .fixmenu__phones-wrap
+                            +phone('header__phone')
+                            button(type='button').header__call.jsCall Заказать звонок
+
+

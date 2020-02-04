@@ -13,6 +13,59 @@ mixin image(imagePath, imageClass, imageAlt)
         - var alt = imageAlt
     img(src=`${imagePath}`, alt=`${alt}`, class=`${imageClass}`)
 
+mixin logo(cls)
+    a(href='/' class=cls).logo
+        +image('images/icons/logo.png','','logo__img')
+
+mixin menu(cls,nofollow)
+    nav(class=cls).menu
+        .menu__list
+            each i in menu
+                div(class=i.catalogMenu ? 'menu__item_catalog':'').menu__item
+                    a(href=i.href class=i.arrow ? 'menu__link_sub':'' rel=nofollow?'nofollow':'').menu__link= i.title
+                    if i.submenu
+                        .submenu
+                            each cat in i.submenu
+                                .submenu__cat
+                                    a(href='category.html' rel=nofollow?'nofollow':'').submenu__title
+                                        svg(viewBox='0 0 16 14', xmlns='http://www.w3.org/2000/svg' class='submenu__title-svg')
+                                            path(d='M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z')
+                                        span.submenu__title-title= cat
+                                    .submenu__list
+                                        each item in ['Беговые дорожки','Велотренажеры','Универсльные тренажеры','Умная спортивная одежда']
+                                            a(href='catalog.html' rel=nofollow?'nofollow':'').submenu__item= item
+                                    a(href='category.html').submenu__more
+                                        span.submenu__more-round
+                                        span.submenu__more-round
+                                        span.submenu__more-round
+                    if i.submenu2
+                        .submenu2
+                            each item in [1,2,3,4,5,6,7,8]
+                                .submenu2__item
+                                    a(href='services.html' rel=nofollow?'nofollow':'').submenu2__link.submenu2__link_arr Мобильные устройства
+                                    .submenu2.submenu2_right
+                                        each subitem in [1,2,3,4]
+                                            a(href='service.html' rel=nofollow?'nofollow':'').submenu2__link Мобильные устройства
+        .menu__more.mmore
+            button(type='button').mmore__btn
+                .mmore__btn-round
+                .mmore__btn-round
+                .mmore__btn-round
+            .mmore__list
+
+mixin phone(cls)
+    div(class=cls).phone
+        a(href='tel:+7(495)111-11-11').phone__phone
+            +icon('tel','phone__phone-svg')
+            span.phone__phone-link +7 (495) 111-11-11
+        .phone__drop
+            a(href='tel:+7(495)000-00-00').phone__drop-item
+                span.phone__drop-link +7 (495) 000-00-00
+                span.phone__drop-title Отдел продаж
+            a(href='tel:+7(495)000-00-00').phone__drop-item
+                span.phone__drop-link +7 (495) 000-00-00
+                span.phone__drop-title Бухгалтерия
+
 mixin title (title, sub, href, cls)
     div(class=cls + '__top').title
         h2(class=cls + '__title').title__title= title
@@ -54,7 +107,7 @@ mixin item(props)
             //- Максимальная длина 90 символов, вместе с точками
             span.item__title= props.title
 
-            button(type='button' class=props.inbasket?'add_in':'').item__buy.jsAdd.add
+            button(type='button' class=props.inbasket ? 'add_in' : '').item__buy.jsAdd.add
                 +icon('check','add__svg')
                 span.add__txt ДОБАВИТЬ В КОРЗИНУ
                 span.add__txt2 ТОВАР В КОРЗИНЕ

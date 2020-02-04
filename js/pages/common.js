@@ -29,6 +29,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 function imageResize(src) {
     $('img').not('.logo__img').attr('src', src);
 }
+
 // imageResize('https://loremflickr.com/320/440');
 
 const wWidth = $(window).width();
@@ -45,3 +46,121 @@ const wWidth = $(window).width();
 // };
 
 $('input[type=tel]').mask('+7 (999) 999-99-99');
+
+function AdaptiveMenu(menu) {
+    this.menu = menu;
+    this.items = this.menu.find('.menu__item');
+    this.list = this.menu.find('.menu__list');
+    this.more = this.menu.find('.menu__more');
+    this.menuWidth = parseInt(this.menu.outerWidth());
+    this.listWidth = parseInt(this.list.outerWidth());
+    this.moreWidth = parseInt(this.more.outerWidth());
+    this.moreList = this.more.find('.mmore__list');
+    this.width = this.listWidth + this.moreWidth;
+    this.cutItems = [];
+    this.lastItem = this.cutItems[this.cutItems.length - 1];
+
+    let that = this;
+
+    $(window).resize(function () {
+        that.update();
+        that.compareWidth();
+    });
+
+    this.init = function () {
+        that.compareWidth();
+    };
+
+    this.compareWidth = function () {
+
+        if (that.menu.hasClass('cut')) {
+            that.compareCutted();
+        } else {
+            that.compareNonCutted();
+        }
+
+    };
+
+    this.compareNonCutted = function () {
+        if (that.listWidth > that.menuWidth) {
+            that.menu.addClass('cut');
+            that.removeLastItem();
+            that.update();
+            that.addItemToMore();
+            that.compareCutted();
+        }
+    };
+
+    this.compareCutted = function () {
+        that.list.addClass('nogrow');
+
+        if (that.width > that.menuWidth) {
+            while (that.width > that.menuWidth) {
+                that.removeLastItem();
+                that.update();
+                that.addItemToMore();
+            }
+        } else {
+            while (that.lastItem.width + that.listWidth <= that.menuWidth) {
+                that.addLastItem();
+                that.removeItemFromMore();
+                that.update();
+                if (!that.lastItem) {
+                    that.menu.removeClass('cut');
+                    break;
+                }
+            }
+        }
+
+        that.list.removeClass('nogrow');
+    };
+
+    this.removeLastItem = function () {
+        let item = $(that.items[that.items.length - 1]),
+            link = item.find('.menu__link');
+
+        that.cutItems.push({
+            width: parseInt(item.outerWidth()),
+            item: item,
+            href: link.attr('href'),
+            title: link.text()
+        });
+        item.detach();
+    };
+
+    this.addLastItem = function () {
+        let item = that.lastItem.item;
+        that.list.append(item);
+        that.cutItems.pop();
+    };
+
+    this.addItemToMore = function () {
+        let item = that.lastItem,
+            link = $('<a>').addClass('mmore__item').attr('href',item.href).text(item.title);
+
+        that.moreList.append(link);
+    };
+
+    this.removeItemFromMore = function () {
+        let item = that.lastItem;
+        that.moreList.find('a[href="'+item.href+'"]').remove();
+    };
+
+    this.update = function () {
+        that.list.addClass('nogrow');
+        that.items = that.menu.find('.menu__item');
+        // that.list = that.menu.find('.menu__list');
+        // that.more = that.menu.find('.menu__more');
+        // that.moreList = that.more.find('.mmore__list');
+        that.menuWidth = parseInt(that.menu.outerWidth());
+        that.listWidth = parseInt(that.list.outerWidth());
+        that.moreWidth = parseInt(that.more.outerWidth());
+        that.width = that.listWidth + that.moreWidth;
+        that.lastItem = that.cutItems[that.cutItems.length - 1];
+        that.list.removeClass('nogrow');
+    }
+
+}
+
+
+
