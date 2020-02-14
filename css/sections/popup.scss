@@ -1,6 +1,6 @@
 .popup {
   position: fixed;
-  z-index: 200;
+  z-index: 1000;
   top: 0;
   bottom: 0;
   right: -692px;
@@ -12,6 +12,7 @@
     width: 100%;
   }
 
+
   &:before {
     content: '';
     display: none;
@@ -22,6 +23,7 @@
     left: 0;
     right: 0;
     background: rgba($black, .2);
+    pointer-events: all;
   }
 
   &.active {

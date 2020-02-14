@@ -282,6 +282,7 @@
   &__title {
     color: $headers;
     font-size: 18px;
+    font-weight: 400;
     margin-bottom: 15px;
     @include sm-block{
       font-size: 14px;

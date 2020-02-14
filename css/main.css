@@ -2713,6 +2713,7 @@ input, textarea {
 .iadvantage__title {
   color: #191919;
   font-size: 18px;
+  font-weight: 400;
   margin-bottom: 15px;
 }
 
@@ -4844,7 +4845,7 @@ input, textarea {
 
 .popup {
   position: fixed;
-  z-index: 200;
+  z-index: 1000;
   top: 0;
   bottom: 0;
   right: -692px;
@@ -4876,6 +4877,7 @@ input, textarea {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.2);
+  pointer-events: all;
 }
 
 .popup.active {
