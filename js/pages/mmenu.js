@@ -28,6 +28,15 @@ $(function () {
         removeOverflow();
     });
 
+    //Закрытие форм
+    $('body').on('click', function (e) {
+        let target = $(e.target);
+
+        if (target.hasClass('mmenu active') || target.closest('.jsMenuClose').length > 0) {
+            closeMenu();
+        }
+    });
+
     function openMenu() {
         let menu = $('.mmenu');
         menu.addClass('active');

@@ -5679,6 +5679,27 @@ input, textarea {
   }
 }
 
+.mmenu:before {
+  content: '';
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+  pointer-events: all;
+  display: none;
+}
+
+.mmenu.active {
+  right: 0;
+}
+
+.mmenu.active:before {
+  display: block;
+}
+
 .mmenu.active {
   left: 0;
 }
@@ -5692,6 +5713,9 @@ input, textarea {
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
+  position: relative;
+  background: #ffffff;
+  z-index: 20;
 }
 
 .mmenu__top {
