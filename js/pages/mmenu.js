@@ -1,5 +1,9 @@
 //mmenu.js
 $(function () {
+
+    // VARIABLES
+
+    // EVENTS
     $('.mitem__link_arr').on('click', function (e) {
         e.preventDefault();
         let link = $(this),
@@ -37,6 +41,8 @@ $(function () {
         }
     });
 
+
+    // FUNCTIONS
     function openMenu() {
         let menu = $('.mmenu');
         menu.addClass('active');
@@ -49,4 +55,10 @@ $(function () {
         wrappers.removeClass('active');
 
     }
+
+
+    //VENDORS
+
+
+
 });

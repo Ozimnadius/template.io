@@ -1,6 +1,13 @@
 //index.js
 $(function () {
 
+    // VARIABLES
+
+    // EVENTS
+
+    // FUNCTIONS
+
+    //VENDORS
     const ibanner = document.querySelector('.ibanner__slider');
     if (ibanner) {
         let ibannerSlider = new Swiper('.ibanner__container', {
