@@ -8,6 +8,9 @@
   &__top {
     background-color: rgba($black, .25);
     padding: 9px 0;
+    @include md-block{
+      display: none;
+    }
 
     &-row {
       display: flex;
@@ -56,6 +59,9 @@
     color: $bg;
     fill: $bg;
     @include tr;
+    @include lg-block{
+      margin-right: 10px;
+    }
 
     &:hover {
       color: $main2;
@@ -85,10 +91,27 @@
   &__middle {
     padding-top: 40px;
     padding-bottom: 20px;
+    @include md-block{
+      padding-top: 20px;
+      padding-bottom: 0;
+    }
+    @include sm-block{
+      padding-top: 15px;
+    }
+
+    &-row{
+      @include sm-block{
+          align-items: center;
+      }
+    }
 
     &-left {
       @include col;
       @include size(10);
+      @include size-lg(8);
+      display: flex;
+      align-items: center;
+      @include size-sm(16);
     }
 
     &-right {
@@ -98,17 +121,36 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      @include size-lg(16);
+      @include size-sm(8);
     }
 
+  }
+
+  &__mmenu{
+    display: none;
+    margin-right: 20px;
+    @include md-block{
+      display: flex;
+    }
   }
 
   &__logo {
     display: flex;
     align-items: center;
+    @include md-block{
+      width: 180px;
+    }
+    @include sm-block{
+      width: 137px;
+    }
 
     &-img {
       margin-right: 75px;
       max-width: 213px;
+      @include lg-block{
+        margin-right: 0;
+      }
     }
 
     &-txt {
@@ -116,11 +158,22 @@
       font-size: 18px;
       font-style: italic;
       letter-spacing: 0.54px;
+      @include lg-block{
+        display: none;
+      }
+    }
+  }
+
+  &__info{
+    @include md-block{
+      display: none;
     }
   }
 
   &__links {
-
+    @include md-block{
+      display: none;
+    }
   }
 
   &__link {
@@ -128,6 +181,13 @@
     align-items: center;
     color: $headers;
     @include tr;
+    @include md-block{
+      margin-bottom: 10px;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
 
     &:hover {
       color: $main1;
@@ -147,11 +207,18 @@
   }
 
   &__phones {
-
+    @include md-block{
+      margin-left: auto;
+    }
+    @include sm-block{
+      font-size: 0;
+    }
   }
 
   &__phone {
-
+    @include sm-block{
+      display: none;
+    }
   }
 
   &__call {
@@ -162,6 +229,15 @@
     text-decoration-style: dashed;
     margin-left: 20px;
     @include tr;
+    @include sm-block{
+      margin-left: 0;
+      font-size: 0;
+      text-decoration: none;
+      width: 13px;
+      height: 19px;
+      background: url("../images/icons/tel.svg") 0 0 no-repeat;
+      line-height: 19;
+    }
 
     &:hover {
       color: $main1;
@@ -169,7 +245,9 @@
   }
 
   &__bottom {
-
+    @include md-block{
+      display: none;
+    }
   }
 }
 
@@ -192,102 +270,6 @@
   &__title {
 
   }
-
-}
-
-.phone {
-  display: block;
-  position: relative;
-
-  &:hover{
-    .phone__drop{
-      display: flex;
-    }
-  }
-
-
-  &__phone {
-    display: flex;
-    align-items: center;
-
-    &-svg {
-      width: 13px;
-      height: 19px;
-      fill: $main1;
-      margin-right: 6px;
-    }
-
-    &-link {
-      color: $headers;
-      font-size: 18px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      @include tr;
-
-      &:after {
-        content: '';
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 4px 3px 0 3px;
-        border-color: $headers transparent transparent transparent;
-        margin-left: 6px;
-        @include tr;
-      }
-
-      &:hover {
-        color: $main1;
-
-        &:after {
-          border-color: $main1 transparent transparent transparent;
-        }
-      }
-    }
-  }
-
-  &__drop {
-    position: absolute;
-    z-index: 20;
-    top: 100%;
-    left: -10px;
-    width: 230px;
-    display: none;
-    flex-direction: column;
-    border-radius: 2px;
-    background-color: $bg;
-
-    &-item{
-      display: flex;
-      flex-direction: column;
-      padding: 15px 10px 15px 30px;
-      border-bottom: 1px solid $icon;
-
-      &:hover{
-        .phone__drop-link{
-          color: $main1;
-        }
-      }
-
-      &:last-child{
-        border-bottom: none;
-      }
-    }
-
-    &-link{
-      color: $headers;
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 0;
-      @include tr;
-    }
-
-    &-title{
-      color: $icon;
-      font-size: 14px;
-    }
-  }
-
 
 }
 
@@ -755,6 +737,9 @@
   background-color: $bg;
   box-shadow: 0 4px 8px rgba($black, 0.15);
   @include tr;
+  @include md-block{
+    padding: 10px 0;
+  }
 
   &.active{
     top: 0;
@@ -764,22 +749,54 @@
     align-items: center;
     position: relative;
     flex-wrap: nowrap;
+    @include md-block{
+      margin: 0;
+    }
+  }
+
+  &__mmenu{
+    display: none;
+    margin-right: 20px;
+    @include md-block{
+      display: flex;
+    }
   }
 
   &__logo{
     @include col;
     @include size(3.7);
+    @include md-block{
+      width: 180px;
+      margin: 0;
+    }
+    @include sm-block{
+      width: 137px;
+    }
   }
 
   &__menu{
     @include col;
     @include size(14.3);
     align-self: stretch;
+    @include size-lg(13.8);
+    @include to(1000px){
+      @include size(12.5);
+    };
+    @include md-block{
+      display: none;
+    }
   }
 
   &__controls{
     @include col;
     @include size(2);
+    @include to(1000px){
+      @include size(2.5);
+      justify-content: flex-end;
+    };
+    @include md-block{
+      display: none;
+    }
   }
 
   &__phones {
@@ -787,6 +804,21 @@
     @include size(4);
     display: flex;
     justify-content: flex-end;
+    @include size-lg(4.5);
+    @include to(1000px){
+      @include size(5.3);
+    };
+    @include md-block{
+      width: auto;
+      margin: 0;
+      margin-left: auto;
+    }
+
+    &-wrap{
+      @include sm-block{
+        display: flex;
+      }
+    }
   }
 }
 

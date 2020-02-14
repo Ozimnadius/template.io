@@ -23,7 +23,7 @@
           <div class="container">
             <div class="header__top-row">
               <div class="header__top-left">
-                <button class="header__city" type="button">Москва</button>
+                <!--button(type='button').header__city Москва-->
               </div>
               <div class="header__top-right">
                 <div class="header__controls"><a class="header__control jsSearch" href="#">
@@ -41,6 +41,13 @@
           <div class="container">
             <div class="header__middle-row row">
               <div class="header__middle-left">
+                <div class="header__mmenu">
+                  <button class="mmenu-btn jsMenuOpen" type="button">
+                    <svg class="mmenu-btn__svg">
+                      <use xlink:href="/images/icons/sprite.svg#menu"></use>
+                    </svg>
+                  </button>
+                </div>
                 <div class="header__logo"><a class="header__logo-img logo" href="/"><img src="images/icons/logo.png" alt="logo__img"/></a>
                   <div class="header__logo-txt">Лучшие товары<br>по лучшим
                     ценам
@@ -75,7 +82,7 @@
                       </svg><span class="phone__phone-link">+7 (495) 111-11-11</span></a>
                     <div class="phone__drop"><a class="phone__drop-item" href="tel:+7(495)000-00-00"><span class="phone__drop-link">+7 (495) 000-00-00</span><span class="phone__drop-title">Отдел продаж</span></a><a class="phone__drop-item" href="tel:+7(495)000-00-00"><span class="phone__drop-link">+7 (495) 000-00-00</span><span class="phone__drop-title">Бухгалтерия</span></a></div>
                   </div>
-                  <button class="header__call jsCall" type="button">Заказать звонок</button>
+                  <button class="header__call jsCall jsOpenForm" type="button">Заказать звонок</button>
                 </div>
               </div>
             </div>
@@ -86,7 +93,7 @@
             <div class="header__bottom-row">
               <nav class="header__menu menu">
                 <div class="menu__list">
-                  <div class="menu__item_catalog menu__item"><a class="menu__link_sub menu__link" href="category.html" rel="">Каталог</a>
+                  <div class="menu__item_catalog jsHoverItem menu__item"><a class="menu__link_sub jsHoverLink menu__link" href="category.html" rel="">Каталог</a>
                     <div class="submenu">
                       <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="">
                           <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
@@ -146,37 +153,37 @@
                       </div>
                     </div>
                   </div>
-                  <div class="menu__item"><a class="menu__link_sub menu__link" href="services.html" rel="">Услуги</a>
+                  <div class="menu__item"><a class="menu__link_sub jsHoverLink menu__link" href="services.html" rel="">Услуги</a>
                     <div class="submenu2">
-                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                      <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
                         <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
                         </div>
                       </div>
-                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                      <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
                         <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
                         </div>
                       </div>
-                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                      <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
                         <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
                         </div>
                       </div>
-                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                      <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
                         <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
                         </div>
                       </div>
-                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                      <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
                         <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
                         </div>
                       </div>
-                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                      <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
                         <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
                         </div>
                       </div>
-                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                      <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
                         <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
                         </div>
                       </div>
-                      <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
+                      <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="">Мобильные устройства</a>
                         <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="">Мобильные устройства</a>
                         </div>
                       </div>
@@ -194,11 +201,7 @@
                   </div>
                 </div>
                 <div class="menu__more mmore">
-                  <button class="mmore__btn" type="button">
-                    <div class="mmore__btn-round"></div>
-                    <div class="mmore__btn-round"></div>
-                    <div class="mmore__btn-round"></div>
-                  </button>
+                  <button class="mmore__btn" type="button"><span class="mmore__btn-round"></span><span class="mmore__btn-round"></span><span class="mmore__btn-round"></span></button>
                   <div class="mmore__list"></div>
                 </div>
               </nav>
@@ -445,6 +448,14 @@
                 </div>
                 <div class="irecom__bottom">
                   <div class="irecom__tabset tabset">
+                    <div class="tabset__select">
+                      <select class="tabset__select-select">
+                        <option value="irecom0">Акция</option>
+                        <option value="irecom1">Советуем</option>
+                        <option value="irecom2">Новинка</option>
+                        <option value="irecom3">Хит</option>
+                      </select>
+                    </div>
                     <input class="irecom__input tabset__input" type="radio" name="irecom" id="irecom0" checked>
                     <label class="irecom__label tabset__label" for="irecom0">Акция</label>
                     <input class="irecom__input tabset__input" type="radio" name="irecom" id="irecom1">
@@ -455,7 +466,7 @@
                     <label class="irecom__label tabset__label" for="irecom3">Хит</label>
                     <div class="irecom__tabs tabset__tabs">
                       <div class="irecom__tab tabset__tab">
-                        <div class="irecom__slider" data-speed="500" data-autoplay="true" data-autoplayDelay="7000" data-pagination="true">
+                        <div class="irecom__slider" data-speed="500" data-pagination="true">
                           <button class="irecom__prev-0 arrow irecom__prev" type="button">
                             <svg class="arrow__svg">
                               <use xlink:href="/images/icons/sprite.svg#prev"></use>
@@ -464,119 +475,79 @@
                           <div class="irecom__container-0 swiper-container irecom__container">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">32 990 руб.</span><span class="item__priceold priceold"></span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="add_in item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">32 990 руб.</span><span class="item__priceold priceold"></span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="add_in item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                             </div>
                           </div>
@@ -591,7 +562,7 @@
                         </div>
                       </div>
                       <div class="irecom__tab tabset__tab">
-                        <div class="irecom__slider" data-speed="500" data-autoplay="true" data-autoplayDelay="7000" data-pagination="true">
+                        <div class="irecom__slider" data-speed="500" data-pagination="true">
                           <button class="irecom__prev-1 arrow irecom__prev" type="button">
                             <svg class="arrow__svg">
                               <use xlink:href="/images/icons/sprite.svg#prev"></use>
@@ -600,119 +571,79 @@
                           <div class="irecom__container-1 swiper-container irecom__container">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">32 990 руб.</span><span class="item__priceold priceold"></span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="add_in item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">32 990 руб.</span><span class="item__priceold priceold"></span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="add_in item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                             </div>
                           </div>
@@ -727,7 +658,7 @@
                         </div>
                       </div>
                       <div class="irecom__tab tabset__tab">
-                        <div class="irecom__slider" data-speed="500" data-autoplay="true" data-autoplayDelay="7000" data-pagination="true">
+                        <div class="irecom__slider" data-speed="500" data-pagination="true">
                           <button class="irecom__prev-2 arrow irecom__prev" type="button">
                             <svg class="arrow__svg">
                               <use xlink:href="/images/icons/sprite.svg#prev"></use>
@@ -736,119 +667,79 @@
                           <div class="irecom__container-2 swiper-container irecom__container">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">32 990 руб.</span><span class="item__priceold priceold"></span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="add_in item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">32 990 руб.</span><span class="item__priceold priceold"></span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="add_in item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                             </div>
                           </div>
@@ -863,7 +754,7 @@
                         </div>
                       </div>
                       <div class="irecom__tab tabset__tab">
-                        <div class="irecom__slider" data-speed="500" data-autoplay="true" data-autoplayDelay="7000" data-pagination="true">
+                        <div class="irecom__slider" data-speed="500" data-pagination="true">
                           <button class="irecom__prev-3 arrow irecom__prev" type="button">
                             <svg class="arrow__svg">
                               <use xlink:href="/images/icons/sprite.svg#prev"></use>
@@ -872,119 +763,79 @@
                           <div class="irecom__container-3 swiper-container irecom__container">
                             <div class="swiper-wrapper">
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">32 990 руб.</span><span class="item__priceold priceold"></span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="add_in item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">32 990 руб.</span><span class="item__priceold priceold"></span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="add_in item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/2.png" alt="lorem"/><span class="item__sticks"></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                               <div class="swiper-slide irecom__item">
-                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls">
-                                        <button class="item__control item__control_compare jsCompare" type="button">
+                                <!-- Дополнительные классы - nopadding, noheight--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/><span class="item__sticks"></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#compare"></use>
-                                          </svg>
-                                        </button>
-                                        <button class="item__control item__control_favorite jsFavorite active" type="button">
+                                          </svg></span><span class="item__control item__control_favorite jsFavorite active">
                                           <svg class="item__control-svg">
                                             <use xlink:href="/images/icons/sprite.svg#heart"></use>
-                                          </svg>
-                                        </button></span></span></span><span class="item__bottom"><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span>
-                                    <button class="item__buy jsAdd add" type="button">
+                                          </svg></span></span></span></span><span class="item__bottom"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span><span class="item__buy jsAdd add">
                                       <svg class="add__svg">
                                         <use xlink:href="/images/icons/sprite.svg#check"></use>
-                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
-                                    </button>
-                                    <button class="item__fast jsFast btn3" type="button">
+                                      </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span></span><span class="item__fast jsFast btn3">
                                       <svg class="btn3__svg">
                                         <use xlink:href="/images/icons/sprite.svg#one"></use>
-                                      </svg><span class="btn3__txt">Купить в 1 клик</span>
-                                    </button></span></a>
+                                      </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></a>
                               </div>
                             </div>
                           </div>
@@ -1005,7 +856,9 @@
             </div>
           </section>
           <section class="index__promo">
-            <div class="ipromo" style="background-image:url(images/content/index/promo/bg.jpg)">
+            <div class="ipromo">
+              <div class="ipromo__img"><img class="ipromo__img-img" src="images/content/index/promo/bg.jpg" alt="lorem"/><img class="ipromo__img-img ipromo__img-img_m" src="images/content/index/promo/bg-m.jpg" alt="lorem"/>
+              </div>
               <div class="ipromo__wrapper">
                 <div class="container ipromo__container">
                   <div class="ipromo__content">
@@ -1116,124 +969,76 @@
                       </svg>
                     </button>
                     <div class="swiper-container irevs__container">
-                      <div class="swiper-wrapper"><a class="swiper-slide irev" href="action.html"><span class="irev__img"><span class="irev__img-wrap"><img class="irev__img-img" src="images/content/index/reviews/1.jpg" alt="lorem"/></span></span><span class="irev__bottom"><span class="irev__title">Александр Баженов</span><span class="irev__prof">Генеральный директор ООО “Техно - Дом”</span><span class="irev__rating">
-                              <div class="rating">
-                                <div class="rating__star active">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star active">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star active">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                              </div></span><span class="irev__txt">Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах. В целом, очень удобная площадка.</span><span class="irev__link link"><span class="inew__link-txt link__txt">Подробнее</span>
+                      <div class="swiper-wrapper"><a class="swiper-slide irev" href="action.html"><span class="irev__img"><span class="irev__img-wrap"><img class="irev__img-img" src="images/content/index/reviews/1.jpg" alt="lorem"/></span></span><span class="irev__bottom"><span class="irev__title">Александр Баженов</span><span class="irev__prof">Генеральный директор ООО “Техно - Дом”</span><span class="irev__rating"><span class="rating"><span class="rating__list"><span class="rating__star active">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star active">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star active">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span></span></span></span><span class="irev__txt">Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах. В целом, очень удобная площадка.</span><span class="irev__link link"><span class="inew__link-txt link__txt">Подробнее</span>
                               <svg class="inew__link-svg link__svg">
                                 <use xlink:href="/images/icons/sprite.svg#arrow-s"></use>
-                              </svg></span></span></a><a class="swiper-slide irev" href="action.html"><span class="irev__img"><span class="irev__img-wrap"><img class="irev__img-img" src="images/content/index/reviews/2.jpg" alt="lorem"/></span></span><span class="irev__bottom"><span class="irev__title">Анна Гаврилова</span><span class="irev__prof">Генеральный директор ООО “Техно - Дом”</span><span class="irev__rating">
-                              <div class="rating">
-                                <div class="rating__star active">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star active">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star active">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                              </div></span><span class="irev__txt">Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах. В целом, очень удобная площадка.</span><span class="irev__link link"><span class="inew__link-txt link__txt">Подробнее</span>
+                              </svg></span></span></a><a class="swiper-slide irev" href="action.html"><span class="irev__img"><span class="irev__img-wrap"><img class="irev__img-img" src="images/content/index/reviews/2.jpg" alt="lorem"/></span></span><span class="irev__bottom"><span class="irev__title">Анна Гаврилова</span><span class="irev__prof">Генеральный директор ООО “Техно - Дом”</span><span class="irev__rating"><span class="rating"><span class="rating__list"><span class="rating__star active">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star active">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star active">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span></span></span></span><span class="irev__txt">Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах. В целом, очень удобная площадка.</span><span class="irev__link link"><span class="inew__link-txt link__txt">Подробнее</span>
                               <svg class="inew__link-svg link__svg">
                                 <use xlink:href="/images/icons/sprite.svg#arrow-s"></use>
-                              </svg></span></span></a><a class="swiper-slide irev" href="action.html"><span class="irev__img"><span class="irev__img-wrap"><img class="irev__img-img" src="images/content/index/reviews/3.jpg" alt="lorem"/></span></span><span class="irev__bottom"><span class="irev__title">Ирина Молотова</span><span class="irev__prof">Дизайнер интерьера</span><span class="irev__rating">
-                              <div class="rating">
-                                <div class="rating__star active">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star active">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star active">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                              </div></span><span class="irev__txt">Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах. В целом, очень удобная площадка.</span><span class="irev__link link"><span class="inew__link-txt link__txt">Подробнее</span>
+                              </svg></span></span></a><a class="swiper-slide irev" href="action.html"><span class="irev__img"><span class="irev__img-wrap"><img class="irev__img-img" src="images/content/index/reviews/3.jpg" alt="lorem"/></span></span><span class="irev__bottom"><span class="irev__title">Ирина Молотова</span><span class="irev__prof">Дизайнер интерьера</span><span class="irev__rating"><span class="rating"><span class="rating__list"><span class="rating__star active">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star active">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star active">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span></span></span></span><span class="irev__txt">Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах. В целом, очень удобная площадка.</span><span class="irev__link link"><span class="inew__link-txt link__txt">Подробнее</span>
                               <svg class="inew__link-svg link__svg">
                                 <use xlink:href="/images/icons/sprite.svg#arrow-s"></use>
-                              </svg></span></span></a><a class="swiper-slide irev" href="action.html"><span class="irev__img"><span class="irev__img-wrap"><img class="irev__img-img" src="images/content/index/reviews/1.jpg" alt="lorem"/></span></span><span class="irev__bottom"><span class="irev__title">Александр Баженов</span><span class="irev__prof">Генеральный директор ООО “Техно - Дом”</span><span class="irev__rating">
-                              <div class="rating">
-                                <div class="rating__star active">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star active">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star active">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                                <div class="rating__star">
-                                  <svg class="rating__star-svg">
-                                    <use xlink:href="/images/icons/sprite.svg#star"></use>
-                                  </svg>
-                                </div>
-                              </div></span><span class="irev__txt">Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах. В целом, очень удобная площадка.</span><span class="irev__link link"><span class="inew__link-txt link__txt">Подробнее</span>
+                              </svg></span></span></a><a class="swiper-slide irev" href="action.html"><span class="irev__img"><span class="irev__img-wrap"><img class="irev__img-img" src="images/content/index/reviews/1.jpg" alt="lorem"/></span></span><span class="irev__bottom"><span class="irev__title">Александр Баженов</span><span class="irev__prof">Генеральный директор ООО “Техно - Дом”</span><span class="irev__rating"><span class="rating"><span class="rating__list"><span class="rating__star active">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star active">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star active">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span><span class="rating__star">
+                                    <svg class="rating__star-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#star"></use>
+                                    </svg></span></span></span></span><span class="irev__txt">Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров нашел дешевле в других магазинах. В целом, очень удобная площадка.</span><span class="irev__link link"><span class="inew__link-txt link__txt">Подробнее</span>
                               <svg class="inew__link-svg link__svg">
                                 <use xlink:href="/images/icons/sprite.svg#arrow-s"></use>
                               </svg></span></span></a>
@@ -1295,14 +1100,15 @@
               <div class="ffeed__right">
                 <div class="row">
                   <div class="ffeed__field">
-                    <input class="ffeed__input" type="text" name="name" placeholder="Имя">
+                    <input class="ffeed__input" type="text" name="name" placeholder="Имя" data-rule-required="true" data-msg-required="Введите Имя">
                   </div>
                   <div class="ffeed__field">
-                    <input class="ffeed__input" type="tel" name="tel" placeholder="+7(__) ___-__-__">
+                    <input class="ffeed__input" type="tel" name="tel" placeholder="+7(__) ___-__-__" data-rule-required="true" data-msg-required="Введите телефон" data-msg-tel="Введите ваш телефон">
                   </div>
                   <div class="ffeed__field">
                     <button class="btn2 btn2_w ffeed__submit" type="submit">заказать звонок</button>
                   </div>
+                  <div class="ffeed__policy">Заполняя данную форму Вы соглашаетесь с&nbsp;<a href="policy.html">Политикой обработки персональных данных</a></div>
                 </div>
               </div>
             </div>
@@ -1311,29 +1117,22 @@
         <div class="footer__top">
           <div class="container">
             <div class="row footer__top-row">
-              <div class="footer__top-left">
-                <div class="row">
-                  <div class="footer__col"><a class="footer__title" href="about.html">О компании</a>
-                    <div class="footer__list"><a class="footer__item" href="news.html">Новости</a><a class="footer__item" href="catalog.html">Каталог</a><a class="footer__item" href="reviews.html">Отзывы</a><a class="footer__item" href="portfolio.html">Портфолио</a><a class="footer__item" href="delivery.html">Доставка</a>
-                    </div>
-                  </div>
-                  <div class="footer__col"><a class="footer__title" href="catalog.html">Каталог</a>
-                    <div class="footer__list"><a class="footer__item" href="catalog.html">Мобильные устройства</a><a class="footer__item" href="catalog.html">Компьютеры</a><a class="footer__item" href="catalog.html">Умный дом</a><a class="footer__item" href="catalog.html">Умные тренажеры</a><a class="footer__item" href="catalog.html">Наручные часы</a>
-                    </div>
-                  </div>
-                  <div class="footer__col"><a class="footer__title" href="services.html">Услуги компании</a>
-                    <div class="footer__list"><a class="footer__item" href="service.html">Ремонт техники по гарантии</a><a class="footer__item" href="service.html">Настройка умного дома</a><a class="footer__item" href="service.html">Монтаж кондиционеров</a><a class="footer__item" href="service.html">Настройка электроники</a><a class="footer__item" href="service.html">Сборка мебели</a>
-                    </div>
-                  </div>
-                  <div class="footer__col"><a class="footer__title" href="info.html">Информация</a>
-                    <div class="footer__list"><a class="footer__item" href="actions.html">Акции</a><a class="footer__item" href="pay.html">Оплата</a><a class="footer__item" href="delivery.html">Доставка</a>
-                    </div>
-                  </div>
+              <div class="footer__col"><a class="footer__title" href="about.html">О компании</a>
+                <div class="footer__list"><a class="footer__item" href="news.html">Новости</a><a class="footer__item" href="catalog.html">Каталог</a><a class="footer__item" href="reviews.html">Отзывы</a><a class="footer__item" href="portfolio.html">Портфолио</a><a class="footer__item" href="delivery.html">Доставка</a>
                 </div>
               </div>
-              <div class="footer__top-right"><a class="footer__title" href="contacts.html">Контакты</a>
-                <div class="footer__contacts"><a class="footer__contact" href="tel:+7(000)000-00-00">+7 000 000-00-00</a><a class="footer__contact" href="mailto:info@web-comp">info@web-comp</a><a class="footer__contact" href="https://yandex.ru/maps/-/CKEMaK--">г.Москва, ул. Пушкина 19</a></div>
-                <div class="footer__socials">
+              <div class="footer__col"><a class="footer__title" href="catalog.html">Каталог</a>
+                <div class="footer__list"><a class="footer__item" href="catalog.html">Мобильные устройства</a><a class="footer__item" href="catalog.html">Компьютеры</a><a class="footer__item" href="catalog.html">Умный дом</a><a class="footer__item" href="catalog.html">Умные тренажеры</a><a class="footer__item" href="catalog.html">Наручные часы</a>
+                </div>
+              </div>
+              <div class="footer__col"><a class="footer__title" href="services.html">Услуги компании</a>
+                <div class="footer__list"><a class="footer__item" href="service.html">Ремонт техники по гарантии</a><a class="footer__item" href="service.html">Настройка умного дома</a><a class="footer__item" href="service.html">Монтаж кондиционеров</a><a class="footer__item" href="service.html">Настройка электроники</a><a class="footer__item" href="service.html">Сборка мебели</a>
+                </div>
+              </div>
+              <div class="footer__col"><a class="footer__title" href="info.html">Информация</a>
+                <div class="footer__list"><a class="footer__item" href="actions.html">Акции</a><a class="footer__item" href="pay.html">Оплата</a><a class="footer__item" href="delivery.html">Доставка</a>
+                </div>
+                <div class="footer__socials-t">
                   <div class="socials">
                     <div class="socials__title">Мы в соц. сетях</div>
                     <div class="socials__list">
@@ -1364,6 +1163,46 @@
                           <svg class="socials__item-svg">
                             <use xlink:href="/images/icons/sprite.svg#yt"></use>
                           </svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__col footer__col_right">
+                <div class="row">
+                  <div class="footer__contacts"><a class="footer__contacts-title" href="contacts.html">Контакты</a><a class="footer__contact" href="tel:+7(000)000-00-00">+7 000 000-00-00</a><a class="footer__contact" href="mailto:info@web-comp">info@web-comp</a><a class="footer__contact" href="https://yandex.ru/maps/-/CKEMaK--">г.Москва, ул. Пушкина 19</a></div>
+                  <div class="footer__socials">
+                    <div class="socials">
+                      <div class="socials__title">Мы в соц. сетях</div>
+                      <div class="socials__list">
+                        <div class="socials__row"><a class="socials__item" href="https://vk.com/">
+                            <svg class="socials__item-svg">
+                              <use xlink:href="/images/icons/sprite.svg#vk"></use>
+                            </svg></a><a class="socials__item" href="https://www.instagram.com/">
+                            <svg class="socials__item-svg">
+                              <use xlink:href="/images/icons/sprite.svg#inst"></use>
+                            </svg></a><a class="socials__item" href="https://ru-ru.facebook.com/">
+                            <svg class="socials__item-svg">
+                              <use xlink:href="/images/icons/sprite.svg#fb"></use>
+                            </svg></a><a class="socials__item" href="https://www.youtube.com/">
+                            <svg class="socials__item-svg">
+                              <use xlink:href="/images/icons/sprite.svg#yt"></use>
+                            </svg></a>
+                        </div>
+                        <div class="socials__row"><a class="socials__item" href="https://vk.com/">
+                            <svg class="socials__item-svg">
+                              <use xlink:href="/images/icons/sprite.svg#vk"></use>
+                            </svg></a><a class="socials__item" href="https://www.instagram.com/">
+                            <svg class="socials__item-svg">
+                              <use xlink:href="/images/icons/sprite.svg#inst"></use>
+                            </svg></a><a class="socials__item" href="https://ru-ru.facebook.com/">
+                            <svg class="socials__item-svg">
+                              <use xlink:href="/images/icons/sprite.svg#fb"></use>
+                            </svg></a><a class="socials__item" href="https://www.youtube.com/">
+                            <svg class="socials__item-svg">
+                              <use xlink:href="/images/icons/sprite.svg#yt"></use>
+                            </svg></a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1411,15 +1250,33 @@
     <script src="js/main.min.js"></script>
     <!-- Для изменений после верстки-->
     <script src="js/custom.js"></script>
+    <div class="scroll">
+      <div class="container">
+        <div class="scroll__wrap">
+          <button class="scroll__btn" type="button">
+            <svg class="scroll__btn-svg">
+              <use xlink:href="/images/icons/sprite.svg#arr-top"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
     <div class="fixmenu">
       <div class="container">
         <div class="fixmenu__row row">
+          <div class="fixmenu__mmenu">
+            <button class="mmenu-btn jsMenuOpen" type="button">
+              <svg class="mmenu-btn__svg">
+                <use xlink:href="/images/icons/sprite.svg#menu"></use>
+              </svg>
+            </button>
+          </div>
           <div class="fixmenu__logo"><a class="logo" href="/"><img src="images/icons/logo.png" alt="logo__img"/></a>
           </div>
           <div class="fixmenu__menu">
             <nav class="menu_small menu_white menu">
               <div class="menu__list">
-                <div class="menu__item_catalog menu__item"><a class="menu__link_sub menu__link" href="category.html" rel="nofollow">Каталог</a>
+                <div class="menu__item_catalog jsHoverItem menu__item"><a class="menu__link_sub jsHoverLink menu__link" href="category.html" rel="nofollow">Каталог</a>
                   <div class="submenu">
                     <div class="submenu__cat"><a class="submenu__title" href="category.html" rel="nofollow">
                         <svg class="submenu__title-svg" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
@@ -1479,37 +1336,37 @@
                     </div>
                   </div>
                 </div>
-                <div class="menu__item"><a class="menu__link_sub menu__link" href="services.html" rel="nofollow">Услуги</a>
+                <div class="menu__item"><a class="menu__link_sub jsHoverLink menu__link" href="services.html" rel="nofollow">Услуги</a>
                   <div class="submenu2">
-                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                    <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
                       <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
                       </div>
                     </div>
-                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                    <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
                       <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
                       </div>
                     </div>
-                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                    <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
                       <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
                       </div>
                     </div>
-                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                    <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
                       <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
                       </div>
                     </div>
-                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                    <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
                       <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
                       </div>
                     </div>
-                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                    <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
                       <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
                       </div>
                     </div>
-                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                    <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
                       <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
                       </div>
                     </div>
-                    <div class="submenu2__item"><a class="submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
+                    <div class="jsHoverItem submenu2__item"><a class="jsHoverLink submenu2__link submenu2__link_arr" href="services.html" rel="nofollow">Мобильные устройства</a>
                       <div class="submenu2 submenu2_right"><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a><a class="submenu2__link" href="service.html" rel="nofollow">Мобильные устройства</a>
                       </div>
                     </div>
@@ -1527,11 +1384,7 @@
                 </div>
               </div>
               <div class="menu__more mmore">
-                <button class="mmore__btn" type="button">
-                  <div class="mmore__btn-round"></div>
-                  <div class="mmore__btn-round"></div>
-                  <div class="mmore__btn-round"></div>
-                </button>
+                <button class="mmore__btn" type="button"><span class="mmore__btn-round"></span><span class="mmore__btn-round"></span><span class="mmore__btn-round"></span></button>
                 <div class="mmore__list"></div>
               </div>
             </nav>
@@ -1551,11 +1404,594 @@
                   </svg><span class="phone__phone-link">+7 (495) 111-11-11</span></a>
                 <div class="phone__drop"><a class="phone__drop-item" href="tel:+7(495)000-00-00"><span class="phone__drop-link">+7 (495) 000-00-00</span><span class="phone__drop-title">Отдел продаж</span></a><a class="phone__drop-item" href="tel:+7(495)000-00-00"><span class="phone__drop-link">+7 (495) 000-00-00</span><span class="phone__drop-title">Бухгалтерия</span></a></div>
               </div>
-              <button class="header__call jsCall" type="button">Заказать звонок</button>
+              <button class="header__call jsCall jsOpenForm" type="button">Заказать звонок</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="popup">
+      <div class="popup__btns">
+        <button class="popup__btn jsCartForm" type="button" data-tab="cart"><span class="popup__btn-img">
+            <svg class="popup__btn-svg popup__btn-svg_cart">
+              <use xlink:href="/images/icons/sprite.svg#cart"></use>
+            </svg><span class="popup__btn-count">3</span></span></button>
+        <button class="popup__btn" type="button" data-tab="favorite"><span class="popup__btn-img">
+            <svg class="popup__btn-svg popup__btn-svg_heart">
+              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+            </svg><span class="popup__btn-count">2</span></span></button>
+        <button class="popup__btn" type="button" data-tab="compare"><span class="popup__btn-img">
+            <svg class="popup__btn-svg popup__btn-svg_compare">
+              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+            </svg><span class="popup__btn-count">0</span></span></button>
+        <button class="popup__btn popup__btn_t jsCall" type="button" data-ajax="ajax.php" data-action="callback"><span class="popup__btn-img">
+            <svg class="popup__btn-svg popup__btn-svg_tel">
+              <use xlink:href="/images/icons/sprite.svg#tel"></use>
+            </svg></span></button>
+        <button class="popup__btn popup__btn_t jsReview" type="button" data-ajax="ajax.php" data-action="review"><span class="popup__btn-img">
+            <svg class="popup__btn-svg popup__btn-svg_review">
+              <use xlink:href="/images/icons/sprite.svg#review"></use>
+            </svg></span></button>
+        <button class="popup__btn popup__btn_t jsQuestion" type="button" data-ajax="ajax.php" data-action="question"><span class="popup__btn-img">
+            <svg class="popup__btn-svg popup__btn-svg_callback">
+              <use xlink:href="/images/icons/sprite.svg#callback"></use>
+            </svg></span></button>
+      </div>
+      <div class="popup__tabs">
+        <div class="popup__tab"></div>
+      </div>
+    </div>
+    <div class="mmenu">
+      <div class="mmenu__main">
+        <div class="mmenu__top">
+          <div class="mmenu__top-left">
+            <button class="mmenu__title jsMenuClose" type="button">
+              <svg class="mmenu__title-svg">
+                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+              </svg><span class="mmenu__title-title">Меню</span>
+            </button>
+          </div>
+          <div class="mmenu__top-right"><a class="mmenu__enter" href="cabinet.html">
+              <svg class="mmenu__enter-svg">
+                <use xlink:href="/images/icons/sprite.svg#cabinet"></use>
+              </svg><span class="mmenu__enter-txt">Войти</span></a>
+            <button class="mmenu__search" type="button">
+              <svg class="mmenu__search-svg">
+                <use xlink:href="/images/icons/sprite.svg#magnifier"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="mmenu__bottom">
+          <div class="mmenu__controls mcontrols"><a class="mcontrol" href="cart.html">
+              <svg class="mcontrol__svg mcontrol__svg_cart">
+                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+              </svg><span class="mcontrol__count">3</span></a><a class="mcontrol" href="favorite.html">
+              <svg class="mcontrol__svg mcontrol__svg_heart">
+                <use xlink:href="/images/icons/sprite.svg#heart"></use>
+              </svg><span class="mcontrol__count">8</span></a><a class="mcontrol" href="compare.html">
+              <svg class="mcontrol__svg mcontrol__svg_compare">
+                <use xlink:href="/images/icons/sprite.svg#compare"></use>
+              </svg><span class="mcontrol__count">0</span></a></div>
+          <div class="mmenu__list">
+            <div class="mitem"><a class="mitem__link_arr mitem__link" href="category.html">Каталог</a>
+              <div class="mmenu__wrapper">
+                <div class="mmenu__top">
+                  <div class="mmenu__top-left">
+                    <button class="mmenu__title jsWrapClose" type="button">
+                      <svg class="mmenu__title-svg">
+                        <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                      </svg><span class="mmenu__title-title">Каталог</span>
+                    </button>
+                  </div>
+                  <div class="mmenu__top-right">
+                    <button class="mmenu__close jsMenuClose" type="button">
+                      <svg class="mmenu__close-svg">
+                        <use xlink:href="/images/icons/sprite.svg#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="mmenu__bottom">
+                  <div class="mmenu__list">
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Мобильные устройства</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Мобильные устройства</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Компьютеры</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Компьютеры</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Умный дом</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Умный дом</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Умные тренажеры</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Умные тренажеры</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Наручные часы</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Наручные часы</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Умная одежда</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Умная одежда</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Игровые приставки</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Игровые приставки</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Бытовая техника</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Бытовая техника</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mitem"><a class="mitem__link_arr mitem__link" href="services.html">Услуги</a>
+              <div class="mmenu__wrapper">
+                <div class="mmenu__top">
+                  <div class="mmenu__top-left">
+                    <button class="mmenu__title jsWrapClose" type="button">
+                      <svg class="mmenu__title-svg">
+                        <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                      </svg><span class="mmenu__title-title">Услуги</span>
+                    </button>
+                  </div>
+                  <div class="mmenu__top-right">
+                    <button class="mmenu__close jsMenuClose" type="button">
+                      <svg class="mmenu__close-svg">
+                        <use xlink:href="/images/icons/sprite.svg#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="mmenu__bottom">
+                  <div class="mmenu__list">
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Мобильные устройства</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Категория</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Мобильные устройства</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Категория</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Мобильные устройства</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Категория</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Мобильные устройства</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Категория</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Мобильные устройства</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Категория</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Мобильные устройства</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Категория</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Мобильные устройства</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Категория</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mitem"><a class="mitem__link mitem__link_arr" href="category.html">Мобильные устройства</a>
+                      <div class="mmenu__wrapper">
+                        <div class="mmenu__top">
+                          <div class="mmenu__top-left">
+                            <button class="mmenu__title jsWrapClose" type="button">
+                              <svg class="mmenu__title-svg">
+                                <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                              </svg><span class="mmenu__title-title">Категория</span>
+                            </button>
+                          </div>
+                          <div class="mmenu__top-right">
+                            <button class="mmenu__close jsMenuClose" type="button">
+                              <svg class="mmenu__close-svg">
+                                <use xlink:href="/images/icons/sprite.svg#close"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mmenu__bottom">
+                          <div class="mmenu__list">
+                            <div class="mitem"><a class="mitem__link" href="">Подкатегория</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mitem"><a class="mitem__link" href="delivery.html">Доставка</a>
+            </div>
+            <div class="mitem"><a class="mitem__link" href="pay.html">Оплата</a>
+            </div>
+            <div class="mitem"><a class="mitem__link" href="about.html">Компания</a>
+            </div>
+            <div class="mitem"><a class="mitem__link" href="contacts.html">Контакты</a>
+            </div>
+            <div class="mitem"><a class="mitem__link" href="actions.html">Акции</a>
+            </div>
+            <div class="mitem"><a class="mitem__link mitem__link_phone mitem__link_arr" href="tel:+7(495)111-11-11"><span class="mitem__phone">
+                  <svg class="mitem__phone-svg">
+                    <use xlink:href="/images/icons/sprite.svg#phone"></use>
+                  </svg><span class="mitem__phone-wrap"><span class="mitem__phone-phone">+7 (495) 111-11-11</span><span class="mitem__phone-txt">Отдел продаж</span></span></span></a>
+              <div class="mmenu__wrapper">
+                <div class="mmenu__top">
+                  <div class="mmenu__top-left">
+                    <button class="mmenu__title jsWrapClose" type="button">
+                      <svg class="mmenu__title-svg">
+                        <use xlink:href="/images/icons/sprite.svg#arrow-s-left"></use>
+                      </svg><span class="mmenu__title-title">Телефоны</span>
+                    </button>
+                  </div>
+                  <div class="mmenu__top-right">
+                    <button class="mmenu__close jsMenuClose" type="button">
+                      <svg class="mmenu__close-svg">
+                        <use xlink:href="/images/icons/sprite.svg#close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="mmenu__bottom">
+                  <div class="mmenu__list">
+                    <div class="mitem"><a class="mitem__link mitem__link_phone mitem__link_arr" href="tel:+7(495)111-11-11"><span class="mitem__phone"><span class="mitem__phone-wrap"><span class="mitem__phone-phone">+7 (495) 111-11-11</span><span class="mitem__phone-txt">Отдел продаж</span></span></span></a></div>
+                    <div class="mitem"><a class="mitem__link mitem__link_phone mitem__link_arr" href="tel:+7(495)111-11-11"><span class="mitem__phone"><span class="mitem__phone-wrap"><span class="mitem__phone-phone">+7 (495) 111-11-11</span><span class="mitem__phone-txt">Отдел продаж</span></span></span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mitem"><a class="mitem__link jsCall" href="tel:+7(495)111-11-11"><span class="mitem__link-img">
+                  <svg class="mitem__link-svg mitem__link-svg_tel">
+                    <use xlink:href="/images/icons/sprite.svg#tel"></use>
+                  </svg></span><span class="mitem__link-txt">Заказать звонок</span></a></div>
+            <div class="mitem"><a class="mitem__link jsReview" href="tel:+7(495)111-11-11"><span class="mitem__link-img">
+                  <svg class="mitem__link-svg mitem__link-svg_review">
+                    <use xlink:href="/images/icons/sprite.svg#review"></use>
+                  </svg></span><span class="mitem__link-txt">Оставить отзыв</span></a></div>
+            <div class="mitem"><a class="mitem__link jsQuestion" href="tel:+7(495)111-11-11"><span class="mitem__link-img">
+                  <svg class="mitem__link-svg mitem__link-svg_callback">
+                    <use xlink:href="/images/icons/sprite.svg#callback"></use>
+                  </svg></span><span class="mitem__link-txt">Задать вопрос</span></a></div>
+          </div>
+          <div class="mmenu__contacts"><a class="header__link" href="mailto:info@web-comp">
+              <svg class="header__link-svg">
+                <use xlink:href="/images/icons/sprite.svg#email"></use>
+              </svg><span class="header__link-txt">info@web-comp</span></a><a class="header__link" href="https://yandex.ru/maps/-/CKEMaK--">
+              <svg class="header__link-svg">
+                <use xlink:href="/images/icons/sprite.svg#pin"></use>
+              </svg><span class="header__link-txt">г.Москва, ул.Нижние поля дом 31</span></a></div>
+        </div>
+      </div>
+    </div>
+    <template id="tmpl">
+      <div class="loader">
+        <div class="loader__wrap">
+          <div class="inner one"></div>
+          <div class="inner two"></div>
+          <div class="inner three"></div>
+        </div>
+      </div>
+    </template>
   </body>
 </html>

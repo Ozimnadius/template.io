@@ -39,6 +39,13 @@ $(function () {
                 el: '.iprojects__pag .pag',
                 clickable: true
             },
+            breakpoints: {
+                // when window width is <= 768px
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+            },
             on: {
                 init: function () {
                     initParams(this, iprojects);
@@ -71,6 +78,17 @@ $(function () {
                     el: '.irecom__pag-' + x + ' .pag',
                     clickable: true
                 },
+                breakpoints: {
+                    // when window width is <= 768px
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: -1,
+                    },
+                    // when window width is <= 1200px
+                    1200: {
+                        slidesPerView: 3,
+                    },
+                },
                 on: {
                     init: function () {
                         initParams(this, slider);
@@ -84,7 +102,7 @@ $(function () {
     }
 
     const iactions = document.querySelector('.iactions__slider');
-    if (iprojects) {
+    if (iactions) {
         let iprojectsSlider = new Swiper('.iactions__container', {
             slidesPerView: 4,
             effect: 'slide',
@@ -101,6 +119,22 @@ $(function () {
                 nextEl: '.iactions__next',
                 prevEl: '.iactions__prev',
             },
+            breakpoints: {
+                // when window width is <= 768px
+                768: {
+                    spaceBetween: 10,
+                    slidesPerView: 1,
+                },
+                // when window width is <= 800px
+                850: {
+                    spaceBetween: 70,
+                    slidesPerView: 2,
+                },
+                // when window width is <= 1200px
+                1200: {
+                    slidesPerView: 3,
+                },
+            },
             on: {
                 init: function () {
                     initParams(this, iprojects);
@@ -110,7 +144,7 @@ $(function () {
     }
 
     const irevs = document.querySelector('.irevs__slider');
-    if (iprojects) {
+    if (irevs) {
         let iprojectsSlider = new Swiper('.irevs__container', {
             slidesPerView: 3,
             effect: 'slide',
@@ -127,6 +161,17 @@ $(function () {
                 nextEl: '.irevs__next',
                 prevEl: '.irevs__prev',
             },
+            breakpoints: {
+                // when window width is <= 769px
+                769: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                // when window width is <= 850px
+                850: {
+                    slidesPerView: 2,
+                },
+            },
             on: {
                 init: function () {
                     initParams(this, irevs);
@@ -136,7 +181,7 @@ $(function () {
     }
 
     const ibrands = document.querySelector('.ibrands__slider');
-    if (iprojects) {
+    if (ibrands) {
         let iprojectsSlider = new Swiper('.ibrands__container', {
             slidesPerView: 5,
             effect: 'slide',
@@ -153,6 +198,21 @@ $(function () {
                 nextEl: '.ibrands__next',
                 prevEl: '.ibrands__prev',
             },
+            breakpoints: {
+                // when window width is <= 768px
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                // when window width is <= 850px
+                850: {
+                    slidesPerView: 3,
+                },
+                // when window width is <= 1200px
+                1200: {
+                    slidesPerView: 4,
+                },
+            },
             on: {
                 init: function () {
                     initParams(this, ibrands);
@@ -161,51 +221,20 @@ $(function () {
         });
     }
 
+    $('input[type=tel]').mask('+7 (999) 999-99-99');
 
-    function initParams(item, slider) {
-
-        let params = item.params,
-            data = slider.dataset,
-            speed = parseInt(data.speed) || 300,
-            autoplay = (data.autoplay == 'true'),
-            delay = parseInt(data.autoplayDelay) || 5000,
-            pagination = (data.pagination == 'true');
-
-        params.speed = speed;
-
-        if (autoplay) {
-            params.autoplay.enabled = autoplay;
-            params.autoplay.delay = delay;
+    $('.ffeed').validate({
+        onfocusout: false,
+        submitHandler: function (form) {
+            alert('submit');
+        },
+        invalidHandler: function (event, validator) {
+            // debugger;
+        },
+        errorPlacement: function (error, element) {
+            element[0].placeholder = error[0].innerText;
+            // debugger;
         }
-
-
-        if (!pagination) {
-            params.pagination = {};
-        }
-    }
-
-    let $menus = $('.menu'),
-        menusObj = {};
-
-    $menus.each(function (x, i) {
-        let menu = $(i);
-        menusObj['menu' + x] = new AdaptiveMenu(menu);
-        menusObj['menu' + x].init();
-    });
-
-    const headerFixed = $('.fixmenu'),
-        headerMain = $('.header');
-
-    $(window).on('scroll', function (e) {
-        let height = headerMain.outerHeight(),
-            scrollTop = $(this).scrollTop();
-
-        if (scrollTop> height){
-            headerFixed.addClass('active');
-        } else {
-            headerFixed.removeClass('active');
-        }
-
     });
 
 });

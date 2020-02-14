@@ -34,18 +34,42 @@ function imageResize(src) {
 
 const wWidth = $(window).width();
 
-// $.validator.methods.tel = function (value, element) {
-//     let re = new RegExp(/\d/g),
-//         str = value.match(re);
-//
-//     if (str.length == 11) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// };
+$.validator.methods.tel = function (value, element) {
+    return validateTel(value);
+};
 
-$('input[type=tel]').mask('+7 (999) 999-99-99');
+function validateTel(value) {
+    let re = new RegExp(/\d/g),
+        str = value.match(re);
+
+    if (str.length == 11) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function initParams(item, slider) {
+
+    let params = item.params,
+        data = slider.dataset,
+        speed = parseInt(data.speed) || 300,
+        autoplay = (data.autoplay == 'true'),
+        delay = parseInt(data.autoplayDelay) || 5000,
+        pagination = (data.pagination == 'true');
+
+    params.speed = speed;
+
+    if (autoplay) {
+        params.autoplay.enabled = autoplay;
+        params.autoplay.delay = delay;
+    }
+
+
+    if (!pagination) {
+        params.pagination = {};
+    }
+}
 
 function AdaptiveMenu(menu) {
     this.menu = menu;
@@ -161,6 +185,39 @@ function AdaptiveMenu(menu) {
     }
 
 }
+
+function setOverflow() {
+    $('body').addClass('overflow');
+}
+
+function removeOverflow() {
+    $('body').removeClass('overflow');
+}
+
+$(function () {
+
+    $('.tabset__select-select').on('change', function (e) {
+        e.preventDefault();
+        console.log(this.value);
+        let select = $(this),
+            val = select.val(),
+            tabset = select.closest('.tabset'),
+            inputs = tabset.find('.tabset__input'),
+            input = inputs.filter('[id = '+val+']');
+        inputs.attr('checked',false);
+        input.attr('checked',true);
+        input.trigger('change');
+    });
+
+    $('.scroll__btn').on('click', function (e) {
+        e.preventDefault();
+
+        $('html, body').animate({scrollTop: 0}, 400);
+    });
+
+
+});
+
 
 
 

@@ -1,75 +1,164 @@
 .footer {
   background-color: #333333;
 
-  &__top{
+  &__top {
     padding-top: 70px;
     padding-bottom: 40px;
-
-    &-left{
-      @include col;
-      @include size(18);
-      @include shift-right(1);
+    @include md-block {
+      padding-top: 60px;
+      padding-bottom: 0;
     }
-
-    &-right{
-      @include col;
-      @include size(5);
+    @include sm-block {
+      padding-top: 30px;
+      padding-bottom: 50px;
     }
   }
 
-  &__col{
+  &__col {
     @include col;
-    @include size(6);
+    @include size(24/5);
+    @include to(1100px) {
+      @include size(24/4);
+      margin-bottom: 50px;
+    }
+    @include size-md(8);
+    @include size-sm(24);
+    @include sm-block {
+      margin-bottom: 0;
+      border-bottom: 1px solid rgba($bg, .5);
+    }
+
+    &:last-child {
+      @include sm-block {
+        border-bottom: none;
+      }
+    }
+
+    &_right {
+      @include to(1100px) {
+        @include size(12);
+      }
+      @include size-md(8);
+      @include size-sm(24);
+    }
   }
 
-  &__title{
+  &__title {
     color: $bg;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 17px;
     display: block;
+    position: relative;
     @include tr;
+    @include sm-block {
+      margin: 0;
+      padding: 18px 0;
+    }
 
-    &:hover{
+
+    &:hover {
       color: $main1;
+      @include sm-block {
+        color: $bg;
+      }
+    }
+
+  }
+
+  &__list {
+    @include sm-block {
+      padding-bottom: 25px;
     }
   }
 
-  &__item{
+  &__item {
     display: block;
     color: $bg;
     font-size: 18px;
     font-weight: 300;
-    padding: 7px 0;
+    padding: 5px 0;
     @include tr;
+    @include sm-block {
+      color: rgba($bg, .5);
+    }
 
-    &:hover{
+    &:hover {
       color: $main1;
+      @include sm-block{
+        color: rgba($bg, .5);
+      }
     }
   }
 
   &__contacts {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
+    @include col;
+    @include size(24);
+    @include to(1100px) {
+      @include size(12);
+    }
+    @include size-md(24);
+
+    &-title {
+      color: $bg;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 17px;
+      display: block;
+      position: relative;
+      @include tr;
+      @include sm-block {
+        margin: 0;
+        padding: 18px 0;
+      }
+    }
   }
 
-  &__contact{
+  &__contact {
     display: block;
     color: $bg;
     font-size: 18px;
     font-weight: 300;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     @include tr;
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
 
-    &:hover{
+    &:hover {
       color: $main1;
     }
   }
 
-  &__bottom{
+  &__socials {
+    @include col;
+    @include size(24);
+    @include to(1100px) {
+      @include size(12);
+    }
+    @include md-block {
+      display: none;
+    }
+    @include sm-block {
+      display: block;
+    }
+    @include size-sm(24);
+
+    &-t {
+      display: none;
+      margin-top: 45px;
+      @include md-block {
+        display: block;
+      }
+      @include sm-block {
+        display: none;
+      }
+    }
+  }
+
+  &__bottom {
     background-color: #2d2d2d;
     padding: 25px 0;
 
@@ -78,17 +167,24 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      @include sm-block {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
 
   &__copy {
     color: $bg;
     font-weight: 300;
+    @include sm-block {
+      text-align: center;
+    }
   }
 
 }
 
-.socials{
+.socials {
 
   &__title {
     color: $bg;
@@ -104,19 +200,19 @@
     margin-right: -10px;
   }
 
-  &__item{
+  &__item {
     width: 50px;
     height: 50px;
     padding-left: 10px;
     padding-right: 10px;
-    fill: rgba($bg,.8);
+    fill: rgba($bg, .8);
     @include tr;
 
-    &:hover{
+    &:hover {
       fill: $main1;
     }
 
-    &-svg{
+    &-svg {
       max-height: 100%;
       max-width: 100%;
 
@@ -130,52 +226,112 @@
   align-items: center;
   color: $bg;
 
-  &:hover{
+  &:hover {
     text-decoration: underline;
   }
 
-  &__txt{
+  &__txt {
 
     font-weight: 300;
     margin-right: 10px;
   }
 }
 
-.ffeed{
+.ffeed {
   background-color: $main1;
   padding: 40px 0;
+  @include md-block {
+    padding-bottom: 80px;
+  }
 
-  &__row{
+  &__row {
     align-items: center;
   }
 
-  &__left{
+  &__left {
     @include col;
     @include size(11.4);
+    @include to(1100px) {
+      @include size-lg(24);
+      margin-bottom: 35px;
+    }
+    @include size-sm(24);
+    @include sm-block {
+      margin-bottom: 20px;
+    }
+
   }
 
-  &__title{
+  &__title {
     color: $bg;
     font-size: 20px;
     font-weight: 700;
   }
 
-  &__right{
+  &__right {
+    position: relative;
     @include col;
     @include size(12.6);
+    @include to(1100px) {
+      @include size(18);
+    }
+    @include to(850px) {
+      @include size(24);
+    }
+    @include size-sm(24);
+
+
   }
 
-  &__field{
+  &__field {
     @include col;
     @include size(8);
+    @include size-sm(24);
+    @include sm-block {
+      margin-bottom: 20px;
+    }
+
+    &:last-of-type {
+      @include sm-block {
+        margin-bottom: 0;
+      }
+    }
   }
 
-  &__input{
+  &__input {
     width: 100%;
     border-radius: 4px;
     background-color: $bg;
     padding: 12px 15px;
     font-size: 13px;
+    border: 1px solid transparent;
+    @include tr;
+
+    &.error{
+      border: 1px solid $validation;
+      &::placeholder{
+        color: $validation;
+      }
+    }
+
+
+  }
+
+  &__submit {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  &__policy {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    color: $bg;
+    font-size: 11px;
+
+    a {
+      text-decoration: underline;
+    }
   }
 
 

@@ -9,6 +9,9 @@
 
   &:hover{
     box-shadow: 0px 4px 12px rgba($black, 0.25);
+    @include md-block{
+        box-shadow: none;
+    }
   }
 
   &.nopadding {
@@ -41,6 +44,10 @@
     padding: 20px;
     padding-bottom: 0;
     position: relative;
+    @include md-block{
+      padding: 10px;
+      padding-bottom: 0;
+    }
   }
 
   &__img {
@@ -49,12 +56,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 100%;
+    @include md-block{
+      height: 170px;
+    }
+    @include sm-block{
+      height: 110px;
+    }
 
     &-img {
       max-width: initial;
       display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -64,6 +79,14 @@
     left: 20px;
     right: 70px;
     display: block;
+    @include md-block{
+      top: 10px;
+      left: 10px;
+      right: 50px;
+    }
+    @include sm-block{
+      right: 0;
+    }
   }
 
   &__controls {
@@ -73,11 +96,30 @@
     position: absolute;
     top: 20px;
     right: 25px;
+    @include md-block{
+      top: 10px;
+      right: 10px;
+    }
+    @include sm-block{
+      top: initial;
+      bottom: 0;
+      right: 10px;
+      left: 10px;
+      justify-content: space-between;
+    }
   }
 
   &__control {
     fill: $icon;
     margin-right: 5px;
+    display: flex;
+    @include sm-block{
+      margin-right: 0;
+      background-color: $bg;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -90,11 +132,31 @@
     &_compare {
       width: 17px;
       height: 15px;
+      @include sm-block{
+        width: 27px;
+        height: 22px;
+        border-top-right-radius: 50%;
+        padding-right: 3px;
+        svg{
+          width: 18px;
+          height: 18px;
+        }
+      }
     }
 
     &_favorite {
       width: 16px;
       height: 13px;
+      @include sm-block{
+        width: 27px;
+        height: 22px;
+        border-top-left-radius: 50%;
+        padding-left: 3px;
+        svg{
+          width: 15px;
+          height: 13px;
+        }
+      }
     }
 
     &-svg {
@@ -109,12 +171,19 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
+    @include md-block{
+      padding: 10px;
+      padding-bottom: 30px;
+    }
   }
 
   &__avaible {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    @include md-block{
+      margin-bottom: 3px;
+    }
 
     &__round {
       width: 10px;
@@ -132,21 +201,29 @@
         height: 4px;
         border-radius: 50%;
         background-color: $main3;
+
       }
     }
 
     &__txt {
       color: $main3;
       font-size: 12px;
+      @include sm-block{
+        font-size: 10px;
+      }
     }
   }
 
   &__prices{
     margin-bottom: 10px;
     width: 100%;
+    @include md-block{
+      margin-bottom: 5px;
+    }
   }
 
   &__priceold{
+    white-space: nowrap;
     margin-left: 10px;
   }
 
@@ -154,12 +231,20 @@
     width: 100%;
     color: $black;
     margin-bottom: 20px;
+    @include md-block{
+      font-size: 14px;
+    }
+    @include sm-block{
+      font-size: 12px;
+    }
   }
 
   &__buy{
     margin-top: auto;
     align-self: center;
     margin-bottom: 10px;
+    max-width: 100%;
+    height: 24px;
   }
 
   &__fast{
@@ -169,11 +254,9 @@
 }
 
 .sticks {
-  width: 100%;
+  width: calc(100% + 5px);
   display: flex;
   flex-wrap: wrap;
-  //flex-direction: column;
-  //align-items: flex-start;
   margin-left: -2.5px;
   margin-right: -2.5px;
 }
@@ -184,9 +267,9 @@
   font-weight: 500;
   padding: 0px 8px;
   margin: 0 2.5px 5px 2.5px;
-
-  &:last-child {
-    margin-bottom: 0;
+  @include md-block{
+    font-size: 11px;
+    padding: 0 6px;
   }
 
   &_hit {

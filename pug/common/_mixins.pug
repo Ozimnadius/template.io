@@ -21,8 +21,8 @@ mixin menu(cls,nofollow)
     nav(class=cls).menu
         .menu__list
             each i in menu
-                div(class=i.catalogMenu ? 'menu__item_catalog':'').menu__item
-                    a(href=i.href class=i.arrow ? 'menu__link_sub':'' rel=nofollow?'nofollow':'').menu__link= i.title
+                div(class=i.catalogMenu ? 'menu__item_catalog jsHoverItem':'').menu__item
+                    a(href=i.href class=i.arrow ? 'menu__link_sub jsHoverLink':'' rel=nofollow?'nofollow':'').menu__link= i.title
                     if i.submenu
                         .submenu
                             each cat in i.submenu
@@ -41,16 +41,16 @@ mixin menu(cls,nofollow)
                     if i.submenu2
                         .submenu2
                             each item in [1,2,3,4,5,6,7,8]
-                                .submenu2__item
-                                    a(href='services.html' rel=nofollow?'nofollow':'').submenu2__link.submenu2__link_arr Мобильные устройства
+                                div(class='jsHoverItem').submenu2__item
+                                    a(href='services.html' class='jsHoverLink' rel=nofollow?'nofollow':'').submenu2__link.submenu2__link_arr Мобильные устройства
                                     .submenu2.submenu2_right
                                         each subitem in [1,2,3,4]
                                             a(href='service.html' rel=nofollow?'nofollow':'').submenu2__link Мобильные устройства
         .menu__more.mmore
             button(type='button').mmore__btn
-                .mmore__btn-round
-                .mmore__btn-round
-                .mmore__btn-round
+                span.mmore__btn-round
+                span.mmore__btn-round
+                span.mmore__btn-round
             .mmore__list
 
 mixin phone(cls)
@@ -88,14 +88,14 @@ mixin item(props)
                     if props.sticks
                         +sticks()
                 span.item__controls
-                    button(type='button').item__control.item__control_compare.jsCompare
+                    span.item__control.item__control_compare.jsCompare
                         +icon('compare','item__control-svg')
-                    button(type='button').item__control.item__control_favorite.jsFavorite.active
+                    span.item__control.item__control_favorite.jsFavorite.active
                         +icon('heart','item__control-svg')
 
 
         span.item__bottom
-            if props.enable
+            if props.enabled
                 span.item__avaible
                     span.item__avaible__round
                     span.item__avaible__txt В наличии
@@ -107,12 +107,12 @@ mixin item(props)
             //- Максимальная длина 90 символов, вместе с точками
             span.item__title= props.title
 
-            button(type='button' class=props.inbasket ? 'add_in' : '').item__buy.jsAdd.add
+            span(class=props.inbasket ? 'add_in' : '').item__buy.jsAdd.add
                 +icon('check','add__svg')
                 span.add__txt ДОБАВИТЬ В КОРЗИНУ
                 span.add__txt2 ТОВАР В КОРЗИНЕ
 
 
-            button(type='button').item__fast.jsFast.btn3
+            span.item__fast.jsFast.btn3
                 +icon('one','btn3__svg')
                 span.btn3__txt Купить в 1 клик

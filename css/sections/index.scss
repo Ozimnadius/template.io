@@ -29,6 +29,12 @@
   &__slide {
     height: 738px;
     box-sizing: border-box;
+    @include md-block {
+      height: 410px;
+    }
+    @include sm-block {
+      height: auto;
+    }
 
 
     &-imgs {
@@ -38,6 +44,10 @@
       bottom: 0;
       left: 0;
       right: 0;
+      @include sm-block {
+        position: static;
+        height: 300px;
+      }
     }
 
     &-img {
@@ -45,13 +55,25 @@
       width: 100%;
       height: 100%;
       display: block;
+      @include md-block {
+        display: none;
+      }
 
       &_t {
         display: none;
+        @include md-block {
+          display: block;
+        }
+        @include sm-block {
+          display: none;
+        }
       }
 
       &_m {
         display: none;
+        @include sm-block {
+          display: block;
+        }
       }
     }
 
@@ -59,6 +81,11 @@
       height: 100%;
       position: relative;
       z-index: 20;
+      @include sm-block {
+        height: auto;
+        background-color: $bg2;
+        padding: 0 20px;
+      }
     }
 
     &-row {
@@ -66,17 +93,38 @@
       padding-bottom: 55px;
       height: 100%;
       align-items: center;
+      @include md-block {
+        padding-top: 65px;
+      }
+      @include sm-block {
+        padding: 20px 0;
+      }
     }
 
     &-content {
       @include col;
       @include size(20);
       @include shift(2);
+      @include size-md(23);
+      @include shift-md(0.5);
+      @include size-sm(24);
+      @include shift-sm(0);
+      @include sm-block{
+        text-align: center;
+      }
     }
 
     &-title {
       font-size: 45px;
       margin-bottom: 20px;
+      max-width: 550px;
+      @include md-block {
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+      @include sm-block {
+        font-size: 20px;
+      }
     }
 
     &-txt {
@@ -84,10 +132,23 @@
       font-size: 24px;
       margin-bottom: 40px;
       line-height: lh(24, 27.5);
+      max-width: 550px;
+      @include md-block {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      @include sm-block {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
     }
 
     &-links {
       display: flex;
+      @include sm-block{
+          justify-content: center;
+      }
     }
 
     &-link {
@@ -108,6 +169,9 @@
     left: 0;
     right: 0;
     pointer-events: none;
+    @include sm-block {
+      position: static;
+    }
 
     &-container {
       display: flex;
@@ -115,6 +179,12 @@
       height: 100%;
       padding-top: 220px;
       padding-bottom: 30px;
+      @include sm-block {
+        height: auto;
+        padding-top: 0;
+        padding-bottom: 20px;
+        background-color: $bg2;
+      }
     }
   }
 
@@ -123,6 +193,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include md-block {
+      display: none;
+    }
   }
 
   &__prev, &__next {
@@ -135,6 +208,7 @@
     position: static;
     width: 100%;
     pointer-events: all;
+    margin-top: auto;
 
     .swiper-pagination-bullet {
       width: 50px;
@@ -145,10 +219,19 @@
       margin: 0 10px;
       outline: none;
       @include tr;
+      @include sm-block {
+        width: 30px;
+        height: 3px;
+        background: $icon;
+        margin: 0 5px;
+      }
 
       &-active {
         height: 8px;
         background: $main1;
+        @include sm-block {
+          height: 5px;
+        }
       }
     }
   }
@@ -164,6 +247,12 @@
     justify-content: space-around;
     margin-left: -10px;
     margin-right: -10px;
+    @include lg-block {
+      justify-content: center;
+    }
+    @include sm-block{
+        @include row-flex;
+    }
   }
 }
 
@@ -176,6 +265,10 @@
   margin-bottom: 40px;
   margin-left: 10px;
   margin-right: 10px;
+  @include sm-block{
+      @include col;
+  }
+  @include size-sm(12);
 
   &__img {
     height: 60px;
@@ -190,11 +283,18 @@
     color: $headers;
     font-size: 18px;
     margin-bottom: 15px;
+    @include sm-block{
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
   }
 
   &__txt {
     color: $text2;
     font-size: 14px;
+    @include sm-block{
+      font-size: 12px;
+    }
   }
 
 }
@@ -205,9 +305,15 @@
   border-bottom: 1px solid $icon;
   border-top: 1px solid $icon;
   background-color: $bg2;
+  @include sm-block{
+    padding: 30px 0;
+  }
 
   &__top {
     margin-bottom: 40px;
+    @include sm-block{
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -221,6 +327,14 @@
   overflow: hidden;
   display: flex;
   height: 200px;
+  @include size-lg(12);
+  @include md-block {
+    height: 171px;
+  }
+  @include size-sm(24);
+  @include sm-block{
+    height: 145px;
+  }
 
 
   &:hover {
@@ -248,6 +362,13 @@
     padding: 25px 20px;
     display: flex;
     flex-direction: column;
+    @include md-block {
+      padding: 25px 15px;
+      padding-top: 30px;
+    }
+    @include sm-block{
+      padding: 15px 10px;
+    }
 
   }
 
@@ -256,6 +377,10 @@
     font-weight: 300;
     margin-bottom: 15px;
     @include tr;
+    @include sm-block{
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
   }
 
   &__svg {
@@ -263,6 +388,10 @@
     height: 8px;
     fill: $main1;
     @include tr;
+    @include sm-block{
+      width: 48px;
+      height: 8px;
+    }
   }
 
   &__img {
@@ -275,6 +404,13 @@
 .iprojects {
   padding-top: 85px;
   padding-bottom: 15px;
+  @include md-block {
+    padding-top: 65px;
+  }
+  @include sm-block{
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
 
   &__slider {
 
@@ -282,6 +418,9 @@
 
   &__container {
     margin-bottom: 60px;
+    @include md-block {
+      margin-bottom: 50px;
+    }
   }
 
   &__pag {
@@ -295,6 +434,14 @@
   width: 420px;
   height: 300px;
   overflow: hidden;
+  @include md-block {
+    width: 354px;
+    height: 252px;
+  }
+  @include sm-block{
+    width: auto;
+    height: 214px;
+  }
 
   &:hover {
 
@@ -313,6 +460,9 @@
 
       &__txt {
         display: block;
+        @include md-block{
+          display: none;
+        }
       }
 
     }
@@ -361,11 +511,17 @@
     right: 85px;
     display: flex;
     flex-direction: column;
+    @include md-block {
+      right: 40px;
+    }
   }
 
   &__title {
     color: $bg;
     font-weight: 600;
+    @include sm-block{
+      font-size: 14px;
+    }
   }
 
   &__txt {
@@ -381,6 +537,9 @@
     height: 8px;
     fill: $main1;
     @include tr;
+    @include sm-block{
+      margin-top: 10px;
+    }
   }
 }
 
@@ -388,6 +547,13 @@
   padding-top: 60px;
   padding-bottom: 100px;
   border-bottom: 1px solid $icon;
+  @include md-block {
+    padding-bottom: 10px;
+  }
+  @include sm-block{
+    border-top: 1px solid $icon;
+    padding-top: 40px;
+  }
 }
 
 .ipop {
@@ -395,6 +561,15 @@
   @include size(6);
   display: flex;
   flex-direction: column;
+  @include size-md(12);
+  @include md-block {
+    margin-bottom: 50px;
+  }
+  @include size-sm(24);
+  @include sm-block{
+    margin-bottom: 40px;
+  }
+
 
   &:hover {
     .ipop {
@@ -407,6 +582,12 @@
   &__img {
     height: 200px;
     margin-bottom: 15px;
+    @include md-block {
+      height: 230px;
+    }
+    @include sm-block{
+      height: 194px;
+    }
 
     &-img {
       width: 100%;
@@ -419,6 +600,9 @@
     color: $headers;
     margin-bottom: 20px;
     @include tr;
+    @include sm-block{
+      margin-bottom: 10px;
+    }
   }
 
   &__bottom {
@@ -429,6 +613,7 @@
   &__prices {
     display: flex;
     flex-wrap: wrap;
+    align-items: baseline;
   }
 
   &__price {
@@ -452,16 +637,28 @@
 .irecom {
   padding-top: 60px;
   padding-bottom: 85px;
+  @include md-block {
+    padding-bottom: 60px;
+  }
+  @include sm-block{
+    padding-bottom: 45px;
+  }
 
   &__slider {
     display: flex;
     align-items: center;
     margin-bottom: 55px;
+    @include sm-block{
+      margin-bottom: 30px;
+    }
   }
 
   &__prev, &__next {
     position: relative;
     z-index: 2;
+    @include md-block {
+      display: none;
+    }
   }
 
   &__container {
@@ -469,6 +666,12 @@
     margin-left: -10px;
     margin-right: -10px;
     padding: 5px 10px 15px 10px;
+    @include md-block {
+      width: calc(100% + 20px);
+    }
+    @include sm-block{
+      padding: 0;
+    }
   }
 
   &__pag {
@@ -493,6 +696,37 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  @include md-block {
+    height: 224px;
+  }
+  @include sm-block{
+    height: auto;
+  }
+
+  &__img{
+    width: 100%;
+    height: 100%;
+    @include sm-block{
+      height: auto;
+    }
+
+    &-img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include sm-block{
+        display: none;
+        height: auto;
+      }
+
+      &_m{
+        display: none;
+        @include sm-block{
+          display: block;
+        }
+      }
+    }
+  }
 
   &__wrapper {
     position: absolute;
@@ -501,12 +735,21 @@
     bottom: 0;
     left: 0;
     right: 0;
+    @include sm-block{
+      position: static;
+    }
   }
 
   &__container {
     height: 100%;
     display: flex;
     align-items: center;
+    @include sm-block{
+      padding-top: 15px;
+      padding-bottom: 45px;
+      text-align: center;
+      justify-content: center;
+    }
   }
 
   &__title {
@@ -515,6 +758,13 @@
     font-weight: 600;
     margin-bottom: 12px;
     display: block;
+    @include md-block {
+      font-size: 25px;
+    }
+    @include sm-block{
+      color: $headers;
+
+    }
   }
 
   &__txt {
@@ -522,6 +772,14 @@
     font-size: 30px;
     font-weight: 100;
     margin-bottom: 20px;
+    @include md-block {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    @include sm-block{
+      color: $headers;
+      margin-bottom: 25px;
+    }
   }
 
 }
@@ -531,9 +789,20 @@
   padding-bottom: 80px;
   border-bottom: 1px solid $icon;
   background-color: $bg2;
+  @include md-block {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  @include sm-block{
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
 
   &__top {
     margin-bottom: 50px;
+    @include sm-block{
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -544,9 +813,19 @@
   border: 1px solid $icon;
   background-color: $bg;
   @include tr;
+  @include to(1000px) {
+    @include size(8);
+  }
+  @include size-sm(12);
+  @include sm-block{
+    margin-bottom: 10px;
+  }
 
   &:hover {
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+    @include sm-block{
+      box-shadow: none;
+    }
 
     .icat {
       &__img {
@@ -561,17 +840,32 @@
     height: 221px;
     display: block;
     position: relative;
+    @include md-block {
+      height: 160px;
+    }
+    @include sm-block{
+      height: 100px;
+    }
 
     &:after {
       content: '';
       display: block;
       position: absolute;
-      left: 65px;
-      right: 65px;
+      left: 50%;
+      margin-left: -70px;
+      width: 140px;
       bottom: -3px;
       height: 6px;
       background-color: $icon;
       @include tr;
+      @include sm-block{
+        width: auto;
+        height: 4px;
+        left: 25px;
+        right: 25px;
+        margin-left: 0;
+        background-color: $main1;
+      }
     }
 
     &-img {
@@ -589,21 +883,45 @@
     justify-content: center;
     text-align: center;
     border-top: 1px solid $icon;
+    @include md-block {
+      height: 69px;
+    }
+    @include sm-block{
+      height: 58px;
+    }
   }
 
 }
 
 .iactions {
   padding: 110px 0;
+  @include md-block {
+    padding: 140px 0;
+    padding-bottom: 15px;
+  }
+  @include sm-block{
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
 
   &__top {
     margin-bottom: 40px;
+    @include sm-block{
+      margin-bottom: 15px;
+    }
   }
 
   &__slider {
     display: flex;
     align-items: center;
     margin-bottom: 65px;
+    @include md-block {
+      padding: 0 20px;
+    }
+    @include sm-block{
+      padding: 0;
+      margin-bottom: 40px;
+    }
   }
 
   &__container {
@@ -611,11 +929,17 @@
     width: calc(100% - 40px);
     margin-left: -10px;
     margin-right: -10px;
+    @include md-block {
+      width: calc(100% + 20%);
+    }
   }
 
   &__prev, &__next {
     position: relative;
     z-index: 2;
+    @include md-block {
+      display: none;
+    }
   }
 
   &__pag {
@@ -632,8 +956,11 @@
   box-shadow: 0 0 8px rgba($black, 0.15);
   border: 1px solid #ebebeb;
   background-color: $bg;
-
   @include tr;
+  @include sm-block{
+    background-color: $main1;
+    color: $bg;
+  }
 
   &:hover {
     background-color: $main1;
@@ -654,6 +981,9 @@
   &__bottom {
     flex-grow: 1;
     padding: 25px 22px 35px 22px;
+    @include sm-block{
+      padding-bottom: 30px;
+    }
   }
 
   &__date {
@@ -673,6 +1003,13 @@
   padding-bottom: 100px;
   border-bottom: 1px solid $icon;
   border-top: 1px solid $icon;
+  @include md-block {
+    padding-bottom: 55px;
+  }
+  @include sm-block{
+    padding-top: 25px;
+    padding-bottom: 0;
+  }
 }
 
 .inew {
@@ -680,6 +1017,11 @@
   @include size(6);
   display: flex;
   flex-direction: column;
+  @include size-md(12);
+  @include md-block {
+    margin-bottom: 45px;
+  }
+  @include size-sm(24);
 
   &:hover {
     .inew {
@@ -697,6 +1039,13 @@
   &__img {
     height: 201px;
     margin-bottom: 20px;
+    @include md-block {
+      height: 228px;
+      margin-bottom: 25px;
+    }
+    @include sm-block{
+      height: 193px;
+    }
 
     &-img {
       width: 100%;
@@ -715,6 +1064,12 @@
   &__date {
     color: $text2;
     margin-bottom: 10px;
+    @include md-block {
+      margin-bottom: 15px;
+    }
+    @include sm-block{
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
@@ -723,12 +1078,24 @@
     font-weight: 600;
     margin-bottom: 10px;
     @include tr;
+    @include md-block {
+      margin-bottom: 20px;
+    }
+    @include sm-block{
+      margin-bottom: 10px;
+    }
   }
 
   &__txt {
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 20px;
+    @include md-block {
+      margin-bottom: 30px;
+    }
+    @include sm-block{
+      margin-bottom: 20px;
+    }
   }
 
   &__link {
@@ -739,6 +1106,13 @@
 .iabout {
   border-bottom: 1px solid $icon;
   padding: 75px 0;
+  @include md-block {
+    padding-bottom: 100px;
+  }
+  @include sm-block{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
   .row {
     align-items: center;
@@ -747,11 +1121,16 @@
   &__left {
     @include col;
     @include size(12);
+    @include size-sm(24);
+    @include sm-block{
+      margin-bottom: 30px;
+    }
   }
 
   &__right {
     @include col;
     @include size(12);
+    @include size-sm(24);
   }
 
   &__top {
@@ -765,16 +1144,24 @@
     color: $text2;
     font-weight: 500;
     margin-bottom: 15px;
+    @include md-block {
+      margin-bottom: 10px;
+    }
+    @include sm-block{
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
   }
 
   &__title {
     color: $headers;
-    font-size: 28px;
-    font-weight: 600;
   }
 
   &__content {
     margin-bottom: 45px;
+    @include md-block {
+      margin-bottom: 30px;
+    }
   }
 
   &__btns {
@@ -784,30 +1171,52 @@
 
   &__link {
     margin-right: 12px;
+    @include md-block {
+      margin-right: 10px;
+      width: 149px;
+    }
+    @include sm-block{
+      width: 105px;
+    }
   }
 
   &__catalog {
-    width: auto;
-    padding-left: 40px;
-    padding-right: 40px;
+    width: 223px;
+    @include md-block {
+      width: 194px;
+    }
+    @include sm-block{
+      width: auto;
+    }
   }
 
 }
 
-.irevs  {
+.irevs {
   padding-top: 75px;
   padding-bottom: 65px;
   border-bottom: 1px solid $icon;
-
-  &__top{
-    margin-bottom: 40px;
+  @include md-block {
+    padding-top: 90px;
+  }
+  @include sm-block{
+    padding-top: 30px;
   }
 
+  &__top {
+    margin-bottom: 40px;
+    @include sm-block{
+      margin-bottom: 25px;
+    }
+  }
 
   &__slider {
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+    @include sm-block{
+      margin-bottom: 20px;
+    }
   }
 
   &__container {
@@ -815,22 +1224,38 @@
     width: calc(100% - 40px);
     margin-left: -10px;
     margin-right: -10px;
+    @include md-block {
+      width: calc(100% + 20px);
+    }
   }
 
   &__prev, &__next {
     position: relative;
     z-index: 2;
+    @include md-block {
+      display: none;
+    }
   }
 
   &__pag {
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+    @include sm-block{
+      margin-bottom: 25px;
+    }
   }
 
-  &__btn{
+  &__btn {
     display: block;
     margin: 0 auto;
+    @include md-block {
+      width: 204px;
+      font-size: 14px;
+    }
+    @include sm-block{
+      height: 39px;
+    }
   }
 
 }
@@ -843,6 +1268,9 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
   background-color: $bg;
   padding: 50px 25px 30px 25px;
+  @include lg-block {
+    padding: 40px 20px 25px 20px;
+  }
 
   &:hover {
     .irev {
@@ -853,7 +1281,7 @@
     }
   }
 
-  &__img{
+  &__img {
     width: 152px;
     height: 152px;
     border: 1px solid $icon;
@@ -861,8 +1289,14 @@
     padding: 12px;
     margin-bottom: 15px;
     align-self: center;
+    @include md-block {
+      width: 130px;
+      height: 130px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
 
-    &-wrap{
+    &-wrap {
       width: 100%;
       height: 100%;
       border-radius: 50%;
@@ -873,54 +1307,69 @@
 
     }
 
-    &-img{
+    &-img {
       display: block;
     }
 
   }
 
-  &__bottom{
+  &__bottom {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
   }
 
-  &__title{
+  &__title {
     color: $headers;
     font-size: 18px;
     text-align: center;
     margin-bottom: 10px;
+    @include md-block {
+      margin-bottom: 5px;
+    }
   }
 
-  &__prof{
+  &__prof {
     font-size: 12px;
     margin-bottom: 15px;
     text-align: center;
+    @include md-block {
+      margin-bottom: 10px;
+    }
   }
 
-  &__rating{
+  &__rating {
     align-self: center;
     margin-bottom: 15px;
+    @include md-block {
+      margin-bottom: 0px;
+    }
   }
 
-  &__txt{
+  &__txt {
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 25px;
+    @include md-block {
+      margin-bottom: 15px;
+    }
   }
 
-  &__link{
+  &__link {
     align-self: flex-end;
   }
 
 }
 
-.ibrands{
+.ibrands {
   background-color: $bg2;
   padding-top: 60px;
   padding-bottom: 45px;
+  @include sm-block{
+    padding-top: 30px;
+  }
 
-  &__top{
+  &__top {
     margin-bottom: 30px;
   }
 
@@ -928,6 +1377,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    @include sm-block{
+      margin-bottom: 20px;
+    }
   }
 
   &__container {
@@ -935,11 +1387,17 @@
     width: calc(100% - 40px);
     margin-left: -10px;
     margin-right: -10px;
+    @include md-block {
+      width: calc(100% + 20px);
+    }
   }
 
   &__prev, &__next {
     position: relative;
     z-index: 2;
+    @include md-block {
+      display: none;
+    }
   }
 
   &__pag {
@@ -948,7 +1406,7 @@
   }
 }
 
-.ibrand{
+.ibrand {
   height: 199px;
   border: 1px solid #e9e8e8;
   background-color: $bg;
@@ -958,8 +1416,15 @@
   padding: 30px;
   box-sizing: border-box;
   @include tr;
+  @include md-block {
+    height: 180px;
+  }
+  @include sm-block{
+    height: 114px;
+    padding: 25px;
+  }
 
-  &:hover{
+  &:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
   }
 }
