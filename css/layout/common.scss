@@ -69,6 +69,7 @@
   align-items: center;
   fill: $text2;
   color: $text2;
+  font-size: 14px;
   @include tr;
 
 
@@ -88,7 +89,7 @@
   }
 
   &__txt {
-    font-size: 14px;
+
     text-decoration: underline;
     text-decoration-style: dashed;
     @include sm-block{

@@ -34,10 +34,10 @@ function imageResize(src) {
 
 const wWidth = $(window).width();
 
+// Валидация телефона
 $.validator.methods.tel = function (value, element) {
     return validateTel(value);
 };
-
 function validateTel(value) {
     let re = new RegExp(/\d/g),
         str = value.match(re);
@@ -49,6 +49,7 @@ function validateTel(value) {
     }
 }
 
+// Инициализация параметров слайдера из дата атрибутов
 function initParams(item, slider) {
 
     let params = item.params,
@@ -71,6 +72,7 @@ function initParams(item, slider) {
     }
 }
 
+// Миник плагин адаптивного меню
 function AdaptiveMenu(menu) {
     this.menu = menu;
     this.items = this.menu.find('.menu__item');
@@ -186,16 +188,19 @@ function AdaptiveMenu(menu) {
 
 }
 
+// Функция убирает прокрутку страницы
 function setOverflow() {
     $('body').addClass('overflow');
 }
 
+// Функция возвращает прокрутку страницы
 function removeOverflow() {
     $('body').removeClass('overflow');
 }
 
 $(function () {
 
+    // Мобильные табы
     $('.tabset__select-select').on('change', function (e) {
         e.preventDefault();
         console.log(this.value);
@@ -209,6 +214,7 @@ $(function () {
         input.trigger('change');
     });
 
+    // Scroll-top
     $('.scroll__btn').on('click', function (e) {
         e.preventDefault();
 

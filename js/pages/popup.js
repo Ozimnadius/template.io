@@ -30,6 +30,84 @@ $(function () {
     });
 
 
+    //Вызов формы "Корзина"
+    $('.jsCartForm').on('click', function (e) {
+        e.preventDefault();
+
+        let btn = btns.filter('[data-action=cart]'),
+            action = btn.data('action'),
+            url = btn.data('ajax'),
+            data = {
+                action: action
+            };
+
+        if (btn.hasClass('active')) {
+            deactivatePopup();
+            return;
+        }
+
+        activatePopup(btn, 'loader_white');
+
+        $.ajax({
+            dataType: "json",
+            type: "POST",
+            url: url,
+            data: data,
+            success: function (result) {
+                if (result.status) {
+                    tab.html(result.html);
+                    deactivateLoader();
+                } else {
+                    alert('Что-то пошло не так, попробуйте еще раз!!!');
+                }
+            },
+            error: function (result) {
+                alert('Что-то пошло не так, попробуйте еще раз!!!');
+            }
+        });
+
+    });
+
+    //Вызов формы "Избранное"
+    $('.jsFavoriteForm').on('click', function (e) {
+        e.preventDefault();
+
+        let btn = btns.filter('[data-action=favorite]'),
+            action = btn.data('action'),
+            url = btn.data('ajax'),
+            data = {
+                action: action
+            };
+
+        if (btn.hasClass('active')) {
+            deactivatePopup();
+            return;
+        }
+
+        activatePopup(btn, 'loader_white');
+
+        $.ajax({
+            dataType: "json",
+            type: "POST",
+            url: url,
+            data: data,
+            success: function (result) {
+                if (result.status) {
+                    tab.html(result.html);
+                    deactivateLoader();
+                } else {
+                    alert('Что-то пошло не так, попробуйте еще раз!!!');
+                }
+            },
+            error: function (result) {
+                alert('Что-то пошло не так, попробуйте еще раз!!!');
+            }
+        });
+
+    });
+
+
+
     //Вызов формы "Заказать звонок"
     $('.jsCall').on('click', function (e) {
         e.preventDefault();
@@ -212,6 +290,25 @@ $(function () {
         if (target.hasClass('popup active') || target.closest('.jsFormClose').length > 0) {
             deactivatePopup();
         }
+    });
+
+    //Смена количества
+    $('body').on('click', '.count__minus', function (e) {
+        e.preventDefault();
+        let btn = $(this),
+            count = btn.closest('.count'),
+            input = count.find('.count__input')[0];
+        input.stepDown();
+
+    });
+
+    $('body').on('click', '.count__plus', function (e) {
+        e.preventDefault();
+        let btn = $(this),
+            count = btn.closest('.count'),
+            input = count.find('.count__input')[0];
+        input.stepUp();
+
     });
 
 

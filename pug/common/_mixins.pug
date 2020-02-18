@@ -116,3 +116,38 @@ mixin item(props)
             span.item__fast.jsFast.btn3
                 +icon('one','btn3__svg')
                 span.btn3__txt Купить в 1 клик
+
+mixin citem
+    .citem
+        //- top
+        .citem__top
+            //- img
+            a(href='product.html').citem__img
+                +image('images/content/catalog/2.png','citem__img-img')
+
+        //- bottom
+        .citem__bottom
+            //- content
+            .citem__content
+                .citem__avaible
+                    .citem__avaible__round
+                    .citem__avaible__txt В наличии
+                .citem__prices
+                    span.item__price.price 7 000 РУБ.
+                    span.item__priceold.priceold 65 000 руб.
+                a(href='product.html').citem__title Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...
+            //- calc
+            .citem__calc
+                .citem__count.count.jsCartCount
+                    button(type='button').citem__count-minus.count__minus.count__btn -
+                    input(type='number' min='1' value='1' step='1' max='999').citem__count-input.count__input
+                    button(type='button').citem__count-plus.count__plus.count__btn +
+                .citem__total 7 000 РУБ.
+            //- btns
+            .citem__btns
+                button(type='button').citem__btn.jsCompare
+                    +icon('compare','citem__btn-svg citem__btn-svg_compare')
+                button(type='button').citem__btn.jsFavorite.active
+                    +icon('heart','citem__btn-svg citem__btn-svg_heart')
+                button(type='button').citem__del
+                    +icon('close','citem__del-svg')

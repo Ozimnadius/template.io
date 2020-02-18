@@ -208,6 +208,7 @@
     &__txt {
       color: $main3;
       font-size: 12px;
+      line-height: 1;
       @include sm-block{
         font-size: 10px;
       }
@@ -244,7 +245,10 @@
     align-self: center;
     margin-bottom: 10px;
     max-width: 100%;
-    height: 24px;
+    @include sm-block{
+      height: 24px;
+    }
+
   }
 
   &__fast{

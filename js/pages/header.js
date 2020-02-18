@@ -5,6 +5,7 @@ $(function () {
     let $menus = $('.menu'),
         menusObj = {};
 
+    // Применяем плагин адаптивного меню к менюшкам
     $menus.each(function (x, i) {
         let menu = $(i);
         menusObj['menu' + x] = new AdaptiveMenu(menu);

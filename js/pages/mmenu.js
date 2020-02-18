@@ -4,6 +4,7 @@ $(function () {
     // VARIABLES
 
     // EVENTS
+    // Переходм между вкладками
     $('.mitem__link_arr').on('click', function (e) {
         e.preventDefault();
         let link = $(this),
@@ -12,6 +13,7 @@ $(function () {
         wrapper.addClass('active');
     });
 
+    //Закрытие вкладки
     $('.jsWrapClose').on('click', function (e) {
         e.preventDefault();
         let btn = $(this),
@@ -20,19 +22,14 @@ $(function () {
         wrapper.removeClass('active');
     });
 
+    // Открытие меню
     $('.jsMenuOpen').on('click',function (e) {
         e.preventDefault();
         openMenu();
         setOverflow();
     });
 
-    $('.jsMenuClose').on('click',function (e) {
-        e.preventDefault();
-        closeMenu();
-        removeOverflow();
-    });
-
-    //Закрытие форм
+    //Закрытие меню
     $('body').on('click', function (e) {
         let target = $(e.target);
 
@@ -43,11 +40,13 @@ $(function () {
 
 
     // FUNCTIONS
+    // Функция отрытия меню
     function openMenu() {
         let menu = $('.mmenu');
         menu.addClass('active');
     }
 
+    // Функция закрытия меню
     function closeMenu() {
         let menu = $('.mmenu'),
             wrappers = menu.find('.mmenu__wrapper');

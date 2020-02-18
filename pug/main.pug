@@ -253,15 +253,15 @@ html(lang="ru")
             .popup__bg
             //- btns
             .popup__btns
-                button(type='button' data-tab='cart').popup__btn.jsCartForm
+                button(type='button' data-ajax='ajax.php' data-action='cart').popup__btn.jsCartForm
                     span.popup__btn-img
                         +icon('cart','popup__btn-svg popup__btn-svg_cart')
                         span.popup__btn-count 3
-                button(type='button' data-tab='favorite').popup__btn
+                button(type='button' data-ajax='ajax.php' data-action='favorite').popup__btn.jsFavoriteForm
                     span.popup__btn-img
                         +icon('heart','popup__btn-svg popup__btn-svg_heart')
                         span.popup__btn-count 2
-                button(type='button' data-tab='compare').popup__btn
+                a(href='compare.html').popup__btn
                     span.popup__btn-img
                         +icon('compare','popup__btn-svg popup__btn-svg_compare')
                         span.popup__btn-count 0
@@ -278,6 +278,7 @@ html(lang="ru")
             //- tabs
             .popup__tabs
                 .popup__tab
+
         //- mmenu
         .mmenu
             .mmenu__main

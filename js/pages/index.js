@@ -230,6 +230,7 @@ $(function () {
 
     $('input[type=tel]').mask('+7 (999) 999-99-99');
 
+    // Валидация формы в подвале
     $('.ffeed').validate({
         onfocusout: false,
         submitHandler: function (form) {
