@@ -171,11 +171,7 @@ block content
                     .icats__bottom
                         .row
                             each i in icats
-                                a(href='catalog.html').icat
-                                    span.icat__img
-                                        +image(i.src,'icat__img-img')
-                                    span.icat__bottom
-                                        span.icat__title= i.title
+                                +icat(i.title,i.src)
         //- actions
         section.index__actions
             .iactions

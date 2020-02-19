@@ -1,3 +1,116 @@
+.catalog {
+  padding: 40px 0;
+
+  &__menu{
+    margin-bottom: 20px;
+  }
+
+  &__consult{
+    border: 1px solid $icon;
+    background-color: $bg;
+    margin-bottom: 20px;
+
+    &-top{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+      border-bottom: 1px solid $icon;
+    }
+
+    &-img{
+      margin-bottom: 10px;
+    }
+
+    &-title{
+      color: $black;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    &-txt{
+      color: $text2;
+      font-size: 14px;
+    }
+
+    &-btn {
+      width: 100%;
+      color: $text2;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      padding: 18px 0;
+    }
+  }
+  
+  &__banner{
+    display: block;
+
+    &-image{
+      display: block;
+    }
+
+    &-img{
+      display: block;
+    }
+
+    &-title{
+      display: block;
+      background: $main1;
+      color: $bg;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      padding: 22px 15px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 65px;
+    @include md-block{
+      margin-bottom: 35px;
+    }
+    @include sm-block{
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    margin-bottom: 25px;
+    @include sm-block{
+      margin-bottom: 35px;
+    }
+  }
+
+  &__cat {
+    @include size(8);
+    @include size-md(6);
+    @include to(850px){
+      @include size(8);
+    };
+    @include size-sm(12);
+
+    .icat {
+
+      &__bottom{
+        background: $bg2;
+      }
+
+      &__title {
+        color: $black;
+        font-size: 18px;
+        font-weight: 500;
+        @include sm-block {
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
 .item {
   display: flex;
   flex-direction: column;
@@ -7,10 +120,10 @@
   box-sizing: border-box;
   @include tr;
 
-  &:hover{
+  &:hover {
     box-shadow: 0px 4px 12px rgba($black, 0.25);
-    @include md-block{
-        box-shadow: none;
+    @include md-block {
+      box-shadow: none;
     }
   }
 
@@ -31,10 +144,10 @@
     }
   }
 
-  &.noheight{
-    .item{
+  &.noheight {
+    .item {
 
-      &__img{
+      &__img {
         height: auto;
       }
     }
@@ -44,7 +157,7 @@
     padding: 20px;
     padding-bottom: 0;
     position: relative;
-    @include md-block{
+    @include md-block {
       padding: 10px;
       padding-bottom: 0;
     }
@@ -57,10 +170,10 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    @include md-block{
+    @include md-block {
       height: 170px;
     }
-    @include sm-block{
+    @include sm-block {
       height: 110px;
     }
 
@@ -79,12 +192,12 @@
     left: 20px;
     right: 70px;
     display: block;
-    @include md-block{
+    @include md-block {
       top: 10px;
       left: 10px;
       right: 50px;
     }
-    @include sm-block{
+    @include sm-block {
       right: 0;
     }
   }
@@ -96,11 +209,11 @@
     position: absolute;
     top: 20px;
     right: 25px;
-    @include md-block{
+    @include md-block {
       top: 10px;
       right: 10px;
     }
-    @include sm-block{
+    @include sm-block {
       top: initial;
       bottom: 0;
       right: 10px;
@@ -113,7 +226,7 @@
     fill: $icon;
     margin-right: 5px;
     display: flex;
-    @include sm-block{
+    @include sm-block {
       margin-right: 0;
       background-color: $bg;
       display: flex;
@@ -132,12 +245,12 @@
     &_compare {
       width: 17px;
       height: 15px;
-      @include sm-block{
+      @include sm-block {
         width: 27px;
         height: 22px;
         border-top-right-radius: 50%;
         padding-right: 3px;
-        svg{
+        svg {
           width: 18px;
           height: 18px;
         }
@@ -147,12 +260,12 @@
     &_favorite {
       width: 16px;
       height: 13px;
-      @include sm-block{
+      @include sm-block {
         width: 27px;
         height: 22px;
         border-top-left-radius: 50%;
         padding-left: 3px;
-        svg{
+        svg {
           width: 15px;
           height: 13px;
         }
@@ -171,7 +284,7 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    @include md-block{
+    @include md-block {
       padding: 10px;
       padding-bottom: 30px;
     }
@@ -181,7 +294,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    @include md-block{
+    @include md-block {
       margin-bottom: 3px;
     }
 
@@ -209,49 +322,49 @@
       color: $main3;
       font-size: 12px;
       line-height: 1;
-      @include sm-block{
+      @include sm-block {
         font-size: 10px;
       }
     }
   }
 
-  &__prices{
+  &__prices {
     margin-bottom: 10px;
     width: 100%;
-    @include md-block{
+    @include md-block {
       margin-bottom: 5px;
     }
   }
 
-  &__priceold{
+  &__priceold {
     white-space: nowrap;
     margin-left: 10px;
   }
 
-  &__title{
+  &__title {
     width: 100%;
     color: $black;
     margin-bottom: 20px;
-    @include md-block{
+    @include md-block {
       font-size: 14px;
     }
-    @include sm-block{
+    @include sm-block {
       font-size: 12px;
     }
   }
 
-  &__buy{
+  &__buy {
     margin-top: auto;
     align-self: center;
     margin-bottom: 10px;
     max-width: 100%;
-    @include sm-block{
+    @include sm-block {
       height: 24px;
     }
 
   }
 
-  &__fast{
+  &__fast {
     align-self: center;
   }
 
@@ -271,7 +384,7 @@
   font-weight: 500;
   padding: 0px 8px;
   margin: 0 2.5px 5px 2.5px;
-  @include md-block{
+  @include md-block {
     font-size: 11px;
     padding: 0 6px;
   }
@@ -291,5 +404,127 @@
   &_action {
     background-color: #fbdc3f;
     color: $headers;
+  }
+}
+
+.amenu {
+  border: 1px solid $icon;
+
+  &__title {
+    background-color: $main1;
+    color: $bg;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 17px 20px;
+  }
+
+}
+
+.aitem {
+
+  &__link {
+    display: block;
+    font-weight: 300;
+    padding: 18px 20px;
+    padding-right: 35px;
+    position: relative;
+    @include tr;
+
+    &:after {
+      content: '';
+      display: none;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 4px 0 4px;
+      border-color: $text transparent transparent transparent;
+      position: absolute;
+      top: 50%;
+      margin-top: -2.5px;
+      right: 20px;
+      @include tr;
+    }
+
+    &_arr {
+      &:after{
+        display: block;
+      }
+    }
+
+    &:hover{
+      color: $main1;
+    }
+
+    &.active{
+      background-color: rgba($text,.1);
+      &:after{
+        transform: rotate(-180deg);
+      }
+
+    }
+  }
+
+  border-bottom: 1px solid $icon;
+
+  &:last-child {
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.asubmenu {
+  display: none;
+  padding: 0 30px;
+  background-color: $bg2;
+
+  &__item{
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 13px 0;
+    border-bottom: 1px solid $icon;
+    @include tr;
+
+    &:last-child{
+      border-bottom: 1px solid transparent;
+    }
+
+    &:hover{
+      color: $main1;
+    }
+
+  }
+}
+
+.left {
+  @include col;
+  @include size(6);
+  @include md-block{
+    display: none;
+  }
+}
+
+.right {
+  @include col;
+  @include size(18);
+  padding-left: 20px;
+
+  @include lg-block{
+    padding-left: 0;
+  }
+  @include size-md(24);
+
+
+  &__bread {
+    margin-bottom: 5px;
+    @include md-block{
+      margin-bottom: 20px;
+    }
+    @include sm-block{
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
   }
 }

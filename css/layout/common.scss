@@ -636,3 +636,34 @@
     }
   }
 }
+
+.bread{
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__link {
+    padding: 0 15px;
+    border-right: 1px solid $text2;
+
+    &.active{
+      border-color: transparent;
+
+    }
+
+    &-svg{
+      width: 17px;
+      height: 18px;
+      fill: $main1;
+      display: flex;
+    }
+
+    &-txt {
+      color: $text2;
+      font-size: 14px;
+      line-height: 1;
+    }
+  }
+}

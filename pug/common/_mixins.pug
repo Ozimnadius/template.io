@@ -151,3 +151,10 @@ mixin citem
                     +icon('heart','citem__btn-svg citem__btn-svg_heart')
                 button(type='button').citem__del
                     +icon('close','citem__del-svg')
+
+mixin icat(title, src, cls)
+    a(href='catalog.html' class=cls).icat
+        span.icat__img
+            +image(src,'icat__img-img')
+        span.icat__bottom
+            span.icat__title= title

@@ -687,6 +687,10 @@
     .item {
       height: 100%;
     }
+
+    &:hover{
+      z-index: 10;
+    }
   }
 
 }
@@ -852,19 +856,20 @@
       content: '';
       display: block;
       position: absolute;
-      left: 50%;
-      margin-left: -70px;
-      width: 140px;
+      left: 60px;
+      right: 60px;
       bottom: -3px;
       height: 6px;
       background-color: $icon;
       @include tr;
+      @include md-block{
+        left: 40px;
+        right: 40px;
+      }
       @include sm-block{
-        width: auto;
         height: 4px;
         left: 25px;
         right: 25px;
-        margin-left: 0;
         background-color: $main1;
       }
     }

@@ -72,7 +72,7 @@ $(function () {
             irecomSliders['iprojectsSlider' + x] = new Swiper('.irecom__container-' + x, {
                 slidesPerView: 4,
                 effect: 'slide',
-                spaceBetween: 20,
+                spaceBetween: -1,
                 loop: true,
                 watchOverflow: true,
                 // Navigation arrows
@@ -89,7 +89,6 @@ $(function () {
                     // when window width is <= 768px
                     768: {
                         slidesPerView: 2,
-                        spaceBetween: -1,
                     },
                     // when window width is <= 1200px
                     1200: {

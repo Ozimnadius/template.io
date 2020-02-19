@@ -107,7 +107,6 @@ $(function () {
     });
 
 
-
     //Вызов формы "Заказать звонок"
     $('.jsCall').on('click', function (e) {
         e.preventDefault();
