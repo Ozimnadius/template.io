@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Portfolio | Каталог</title>
+    <title>Portfolio | Инструменты</title>
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- Для изменений после верстки-->
@@ -253,6 +253,160 @@
                     </div>
                   </div>
                 </div>
+                <div class="catalog__filters">
+                  <form class="filters">
+                    <div class="filters__block">
+                      <div class="filters__title">
+                        <svg class="filters__title-svg">
+                          <use xlink:href="/images/icons/sprite.svg#filter"></use>
+                        </svg>
+                        <div class="filters__title-txt">Фильтры</div>
+                        <button class="filters__close" type="button">
+                          <svg class="filters__close-svg">
+                            <use xlink:href="/images/icons/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="filters__list">
+                        <div class="filter filter_m">
+                          <button class="filter__title" type="button">сортировка</button>
+                          <div class="filter__content">
+                            <div class="filter__sorts"><a class="filter__sort active" href="/">По популярности (убывание)</a><a class="filter__sort" href="/">По популярности (возрастание)</a><a class="filter__sort" href="/">По алфавиту (убывание)</a><a class="filter__sort" href="/">По алфавиту (возрастание)</a><a class="filter__sort" href="/">По алфавиту (возрастание)</a><a class="filter__sort" href="/">По цене (возрастание)</a></div>
+                          </div>
+                        </div>
+                        <div class="filter">
+                          <button class="filter__title" type="button">Цена (руб.)</button>
+                          <div class="filter__content">
+                            <div class="filter__range">
+                              <div class="range">
+                                <div class="range__fields">
+                                  <label class="range__field">
+                                    <input class="range__input range__input_from" type="text" name="from" value="390">
+                                  </label>
+                                  <div class="range__fields-seporator"></div>
+                                  <label class="range__field">
+                                    <input class="range__input range__input_to" type="text" name="to" value="27 000">
+                                  </label>
+                                </div>
+                                <input class="range__slider" type="text" name="range" value="" data-type="double" data-min="0" data-max="27000" data-from="390" data-to="27000">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter">
+                          <button class="filter__title" type="button">Бренд</button>
+                          <div class="filter__content">
+                            <div class="filter__checks checks">
+                              <label class="check">
+                                <input class="check__input" type="checkbox" name="brend" value="Bosh"><span class="check__fake"><span class="check__check">
+                                    <svg class="check__check-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check2"></use>
+                                    </svg></span><span class="check__title">Bosh</span></span>
+                              </label>
+                              <label class="check">
+                                <input class="check__input" type="checkbox" name="brend" value="Kolner"><span class="check__fake"><span class="check__check">
+                                    <svg class="check__check-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check2"></use>
+                                    </svg></span><span class="check__title">Kolner</span></span>
+                              </label>
+                              <label class="check">
+                                <input class="check__input" type="checkbox" name="brend" value="Diesel"><span class="check__fake"><span class="check__check">
+                                    <svg class="check__check-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check2"></use>
+                                    </svg></span><span class="check__title">Diesel</span></span>
+                              </label>
+                              <label class="check">
+                                <input class="check__input" type="checkbox" name="brend" value="Зубр"><span class="check__fake"><span class="check__check">
+                                    <svg class="check__check-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check2"></use>
+                                    </svg></span><span class="check__title">Зубр</span></span>
+                              </label>
+                              <label class="check">
+                                <input class="check__input" type="checkbox" name="brend" value="Bosh "><span class="check__fake"><span class="check__check">
+                                    <svg class="check__check-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check2"></use>
+                                    </svg></span><span class="check__title">Bosh </span></span>
+                              </label>
+                              <label class="check">
+                                <input class="check__input" type="checkbox" name="brend" value="Karcher"><span class="check__fake"><span class="check__check">
+                                    <svg class="check__check-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check2"></use>
+                                    </svg></span><span class="check__title">Karcher</span></span>
+                              </label>
+                              <label class="check">
+                                <input class="check__input" type="checkbox" name="brend" value="Diesel-М"><span class="check__fake"><span class="check__check">
+                                    <svg class="check__check-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check2"></use>
+                                    </svg></span><span class="check__title">Diesel-М</span></span>
+                              </label>
+                              <label class="check">
+                                <input class="check__input" type="checkbox" name="brend" value="Зубр (Дримкас)"><span class="check__fake"><span class="check__check">
+                                    <svg class="check__check-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check2"></use>
+                                    </svg></span><span class="check__title">Зубр (Дримкас)</span></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter">
+                          <button class="filter__title" type="button">Цвет</button>
+                          <div class="filter__content">
+                            <div class="filter__colors colors">
+                              <label class="color">
+                                <input class="color__input" type="checkbox" name="color" value="#FFB800"><span class="color__fake"><span class="color__fake-color" style="background:#FFB800;"></span></span>
+                              </label>
+                              <label class="color">
+                                <input class="color__input" type="checkbox" name="color" value="#27AE60"><span class="color__fake"><span class="color__fake-color" style="background:#27AE60;"></span></span>
+                              </label>
+                              <label class="color">
+                                <input class="color__input" type="checkbox" name="color" value="#2D9CDB"><span class="color__fake"><span class="color__fake-color" style="background:#2D9CDB;"></span></span>
+                              </label>
+                              <label class="color">
+                                <input class="color__input" type="checkbox" name="color" value="#F2C94C"><span class="color__fake"><span class="color__fake-color" style="background:#F2C94C;"></span></span>
+                              </label>
+                              <label class="color">
+                                <input class="color__input" type="checkbox" name="color" value="#EB5757"><span class="color__fake"><span class="color__fake-color" style="background:#EB5757;"></span></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="filter">
+                          <button class="filter__title" type="button">Размер</button>
+                          <div class="filter__content">
+                            <div class="filter__checks checks">
+                              <label class="check">
+                                <input class="check__input" type="checkbox" name="size" value="100x100"><span class="check__fake"><span class="check__check">
+                                    <svg class="check__check-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check2"></use>
+                                    </svg></span><span class="check__title">100x100</span></span>
+                              </label>
+                              <label class="check">
+                                <input class="check__input" type="checkbox" name="size" value="100x90"><span class="check__fake"><span class="check__check">
+                                    <svg class="check__check-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check2"></use>
+                                    </svg></span><span class="check__title">100x90</span></span>
+                              </label>
+                              <label class="check">
+                                <input class="check__input" type="checkbox" name="size" value="100x40"><span class="check__fake"><span class="check__check">
+                                    <svg class="check__check-svg">
+                                      <use xlink:href="/images/icons/sprite.svg#check2"></use>
+                                    </svg></span><span class="check__title">100x40</span></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="filters__btns">
+                        <button class="btn filters__submit" type="submit">Показать 48 товаров</button>
+                        <button class="filters__reset" type="reset"><span class="filters__reset-txt">Сбросить</span>
+                          <svg class="filters__reset-svg">
+                            <use xlink:href="/images/icons/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
                 <div class="catalog__consult">
                   <div class="catalog__consult-top">
                     <div class="catalog__consult-image"><img class="catalog__consult-img" src="images/content/catalog/img.svg" alt="lorem"/>
@@ -261,26 +415,351 @@
                     <div class="catalog__consult-txt">Наши специалисты ответят на любой интересующий вопрос</div>
                   </div>
                   <button class="catalog__consult-btn jsQuestion" type="button">ЗАДАТЬ ВОПРОС</button>
-                </div><a class="catalog__banner" href="category.html"><span class="catalog__banner-image"><img class="catalog__banner-img" src="images/content/catalog/img2.jpg" alt="lorem"/></span><span class="catalog__banner-title">Строиматериалы оптом</span></a>
+                </div>
               </aside>
               <main class="catalog__right right">
                 <div class="catalog__bread bread right__bread"><a class="bread__link" href="/">
                     <svg class="bread__link-svg">
                       <use xlink:href="/images/icons/sprite.svg#home"></use>
-                    </svg></a><span class="bread__link active"><span class="bread__link-txt">Каталог</span></span></div>
-                <h1 class="catalog__title right__title">Каталог</h1>
+                    </svg></a><a class="bread__link" href="catalog.html"><span class="bread__link-txt">Каталог</span></a><span class="bread__link active"><span class="bread__link-txt">Инструменты</span></span></div>
+                <h1 class="catalog__title right__title">Инструменты</h1>
+                <div class="catalog__cats"><a class="ccat" href="category.html"><span class="ccat__left"><span class="ccat__img"><span class="pt pt_78x60"></span><span class="ccat__img-wrap"><img class="ccat__img-img" src="images/content/catalog/categories/1.jpg" alt="lorem"/></span></span></span><span class="ccat__right"><span class="ccat__title">Шуруповерты</span><span class="ccat__sub">товаров: 20</span></span></a><a class="ccat" href="category.html"><span class="ccat__left"><span class="ccat__img"><span class="pt pt_78x60"></span><span class="ccat__img-wrap"><img class="ccat__img-img" src="images/content/catalog/categories/2.jpg" alt="lorem"/></span></span></span><span class="ccat__right"><span class="ccat__title">Сантехника</span><span class="ccat__sub">Товаров: 25</span></span></a><a class="ccat" href="category.html"><span class="ccat__left"><span class="ccat__img"><span class="pt pt_78x60"></span><span class="ccat__img-wrap"><img class="ccat__img-img" src="images/content/catalog/categories/3.jpg" alt="lorem"/></span></span></span><span class="ccat__right"><span class="ccat__title">Сантехника</span><span class="ccat__sub">Товаров: 25</span></span></a><a class="ccat" href="category.html"><span class="ccat__left"><span class="ccat__img"><span class="pt pt_78x60"></span><span class="ccat__img-wrap"><img class="ccat__img-img" src="images/content/catalog/categories/4.jpg" alt="lorem"/></span></span></span><span class="ccat__right"><span class="ccat__title">Сантехника</span><span class="ccat__sub">Товаров: 25</span></span></a><a class="ccat" href="category.html"><span class="ccat__left"><span class="ccat__img"><span class="pt pt_78x60"></span><span class="ccat__img-wrap"><img class="ccat__img-img" src="images/content/catalog/categories/5.jpg" alt="lorem"/></span></span></span><span class="ccat__right"><span class="ccat__title">Сантехника</span><span class="ccat__sub">Товаров: 25</span></span></a><a class="ccat" href="category.html"><span class="ccat__left"><span class="ccat__img"><span class="pt pt_78x60"></span><span class="ccat__img-wrap"><img class="ccat__img-img" src="images/content/catalog/categories/6.jpg" alt="lorem"/></span></span></span><span class="ccat__right"><span class="ccat__title">Сантехника</span><span class="ccat__sub">Товаров: 25</span></span></a>
+                </div>
                 <div class="catalog__top">
                   <div class="content">
                     <p>Предоставляем спектр услуг по установке, монтажу, настройке электроники и сантехники. Занимаемся скупкой и экологичной утилизацией старой техники. А также предлагаем воспользоваться системой кредитования для того, чтобы вы смогли приобрести необходимый товар или услугу прямо сейчас. Выполняем работы в день заказа, делаем все быстро и качественно!</p>
                   </div>
                 </div>
-                <div class="catalog__list">
-                  <div class="row"><a class="catalog__cat icat" href="category.html"><span class="icat__img"><img class="icat__img-img" src="images/content/index/categories/1.jpg" alt="lorem"/></span><span class="icat__bottom"><span class="icat__title">Бытовая техника</span></span></a><a class="catalog__cat icat" href="category.html"><span class="icat__img"><img class="icat__img-img" src="images/content/index/categories/2.jpg" alt="lorem"/></span><span class="icat__bottom"><span class="icat__title">Инструменты</span></span></a><a class="catalog__cat icat" href="category.html"><span class="icat__img"><img class="icat__img-img" src="images/content/index/categories/3.jpg" alt="lorem"/></span><span class="icat__bottom"><span class="icat__title">Промышленная техника</span></span></a><a class="catalog__cat icat" href="category.html"><span class="icat__img"><img class="icat__img-img" src="images/content/index/categories/4.jpg" alt="lorem"/></span><span class="icat__bottom"><span class="icat__title">Инструменты</span></span></a><a class="catalog__cat icat" href="category.html"><span class="icat__img"><img class="icat__img-img" src="images/content/index/categories/5.jpg" alt="lorem"/></span><span class="icat__bottom"><span class="icat__title">Бытовая техника</span></span></a><a class="catalog__cat icat" href="category.html"><span class="icat__img"><img class="icat__img-img" src="images/content/index/categories/6.jpg" alt="lorem"/></span><span class="icat__bottom"><span class="icat__title">Теплоизоляция</span></span></a><a class="catalog__cat icat" href="category.html"><span class="icat__img"><img class="icat__img-img" src="images/content/index/categories/7.jpg" alt="lorem"/></span><span class="icat__bottom"><span class="icat__title">Сантехника</span></span></a><a class="catalog__cat icat" href="category.html"><span class="icat__img"><img class="icat__img-img" src="images/content/index/categories/8.jpg" alt="lorem"/></span><span class="icat__bottom"><span class="icat__title">Электрика и освещение</span></span></a>
+                <div class="catalog__panel">
+                  <div class="catalog__filters-btn">
+                    <button class="filters-btn" type="button">
+                      <svg class="filters-btn__svg">
+                        <use xlink:href="/images/icons/sprite.svg#filter"></use>
+                      </svg><span class="filters-btn__txt">Фильтр</span>
+                    </button>
+                  </div>
+                  <div class="catalog__sort">
+                    <div class="csort">
+                      <div class="csort__title">По популярности (возрастание)</div>
+                      <div class="csort__drop"><a class="active csort__link" href="/">По популярности (убывание)</a><a class="csort__link" href="/">По популярности (возрастание)</a><a class="csort__link" href="/">По алфавиту (убывание)</a><a class="csort__link" href="/">По алфавиту (возрастание)</a><a class="csort__link" href="/">По цене (убывание)</a><a class="csort__link" href="/">По цене (возрастание)</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog__controls"><a class="catalog__control active" href="/?display=blocks">
+                      <svg class="catalog__control-svg">
+                        <use xlink:href="/images/icons/sprite.svg#cat-block"></use>
+                      </svg></a><a class="catalog__control" href="/?display=blocks">
+                      <svg class="catalog__control-svg">
+                        <use xlink:href="/images/icons/sprite.svg#cat-list"></use>
+                      </svg></a></div>
+                </div>
+                <!--Дополнительный класс list-->
+                <div class="catalog__list lis">
+                  <div class="catalog__row">
+                    <div class="catalog__item">
+                      <!-- Дополнительные классы - nopadding, noheight, disabled--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><span class="item__propportion pt pt_221x177"></span><span class="item__img-wrap"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/></span><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                                </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg></span></span></span></span><span class="item__bottom"><span class="item__content"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span></span><span class="item__btns"><span class="item__buy jsAdd add">
+                              <svg class="add__svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
+                              <svg class="add__mobile">
+                                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+                              </svg></span><span class="item__fast jsFast btn3">
+                              <svg class="btn3__svg">
+                                <use xlink:href="/images/icons/sprite.svg#one"></use>
+                              </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></span><span class="item__controls item__controls_list"><span class="item__control item__control_compare jsCompare">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                            </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                            </svg></span></span></a>
+                    </div>
+                    <div class="catalog__item">
+                      <!-- Дополнительные классы - nopadding, noheight, disabled--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><span class="item__propportion pt pt_221x177"></span><span class="item__img-wrap"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/></span><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                                </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg></span></span></span></span><span class="item__bottom"><span class="item__content"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span></span><span class="item__btns"><span class="item__buy jsAdd add">
+                              <svg class="add__svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
+                              <svg class="add__mobile">
+                                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+                              </svg></span><span class="item__fast jsFast btn3">
+                              <svg class="btn3__svg">
+                                <use xlink:href="/images/icons/sprite.svg#one"></use>
+                              </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></span><span class="item__controls item__controls_list"><span class="item__control item__control_compare jsCompare">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                            </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                            </svg></span></span></a>
+                    </div>
+                    <div class="catalog__item">
+                      <!-- Дополнительные классы - nopadding, noheight, disabled--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><span class="item__propportion pt pt_221x177"></span><span class="item__img-wrap"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/></span><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                                </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg></span></span></span></span><span class="item__bottom"><span class="item__content"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span></span><span class="item__btns"><span class="item__buy jsAdd add">
+                              <svg class="add__svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
+                              <svg class="add__mobile">
+                                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+                              </svg></span><span class="item__fast jsFast btn3">
+                              <svg class="btn3__svg">
+                                <use xlink:href="/images/icons/sprite.svg#one"></use>
+                              </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></span><span class="item__controls item__controls_list"><span class="item__control item__control_compare jsCompare">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                            </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                            </svg></span></span></a>
+                    </div>
+                    <div class="catalog__item">
+                      <!-- Дополнительные классы - nopadding, noheight, disabled--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><span class="item__propportion pt pt_221x177"></span><span class="item__img-wrap"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/></span><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                                </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg></span></span></span></span><span class="item__bottom"><span class="item__content"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span></span><span class="item__btns"><span class="item__buy jsAdd add">
+                              <svg class="add__svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
+                              <svg class="add__mobile">
+                                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+                              </svg></span><span class="item__fast jsFast btn3">
+                              <svg class="btn3__svg">
+                                <use xlink:href="/images/icons/sprite.svg#one"></use>
+                              </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></span><span class="item__controls item__controls_list"><span class="item__control item__control_compare jsCompare">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                            </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                            </svg></span></span></a>
+                    </div>
+                    <div class="catalog__item">
+                      <!-- Дополнительные классы - nopadding, noheight, disabled--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><span class="item__propportion pt pt_221x177"></span><span class="item__img-wrap"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/></span><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                                </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg></span></span></span></span><span class="item__bottom"><span class="item__content"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span></span><span class="item__btns"><span class="item__buy jsAdd add">
+                              <svg class="add__svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
+                              <svg class="add__mobile">
+                                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+                              </svg></span><span class="item__fast jsFast btn3">
+                              <svg class="btn3__svg">
+                                <use xlink:href="/images/icons/sprite.svg#one"></use>
+                              </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></span><span class="item__controls item__controls_list"><span class="item__control item__control_compare jsCompare">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                            </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                            </svg></span></span></a>
+                    </div>
+                    <div class="catalog__item">
+                      <!-- Дополнительные классы - nopadding, noheight, disabled--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><span class="item__propportion pt pt_221x177"></span><span class="item__img-wrap"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/></span><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                                </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg></span></span></span></span><span class="item__bottom"><span class="item__content"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span></span><span class="item__btns"><span class="item__buy jsAdd add">
+                              <svg class="add__svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
+                              <svg class="add__mobile">
+                                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+                              </svg></span><span class="item__fast jsFast btn3">
+                              <svg class="btn3__svg">
+                                <use xlink:href="/images/icons/sprite.svg#one"></use>
+                              </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></span><span class="item__controls item__controls_list"><span class="item__control item__control_compare jsCompare">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                            </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                            </svg></span></span></a>
+                    </div>
+                    <div class="catalog__item">
+                      <!-- Дополнительные классы - nopadding, noheight, disabled--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><span class="item__propportion pt pt_221x177"></span><span class="item__img-wrap"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/></span><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                                </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg></span></span></span></span><span class="item__bottom"><span class="item__content"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span></span><span class="item__btns"><span class="item__buy jsAdd add">
+                              <svg class="add__svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
+                              <svg class="add__mobile">
+                                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+                              </svg></span><span class="item__fast jsFast btn3">
+                              <svg class="btn3__svg">
+                                <use xlink:href="/images/icons/sprite.svg#one"></use>
+                              </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></span><span class="item__controls item__controls_list"><span class="item__control item__control_compare jsCompare">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                            </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                            </svg></span></span></a>
+                    </div>
+                    <div class="catalog__item">
+                      <!-- Дополнительные классы - nopadding, noheight, disabled--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><span class="item__propportion pt pt_221x177"></span><span class="item__img-wrap"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/></span><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                                </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg></span></span></span></span><span class="item__bottom"><span class="item__content"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span></span><span class="item__btns"><span class="item__buy jsAdd add">
+                              <svg class="add__svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
+                              <svg class="add__mobile">
+                                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+                              </svg></span><span class="item__fast jsFast btn3">
+                              <svg class="btn3__svg">
+                                <use xlink:href="/images/icons/sprite.svg#one"></use>
+                              </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></span><span class="item__controls item__controls_list"><span class="item__control item__control_compare jsCompare">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                            </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                            </svg></span></span></a>
+                    </div>
+                    <div class="catalog__item">
+                      <!-- Дополнительные классы - nopadding, noheight, disabled--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><span class="item__propportion pt pt_221x177"></span><span class="item__img-wrap"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/></span><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                                </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg></span></span></span></span><span class="item__bottom"><span class="item__content"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span></span><span class="item__btns"><span class="item__buy jsAdd add">
+                              <svg class="add__svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
+                              <svg class="add__mobile">
+                                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+                              </svg></span><span class="item__fast jsFast btn3">
+                              <svg class="btn3__svg">
+                                <use xlink:href="/images/icons/sprite.svg#one"></use>
+                              </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></span><span class="item__controls item__controls_list"><span class="item__control item__control_compare jsCompare">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                            </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                            </svg></span></span></a>
+                    </div>
+                    <div class="catalog__item">
+                      <!-- Дополнительные классы - nopadding, noheight, disabled--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><span class="item__propportion pt pt_221x177"></span><span class="item__img-wrap"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/></span><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                                </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg></span></span></span></span><span class="item__bottom"><span class="item__content"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span></span><span class="item__btns"><span class="item__buy jsAdd add">
+                              <svg class="add__svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
+                              <svg class="add__mobile">
+                                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+                              </svg></span><span class="item__fast jsFast btn3">
+                              <svg class="btn3__svg">
+                                <use xlink:href="/images/icons/sprite.svg#one"></use>
+                              </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></span><span class="item__controls item__controls_list"><span class="item__control item__control_compare jsCompare">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                            </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                            </svg></span></span></a>
+                    </div>
+                    <div class="catalog__item">
+                      <!-- Дополнительные классы - nopadding, noheight, disabled--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><span class="item__propportion pt pt_221x177"></span><span class="item__img-wrap"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/></span><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                                </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg></span></span></span></span><span class="item__bottom"><span class="item__content"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span></span><span class="item__btns"><span class="item__buy jsAdd add">
+                              <svg class="add__svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
+                              <svg class="add__mobile">
+                                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+                              </svg></span><span class="item__fast jsFast btn3">
+                              <svg class="btn3__svg">
+                                <use xlink:href="/images/icons/sprite.svg#one"></use>
+                              </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></span><span class="item__controls item__controls_list"><span class="item__control item__control_compare jsCompare">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                            </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                            </svg></span></span></a>
+                    </div>
+                    <div class="catalog__item">
+                      <!-- Дополнительные классы - nopadding, noheight, disabled--><a class="item" href="product.html"><span class="item__top"><span class="item__img"><span class="item__propportion pt pt_221x177"></span><span class="item__img-wrap"><img class="item__img-img" src="images/content/catalog/1.jpg" alt="lorem"/></span><span class="item__sticks"><span class="sticks"><span class="stick stick_hit">Хит</span><span class="stick stick_recom">Советуем</span><span class="stick stick_new">Новинка</span><span class="stick stick_action">Акция</span></span></span><span class="item__controls"><span class="item__control item__control_compare jsCompare">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                                </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                                <svg class="item__control-svg">
+                                  <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                                </svg></span></span></span></span><span class="item__bottom"><span class="item__content"><span class="item__avaible"><span class="item__avaible__round"></span><span class="item__avaible__txt">В наличии</span></span><span class="item__prices"><span class="item__price price">7 000 РУБ.</span><span class="item__priceold priceold">65 000 руб.</span></span><span class="item__title">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671...</span></span><span class="item__btns"><span class="item__buy jsAdd add">
+                              <svg class="add__svg">
+                                <use xlink:href="/images/icons/sprite.svg#check"></use>
+                              </svg><span class="add__txt">ДОБАВИТЬ В КОРЗИНУ</span><span class="add__txt2">ТОВАР В КОРЗИНЕ</span>
+                              <svg class="add__mobile">
+                                <use xlink:href="/images/icons/sprite.svg#cart"></use>
+                              </svg></span><span class="item__fast jsFast btn3">
+                              <svg class="btn3__svg">
+                                <use xlink:href="/images/icons/sprite.svg#one"></use>
+                              </svg><span class="btn3__txt">Купить в 1 клик</span></span></span></span><span class="item__controls item__controls_list"><span class="item__control item__control_compare jsCompare">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#compare"></use>
+                            </svg></span><span class="item__control item__control_favorite jsFavorite active">
+                            <svg class="item__control-svg">
+                              <use xlink:href="/images/icons/sprite.svg#heart"></use>
+                            </svg></span></span></a>
+                    </div>
+                  </div>
+                  <button class="catalog__more" type="button">Показать еще</button>
+                  <div class="catalog__pag">
+                    <div class="pagination"><a class="pagination__item pagination__item_left" href="/">
+                        <svg class="pagination__item-svg">
+                          <use xlink:href="/images/icons/sprite.svg#arr-l"></use>
+                        </svg></a><a class="pagination__item active" href="/"><span class="pagination__item-txt">1</span></a><a class="pagination__item" href="/"><span class="pagination__item-txt">2</span></a><a class="pagination__item" href="/"><span class="pagination__item-txt">3</span></a><a class="pagination__item" href="/"><span class="pagination__item-txt">...</span></a><a class="pagination__item" href="/"><span class="pagination__item-txt">48</span></a><a class="pagination__item pagination__item_right" href="/">
+                        <svg class="pagination__item-svg">
+                          <use xlink:href="/images/icons/sprite.svg#arr-r"></use>
+                        </svg></a></div>
                   </div>
                 </div>
                 <div class="catalog__bottom">
                   <div class="content">
                     <p>Предоставляем спектр услуг по установке, монтажу, настройке электроники и сантехники. Занимаемся скупкой и экологичной утилизацией старой техники. А также предлагаем воспользоваться системой кредитования для того, чтобы вы смогли приобрести необходимый товар или услугу прямо сейчас. Выполняем работы в день заказа, делаем все быстро и качественно!</p>
+                    <p>Предоставляем спектр услуг по установке, монтажу, настройке электроники и сантехники. Занимаемся скупкой и экологичной утилизацией старой техники. А также предлагаем воспользоваться системой кредитования для того, чтобы вы смогли приобрести необходимый товар или услугу прямо сейчас. Выполняем работы в день заказа, делаем все быстро и качественно! Предоставляем спектр услуг по установке, монтажу, настройке электроники и сантехники. Занимаемся скупкой и экологичной утилизацией старой техники. А также предлагаем воспользоваться системой кредитования для того, чтобы вы смогли приобрести необходимый товар или услугу прямо сейчас. Выполняем работы в день заказа, делаем все быстро и качественно!</p>
                   </div>
                 </div>
               </main>

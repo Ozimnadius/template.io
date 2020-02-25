@@ -11,18 +11,8 @@ block content
                 //- left
                 aside.catalog__left.left
                     //- menu
-                    .catalog__menu.amenu
-                        //- title
-                        .amenu__title КАТАЛОГ
-
-                        //- list
-                        .amenu__list
-                            each i in asideMenu
-                                .aitem.amenu__item
-                                    a(href='category.html').aitem__link.aitem__link_arr= i.title
-                                    .asubmenu
-                                        each j in asideMenu2
-                                            a(href='category.html').asubmenu__item= j
+                    .catalog__menu
+                        +amenu(asideMenu,asideMenu2)
 
                     //- consult
                     .catalog__consult

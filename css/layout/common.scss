@@ -182,6 +182,13 @@
     }
   }
 
+  &__mobile {
+    display: none;
+    width: 12px;
+    height: 12px;
+    fill: $main1;
+  }
+
   &_in {
     background-color: $main1;
 
@@ -196,6 +203,10 @@
 
       &__txt2 {
         display: flex;
+      }
+
+      &__mobile {
+        fill: $bg;
       }
     }
   }
@@ -293,6 +304,9 @@
   text-transform: uppercase;
   @include md-block {
     font-size: 14px;
+  }
+  @include sm-block{
+    font-size: 12px;
   }
 
   &_green {
@@ -613,7 +627,7 @@
   }
 
   &__btn{
-    opacity: .5;
+    opacity: 0;
     position: absolute;
     left: calc(100% + 20px);
     bottom: 100%;
@@ -624,6 +638,10 @@
       right: 0;
       left: initial;
     };
+
+    &.active{
+      opacity: .5;
+    }
 
     &:hover{
       opacity: 1;
@@ -665,5 +683,53 @@
       font-size: 14px;
       line-height: 1;
     }
+  }
+}
+
+.pt{
+  display: block;
+  width: 100%;
+
+  &_221x177 {
+    padding-top: calc((177 / 221) * 100%);
+  }
+  &_78x60 {
+    padding-top: calc((60 / 78) * 100%);
+  }
+
+}
+
+.left {
+  @include col;
+  @include size(6);
+  @include md-block {
+    display: none;
+  }
+}
+
+.right {
+  @include col;
+  @include size(18);
+  padding-left: 20px;
+
+  @include lg-block {
+    padding-left: 0;
+  }
+  @include size-md(24);
+  @include size-sm(24);
+
+
+  &__bread {
+    margin-bottom: 5px;
+    @include md-block {
+      margin-bottom: 20px;
+    }
+    @include sm-block {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
   }
 }

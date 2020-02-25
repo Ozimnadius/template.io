@@ -207,7 +207,7 @@ html(lang="ru")
 
 
         script(src='js/vendor.min.js')
-        script(src='js/main.min.js')
+        script(src='js/main.min.js' async=true)
         // Для изменений после верстки
         script(src='js/custom.js')
         //- scrollTop
@@ -315,7 +315,7 @@ html(lang="ru")
                     .mmenu__list
                         each i in menu
                             .mitem
-                                a(href=i.href class=i.arrow?'mitem__link_arr':'').mitem__link= i.title
+                                a(href=i.href class=i.arrow ? 'mitem__link_arr' : '').mitem__link= i.title
                                 if i.arrow
                                     .mmenu__wrapper
                                         .mmenu__top
@@ -332,6 +332,8 @@ html(lang="ru")
 
                                         .mmenu__bottom
                                             .mmenu__list
+                                                .mitem
+                                                    a(href='category.html').mitem__link.mitem__link_b Перейти в раздел
                                                 if i.submenu
                                                     each j in i.submenu
                                                         .mitem
@@ -352,7 +354,9 @@ html(lang="ru")
                                                                 .mmenu__bottom
                                                                     .mmenu__list
                                                                         .mitem
-                                                                            a(href='').mitem__link Подкатегория
+                                                                            a(href='category.html').mitem__link.mitem__link_b Перейти в раздел
+                                                                        .mitem
+                                                                            a(href='category.html').mitem__link Подкатегория
                                                 if i.submenu2
                                                     each j in [1,2,3,4,5,6,7,8]
                                                         .mitem
@@ -372,6 +376,8 @@ html(lang="ru")
 
                                                                 .mmenu__bottom
                                                                     .mmenu__list
+                                                                        .mitem
+                                                                            a(href='category.html').mitem__link.mitem__link_b Перейти в раздел
                                                                         .mitem
                                                                             a(href='').mitem__link Подкатегория
                         .mitem
@@ -440,6 +446,19 @@ html(lang="ru")
 
 
 
+        //- search
+        form(action='ajax.php' method='post').hsearch
+            input(type='hidden' name='action' value='search')
+            //- top
+            .hsearch__top
+                .container
+                    .hsearch__field
+                        input(type='search' name='search' placeholder='Поиск' autocomplete=false).hsearch__input
+                        button(type='submit').hsearch__submit.btn Найти
+                        button(type='button').hsearch__close.jsSearchClose
+                            +icon('close','hsearch__close-svg')
+            .hsearch__bottom
+                .container.hsearch__html
         //- templates
         template#tmpl
             .loader

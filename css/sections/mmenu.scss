@@ -210,10 +210,10 @@
 }
 
 .mitem {
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid $border;
 
   &:last-child {
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid $border;
   }
 
   &__link {
@@ -222,6 +222,10 @@
     color: $headers;
     position: relative;
     padding: 20px;
+
+    &_b{
+      font-weight: 600;
+    }
 
     &:after {
       content: '';

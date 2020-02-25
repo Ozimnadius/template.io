@@ -21,20 +21,20 @@ mixin menu(cls,nofollow)
     nav(class=cls).menu
         .menu__list
             each i in menu
-                div(class=i.catalogMenu ? 'menu__item_catalog jsHoverItem':'').menu__item
-                    a(href=i.href class=i.arrow ? 'menu__link_sub jsHoverLink':'' rel=nofollow?'nofollow':'').menu__link= i.title
+                div(class=i.catalogMenu ? 'menu__item_catalog jsHoverItem' : '').menu__item
+                    a(href=i.href class=i.arrow ? 'menu__link_sub jsHoverLink' : '' rel=nofollow ? 'nofollow' : '').menu__link= i.title
                     if i.submenu
                         .submenu
                             each cat in i.submenu
                                 .submenu__cat
-                                    a(href='category.html' rel=nofollow?'nofollow':'').submenu__title
+                                    a(href='category.html' rel=nofollow ? 'nofollow' : '').submenu__title
                                         svg(viewBox='0 0 16 14', xmlns='http://www.w3.org/2000/svg' class='submenu__title-svg')
                                             path(d='M14.5938 0.949219H1.40625C0.631813 0.949219 0 1.58034 0 2.35547V11.7305C0 12.503 0.629 13.1367 1.40625 13.1367H14.5938C15.3663 13.1367 16 12.5077 16 11.7305V2.35547C16 1.58297 15.371 0.949219 14.5938 0.949219ZM14.3996 1.88672L8.02981 8.2565L1.60497 1.88672H14.3996ZM0.9375 11.5363V2.54513L5.45247 7.02138L0.9375 11.5363ZM1.60041 12.1992L6.11822 7.68141L7.70125 9.25084C7.8845 9.43253 8.18022 9.43194 8.36272 9.24941L9.90625 7.70588L14.3996 12.1992H1.60041ZM15.0625 11.5363L10.5692 7.04297L15.0625 2.54959V11.5363Z')
                                         span.submenu__title-title= cat
                                     .submenu__list
                                         each item in ['Беговые дорожки','Велотренажеры','Универсльные тренажеры','Умная спортивная одежда']
-                                            a(href='catalog.html' rel=nofollow?'nofollow':'').submenu__item= item
-                                    a(href='category.html').submenu__more
+                                            a(href='category.html' rel=nofollow ? 'nofollow' : '').submenu__item= item
+                                    a(href='catalog.html').submenu__more
                                         span.submenu__more-round
                                         span.submenu__more-round
                                         span.submenu__more-round
@@ -42,10 +42,10 @@ mixin menu(cls,nofollow)
                         .submenu2
                             each item in [1,2,3,4,5,6,7,8]
                                 div(class='jsHoverItem').submenu2__item
-                                    a(href='services.html' class='jsHoverLink' rel=nofollow?'nofollow':'').submenu2__link.submenu2__link_arr Мобильные устройства
+                                    a(href='services.html' class='jsHoverLink' rel=nofollow ? 'nofollow' : '').submenu2__link.submenu2__link_arr Мобильные устройства
                                     .submenu2.submenu2_right
                                         each subitem in [1,2,3,4]
-                                            a(href='service.html' rel=nofollow?'nofollow':'').submenu2__link Мобильные устройства
+                                            a(href='service.html' rel=nofollow ? 'nofollow' : '').submenu2__link Мобильные устройства
         .menu__more.mmore
             button(type='button').mmore__btn
                 span.mmore__btn-round
@@ -79,11 +79,13 @@ mixin sticks()
         span.stick.stick_action Акция
 
 mixin item(props)
-    // Дополнительные классы - nopadding, noheight
+    // Дополнительные классы - nopadding, noheight, disabled
     a(href='product.html').item
         span.item__top
             span.item__img
-                +image(props.src,'item__img-img')
+                span.item__propportion.pt.pt_221x177
+                span.item__img-wrap
+                    +image(props.src,'item__img-img')
                 span.item__sticks
                     if props.sticks
                         +sticks()
@@ -95,27 +97,35 @@ mixin item(props)
 
 
         span.item__bottom
-            if props.enabled
-                span.item__avaible
-                    span.item__avaible__round
-                    span.item__avaible__txt В наличии
+            span.item__content
+                if props.enabled
+                    span.item__avaible
+                        span.item__avaible__round
+                        span.item__avaible__txt В наличии
 
-            span.item__prices
-                span.item__price.price= props.price
-                span.item__priceold.priceold= props.priceOld
+                span.item__prices
+                    span.item__price.price= props.price
+                    span.item__priceold.priceold= props.priceOld
 
-            //- Максимальная длина 90 символов, вместе с точками
-            span.item__title= props.title
+                //- Максимальная длина 90 символов, вместе с точками
+                span.item__title= props.title
 
-            span(class=props.inbasket ? 'add_in' : '').item__buy.jsAdd.add
-                +icon('check','add__svg')
-                span.add__txt ДОБАВИТЬ В КОРЗИНУ
-                span.add__txt2 ТОВАР В КОРЗИНЕ
+            span.item__btns
+                span(class=props.inbasket ? 'add_in' : '').item__buy.jsAdd.add
+                    +icon('check','add__svg')
+                    span.add__txt ДОБАВИТЬ В КОРЗИНУ
+                    span.add__txt2 ТОВАР В КОРЗИНЕ
+                    +icon('cart','add__mobile')
 
+                span.item__fast.jsFast.btn3
+                    +icon('one','btn3__svg')
+                    span.btn3__txt Купить в 1 клик
 
-            span.item__fast.jsFast.btn3
-                +icon('one','btn3__svg')
-                span.btn3__txt Купить в 1 клик
+        span.item__controls.item__controls_list
+            span.item__control.item__control_compare.jsCompare
+                +icon('compare','item__control-svg')
+            span.item__control.item__control_favorite.jsFavorite.active
+                +icon('heart','item__control-svg')
 
 mixin citem
     .citem
@@ -153,8 +163,39 @@ mixin citem
                     +icon('close','citem__del-svg')
 
 mixin icat(title, src, cls)
-    a(href='catalog.html' class=cls).icat
+    a(href='category.html' class=cls).icat
         span.icat__img
             +image(src,'icat__img-img')
         span.icat__bottom
             span.icat__title= title
+
+mixin amenu (menu,submenu)
+    .amenu
+        //- title
+        .amenu__title КАТАЛОГ
+
+        //- list
+        .amenu__list
+            each i in menu
+                .aitem.amenu__item
+                    a(href='category.html').aitem__link.aitem__link_arr= i.title
+                    .asubmenu
+                        each j in submenu
+                            a(href='category.html').asubmenu__item= j
+
+mixin pagination()
+    .pagination
+        a(href='/').pagination__item.pagination__item_left
+            +icon('arr-l','pagination__item-svg')
+        a(href='/').pagination__item.active
+            span.pagination__item-txt 1
+        a(href='/').pagination__item
+            span.pagination__item-txt 2
+        a(href='/').pagination__item
+            span.pagination__item-txt 3
+        a(href='/').pagination__item
+            span.pagination__item-txt ...
+        a(href='/').pagination__item
+            span.pagination__item-txt 48
+        a(href='/').pagination__item.pagination__item_right
+            +icon('arr-r','pagination__item-svg')

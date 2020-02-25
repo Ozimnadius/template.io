@@ -26,7 +26,6 @@ $(function () {
     $('.jsMenuOpen').on('click',function (e) {
         e.preventDefault();
         openMenu();
-        setOverflow();
     });
 
     //Закрытие меню
@@ -44,6 +43,7 @@ $(function () {
     function openMenu() {
         let menu = $('.mmenu');
         menu.addClass('active');
+        setOverflow();
     }
 
     // Функция закрытия меню
@@ -52,7 +52,7 @@ $(function () {
             wrappers = menu.find('.mmenu__wrapper');
         menu.removeClass('active');
         wrappers.removeClass('active');
-
+        removeOverflow();
     }
 
 

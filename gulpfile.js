@@ -31,6 +31,8 @@ const vendorJs = [
     'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
     'node_modules/swiper/dist/js/swiper.js',
     'node_modules/jquery-validation/dist/jquery.validate.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/jquery-throttle-debounce/jquery.ba-throttle-debounce.js',
 ];
 
 
@@ -38,6 +40,7 @@ const vendorCss = [
     'node_modules/font-awesome/css/font-awesome.css',
     'node_modules/normalize.css/normalize.css',
     'node_modules/swiper/dist/css/swiper.css',
+    'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
 ];
 
 

@@ -14,8 +14,8 @@
       }
 
       &__bottom{
-        border-top: 1px solid $icon;
-        border-bottom: 1px solid $icon;
+        border-top: 1px solid $border;
+        border-bottom: 1px solid $border;
       }
     }
   }
@@ -835,5 +835,103 @@
       }
     }
   }
+}
+
+.hsearch{
+  position: fixed;
+  z-index: 1001;
+  top: -2000px;
+  left: 0;
+  right: 0;
+  background-color: $bg;
+  @include tr;
+
+  &.active{
+    top: 0;
+  }
+
+  &__top{
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba($black, 0.15);
+  }
+
+  &__field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: -10px;
+  }
+
+  &__input {
+    flex-grow: 1;
+    color: $black;
+    font-size: 28px;
+    font-weight: 400;
+    margin-right: 20px;
+  }
+
+  &__submit {
+    margin-right: 15px;
+  }
+
+  &__close {
+    padding: 10px;
+    fill: $headers;
+    @include tr;
+
+    &:hover{
+      fill: $main1;
+    }
+
+    &-svg {
+      width: 14px;
+      height: 14px;
+
+
+    }
+  }
+
+  &__bottom {
+
+  }
+
+  &__table{
+    width: 100%;
+    margin: 45px 0;
+  }
+
+  &__left{
+    vertical-align: top;
+    padding-right: 15px;
+  }
+
+  &__title{
+    color: $icon;
+    font-size: 20px;
+    padding: 15px 0;
+  }
+
+  &__right{
+    width: 100%;
+  }
+
+  &__item{
+    font-size: 20px;
+    display: block;
+    padding: 15px 10px;
+    border-radius: 4px;
+    @include tr;
+
+    b{
+      color: $black;
+      font-weight: 700;
+    }
+
+    &:hover{
+      background-color: rgba($main1,.2);
+    }
+
+  }
+
 }
 
