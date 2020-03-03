@@ -109,7 +109,7 @@ $(function () {
 
     const iactions = document.querySelector('.iactions__slider');
     if (iactions) {
-        let iprojectsSlider = new Swiper('.iactions__container', {
+        let iactionsSlider = new Swiper('.iactions__container', {
             slidesPerView: 4,
             effect: 'slide',
             spaceBetween: 20,
@@ -143,7 +143,7 @@ $(function () {
             },
             on: {
                 init: function () {
-                    initParams(this, iprojects);
+                    initParams(this, iactions);
                 },
             }
         });

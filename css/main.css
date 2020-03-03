@@ -3945,6 +3945,12 @@ input, textarea {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .iactions_basket {
+    padding: 50px 0;
+  }
+}
+
 .iactions__top {
   margin-bottom: 40px;
 }
@@ -8264,6 +8270,24 @@ input, textarea {
   }
 }
 
+.citem_favorite .citem__btn_favorite {
+  display: none;
+}
+
+.citem_favorite .citem__btn_cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.citem_favorite .citem__count {
+  display: none;
+}
+
+.citem_favorite .citem__total {
+  display: none;
+}
+
 .citem__top {
   padding: 0 20px;
   padding-left: 0;
@@ -8533,6 +8557,10 @@ input, textarea {
     width: 15px;
     height: 13px;
   }
+}
+
+.citem__btn_cart {
+  display: none;
 }
 
 .citem__btn.active {
@@ -8874,11 +8902,16 @@ input, textarea {
 .btable__table {
   border-collapse: collapse;
   width: 100%;
+  background-color: #f8f8f8;
 }
 
 .btable__w-1 {
   width: 215px;
   padding-left: 20px;
+}
+
+.btable__w-1.btable__th {
+  width: auto;
 }
 
 @media screen and (max-width: 991.9px) {
@@ -10077,6 +10110,18 @@ input, textarea {
 
 .brecom__item .item {
   height: 100%;
+}
+
+.favorite__main {
+  padding-bottom: 90px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+@media screen and (max-width: 1200px) {
+  .favorite__main {
+    padding-bottom: 30px;
+  }
 }
 
 .footer {

@@ -69,7 +69,7 @@ mixin phone(cls)
 mixin title (title, sub, href, cls)
     div(class=cls + '__top').title
         h2(class=cls + '__title').title__title= title
-        a(href=href class=cls + 'sub').title__subtitle= sub
+        a(href=href class=cls + '__sub').title__subtitle= sub
 
 mixin sticks()
     span.sticks
@@ -140,6 +140,8 @@ mixin citem(cls)
                     +icon('compare','citem__btn-svg citem__btn-svg_compare')
                 button(type='button').citem__btn.citem__btn_favorite.jsFavorite.active
                     +icon('heart','citem__btn-svg citem__btn-svg_heart')
+                button(type='button').citem__btn.citem__btn_cart.jsBuy
+                    +icon('cart','citem__btn-svg citem__btn-svg_heart')
                 button(type='button').citem__del
                     +icon('close','citem__del-svg')
 
@@ -165,8 +167,10 @@ mixin citem(cls)
             .citem__btns
                 button(type='button').citem__btn.jsCompare
                     +icon('compare','citem__btn-svg citem__btn-svg_compare')
-                button(type='button').citem__btn.jsFavorite.active
+                button(type='button').citem__btn.citem__btn_favorite.jsFavorite.active
                     +icon('heart','citem__btn-svg citem__btn-svg_heart')
+                button(type='button').citem__btn.citem__btn_cart.jsBuy
+                    +icon('cart','citem__btn-svg citem__btn-svg_heart')
                 button(type='button').citem__del
                     +icon('close','citem__del-svg')
 
@@ -241,3 +245,29 @@ mixin irecom(title,link,href,cls)
                                 //- pag
                                 div(class='irecom__pag-' + tabx).irecom__pag
                                     .pag
+
+mixin iactions(cls)
+    div(class=cls).iactions
+        .container
+            //- top
+            +title('Акции','ВСЕ АКЦИИ','actions.html','iactions')
+            //- bottom
+            .iactions__bottom
+                div(data-speed='500' data-autoplay='true' data-autoplayDelay='7000' data-pagination='true').iactions__slider
+                    button(type='button').arrow.iactions__prev
+                        +icon('prev','arrow__svg')
+                    .swiper-container.iactions__container
+                        .swiper-wrapper
+                            each i in iactions
+                                a(href='action.html').swiper-slide.iaction
+                                    span.iaction__img
+                                        +image(i.src,'iaction__img-img')
+                                    span.iaction__bottom
+                                        span.iaction__date= i.date
+                                        span.iaction__title= i.title
+
+                    button(type='button').arrow.iactions__next
+                        +icon('next','arrow__svg')
+                //- pag
+                .iactions__pag
+                    .pag

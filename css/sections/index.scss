@@ -910,6 +910,12 @@
     padding-bottom: 55px;
   }
 
+  &_basket{
+    @include to(1200px){
+      padding: 50px 0;
+    }
+  }
+
   &__top {
     margin-bottom: 40px;
     @include sm-block{
