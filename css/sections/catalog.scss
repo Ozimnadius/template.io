@@ -685,6 +685,7 @@
       width: 16px;
       height: 13px;
       @include sm-block {
+        order: 1;
         width: 27px;
         height: 22px;
         border-top-left-radius: 50%;
@@ -693,6 +694,23 @@
           width: 15px;
           height: 13px;
         }
+      }
+    }
+
+    &_close{
+
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 1px solid $icon;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg{
+        width: 8px;
+        height: 8px;
+        fill: $icon;
       }
     }
 

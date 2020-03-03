@@ -6,4 +6,5 @@
 //@prepros-append pages/mmenu.js
 //@prepros-append pages/catalog.js
 //@prepros-append pages/basket.js
+//@prepros-append pages/compare.js
 //@prepros-append pages/footer.js
