@@ -618,6 +618,9 @@
   right: 0;
   z-index: 90;
   pointer-events: none;
+  @include md-block{
+    bottom: 10px;
+  }
   @include sm-block{
     display: none;
   }
@@ -732,4 +735,8 @@
   &__title {
     margin-bottom: 25px;
   }
+}
+
+.req{
+  color: $validation;
 }

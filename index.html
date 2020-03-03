@@ -456,13 +456,13 @@
                         <option value="irecom3">Хит</option>
                       </select>
                     </div>
-                    <input class="irecom__input tabset__input" type="radio" name="irecom" id="irecom0" checked>
+                    <input class="irecom__input tabset__input" type="radio" name="irecom" id="irecom0" checked="checked"/>
                     <label class="irecom__label tabset__label" for="irecom0">Акция</label>
-                    <input class="irecom__input tabset__input" type="radio" name="irecom" id="irecom1">
+                    <input class="irecom__input tabset__input" type="radio" name="irecom" id="irecom1"/>
                     <label class="irecom__label tabset__label" for="irecom1">Советуем</label>
-                    <input class="irecom__input tabset__input" type="radio" name="irecom" id="irecom2">
+                    <input class="irecom__input tabset__input" type="radio" name="irecom" id="irecom2"/>
                     <label class="irecom__label tabset__label" for="irecom2">Новинка</label>
-                    <input class="irecom__input tabset__input" type="radio" name="irecom" id="irecom3">
+                    <input class="irecom__input tabset__input" type="radio" name="irecom" id="irecom3"/>
                     <label class="irecom__label tabset__label" for="irecom3">Хит</label>
                     <div class="irecom__tabs tabset__tabs">
                       <div class="irecom__tab tabset__tab">
@@ -1034,6 +1034,38 @@
                 </div>
               </div>
             </div>
+            <!--.irecom-->
+            <!--    .container-->
+            <!--        //- top-->
+            <!--        +title('Стоит приглядеться','ВСЯ ПРОДУКЦИЯ','catalog.html','irecom')-->
+            <!--        //- bottom-->
+            <!--        .irecom__bottom-->
+            <!--            .irecom__tabset.tabset-->
+            <!--                .tabset__select-->
+            <!--                    select.tabset__select-select-->
+            <!--                        each sw,swx in irecom.sws-->
+            <!--                            option(value='irecom' + swx)= sw.title-->
+            <!---->
+            <!--                each sw,swx in irecom.sws-->
+            <!--                    input(type='radio' name='irecom' id='irecom' + swx checked=sw.checked).irecom__input.tabset__input-->
+            <!--                    label(for='irecom' + swx).irecom__label.tabset__label= sw.title-->
+            <!---->
+            <!--                .irecom__tabs.tabset__tabs-->
+            <!--                    each tab,tabx in irecom.tabs-->
+            <!--                        .irecom__tab.tabset__tab-->
+            <!--                            div(data-speed='500'  data-pagination='true').irecom__slider-->
+            <!--                                button(type='button' class='irecom__prev-' + tabx).arrow.irecom__prev-->
+            <!--                                    +icon('prev','arrow__svg')-->
+            <!--                                div(class='irecom__container-' + tabx).swiper-container.irecom__container-->
+            <!--                                    .swiper-wrapper-->
+            <!--                                        each i in tab.list-->
+            <!--                                            .swiper-slide.irecom__item-->
+            <!--                                                +item(i)-->
+            <!--                                button(type='button' class='irecom__next-' + tabx).arrow.irecom__next-->
+            <!--                                    +icon('next','arrow__svg')-->
+            <!--                            //- pag-->
+            <!--                            div(class='irecom__pag-' + tabx).irecom__pag-->
+            <!--                                .pag-->
           </section>
           <section class="index__promo">
             <div class="ipromo">

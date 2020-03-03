@@ -98,9 +98,9 @@ function getCartForm()
         <div class="cart__middle popup__middle">
             <div class="cart__list">
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -141,9 +141,9 @@ function getCartForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -184,9 +184,9 @@ function getCartForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -227,9 +227,9 @@ function getCartForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -270,9 +270,9 @@ function getCartForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -313,9 +313,9 @@ function getCartForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -356,9 +356,9 @@ function getCartForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -399,9 +399,9 @@ function getCartForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -496,9 +496,9 @@ function getFavoriteForm()
         <div class="cart__middle popup__middle">
             <div class="cart__list">
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -530,9 +530,9 @@ function getFavoriteForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -564,9 +564,9 @@ function getFavoriteForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -598,9 +598,9 @@ function getFavoriteForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -632,9 +632,9 @@ function getFavoriteForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -666,9 +666,9 @@ function getFavoriteForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -700,9 +700,9 @@ function getFavoriteForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
@@ -734,9 +734,9 @@ function getFavoriteForm()
                     </div>
                 </div>
                 <div class="citem">
-                    <div class="citem__top"><a class="citem__img" href="product.html"><img class="citem__img-img"
+                    <div class="citem__top"><a class="citem__img" href="product.html"><span class="citem__img-wrap"><img class="citem__img-img"
                                                                                            src="images/content/catalog/2.png"
-                                                                                           alt="lorem"/></a></div>
+                                                                                           alt="lorem"/></span></a></div>
                     <div class="citem__bottom">
                         <div class="citem__content">
                             <div class="citem__avaible">
