@@ -65,7 +65,12 @@
       padding: 10px;
       background: $main1;
       height: 40px;
-      flex-grow: 1;
+    }
+
+    &:first-child{
+      @include sm-block{
+        flex-grow: 1;
+      }
     }
 
 
