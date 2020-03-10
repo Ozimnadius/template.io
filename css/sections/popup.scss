@@ -392,6 +392,24 @@
     }
   }
 
+  &__link       {
+    &-label{
+      color: $icon;
+      font-size: 16px;
+    }
+
+    &-link{
+      color: $main1;
+      @include tr;
+      &:hover{
+        color: $main2;
+      }
+    }
+
+    border-bottom: 1px solid $border;
+    padding: 5px 0;
+  }
+
 }
 
 .psuccess {

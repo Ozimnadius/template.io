@@ -13,9 +13,9 @@ $(function () {
     const brecom = document.querySelector('.brecom__slider');
     if (brecom) {
         let brecomSlider = new Swiper('.brecom__container', {
-            slidesPerView: 4,
+            slidesPerView: 2,
             effect: 'slide',
-            spaceBetween: 20,
+            spaceBetween: 0,
             loop: true,
             watchOverflow: true,
             // If we need pagination
@@ -29,14 +29,15 @@ $(function () {
                 prevEl: '.brecom__prev',
             },
             breakpoints: {
-                // when window width is <= 768px
+                // when window width is >= 769px
                 768: {
-                    spaceBetween: 0,
-                    slidesPerView: 2,
-                },
-                // when window width is <= 1200px
-                1200: {
+                    spaceBetween: 20,
                     slidesPerView: 3,
+                },
+                // when window width is >= 1200px
+                1200: {
+                    spaceBetween: 20,
+                    slidesPerView: 4,
                 },
             },
             on: {

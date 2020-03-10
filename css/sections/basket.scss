@@ -524,53 +524,6 @@
   }
 }
 
-.count {
-  height: 34px;
-  border-radius: 4px;
-  border: 1px solid $border;
-  display: flex;
-  position: relative;
-
-  &__btn {
-    min-width: 25px;
-    width: 25px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    color: $icon;
-    font-size: 20px;
-    //font-weight: 600;
-    @include tr;
-
-    &:hover {
-      color: $text;
-    }
-  }
-
-  &__minus {
-    left: 0;
-  }
-
-  &__plus {
-    right: 0;
-  }
-
-  &__input {
-    width: 100%;
-    appearance: none;
-    font-size: 14px;
-    text-align: center;
-    padding: 0 25px;
-    -moz-appearance: textfield;
-
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-    }
-  }
-}
-
 .basket {
 
   &__main {

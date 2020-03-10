@@ -37,7 +37,7 @@ $(function () {
     const iprojects = document.querySelector('.iprojects__slider');
     if (iprojects) {
         let iprojectsSlider = new Swiper('.iprojects__container', {
-            slidesPerView: 'auto',
+            slidesPerView: 1,
             effect: 'slide',
             spaceBetween: 20,
             loop: true,
@@ -47,9 +47,9 @@ $(function () {
                 clickable: true
             },
             breakpoints: {
-                // when window width is <= 768px
-                768: {
-                    slidesPerView: 1,
+                // when window width is >= 769px
+                769: {
+                    slidesPerView: 'auto',
                     spaceBetween: 0
                 },
             },
@@ -70,7 +70,7 @@ $(function () {
             let slider = i;
 
             irecomSliders['iprojectsSlider' + x] = new Swiper('.irecom__container-' + x, {
-                slidesPerView: 4,
+                slidesPerView: 2,
                 effect: 'slide',
                 spaceBetween: -1,
                 loop: true,
@@ -86,13 +86,13 @@ $(function () {
                     clickable: true
                 },
                 breakpoints: {
-                    // when window width is <= 768px
-                    768: {
-                        slidesPerView: 2,
-                    },
-                    // when window width is <= 1200px
-                    1200: {
+                    // when window width is >= 768px
+                    769: {
                         slidesPerView: 3,
+                    },
+                    // when window width is >= 1201px
+                    1200: {
+                        slidesPerView: 4,
                     },
                 },
                 on: {
@@ -110,7 +110,7 @@ $(function () {
     const iactions = document.querySelector('.iactions__slider');
     if (iactions) {
         let iactionsSlider = new Swiper('.iactions__container', {
-            slidesPerView: 4,
+            slidesPerView: 1,
             effect: 'slide',
             spaceBetween: 20,
             loop: true,
@@ -126,19 +126,19 @@ $(function () {
                 prevEl: '.iactions__prev',
             },
             breakpoints: {
-                // when window width is <= 768px
-                768: {
+                // when window width is >= 769px
+                769: {
                     spaceBetween: 10,
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                 },
-                // when window width is <= 800px
+                // when window width is >= 850px
                 850: {
                     spaceBetween: 70,
-                    slidesPerView: 2,
+                    slidesPerView: 3,
                 },
                 // when window width is <= 1200px
                 1200: {
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                 },
             },
             on: {
@@ -152,7 +152,7 @@ $(function () {
     const irevs = document.querySelector('.irevs__slider');
     if (irevs) {
         let iprojectsSlider = new Swiper('.irevs__container', {
-            slidesPerView: 3,
+            slidesPerView: 1,
             effect: 'slide',
             spaceBetween: 20,
             loop: true,
@@ -168,14 +168,14 @@ $(function () {
                 prevEl: '.irevs__prev',
             },
             breakpoints: {
-                // when window width is <= 769px
+                // when window width is >= 769px
                 769: {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                     spaceBetween: 10,
                 },
-                // when window width is <= 850px
+                // when window width is >= 850px
                 850: {
-                    slidesPerView: 2,
+                    slidesPerView: 3,
                 },
             },
             on: {
@@ -189,9 +189,9 @@ $(function () {
     const ibrands = document.querySelector('.ibrands__slider');
     if (ibrands) {
         let iprojectsSlider = new Swiper('.ibrands__container', {
-            slidesPerView: 5,
+            slidesPerView: 2,
             effect: 'slide',
-            spaceBetween: 20,
+            spaceBetween: 10,
             loop: true,
             watchOverflow: true,
             // If we need pagination
@@ -205,18 +205,20 @@ $(function () {
                 prevEl: '.ibrands__prev',
             },
             breakpoints: {
-                // when window width is <= 768px
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                },
-                // when window width is <= 850px
-                850: {
+                // when window width is >= 769px
+                769: {
                     slidesPerView: 3,
+                    spaceBetween: 20,
                 },
-                // when window width is <= 1200px
-                1200: {
+                // when window width is >= 850px
+                850: {
                     slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                // when window width is >= 1200px
+                1200: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
                 },
             },
             on: {

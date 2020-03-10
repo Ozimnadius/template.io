@@ -234,6 +234,87 @@ $(function () {
 
     });
 
+    //Вызов формы "Оставить отзыв на товар"
+    $('.jsReviewProduct').on('click', function (e) {
+        e.preventDefault();
+
+        let btn = btns.filter('[data-action=review]'),
+            action = 'reviewProduct',
+            url = btn.data('ajax'),
+            data = {
+                action: action
+            };
+
+
+        activatePopup(false, 'loader_white');
+
+        $.ajax({
+            dataType: "json",
+            type: "POST",
+            url: url,
+            data: data,
+            success: function (result) {
+                if (result.status) {
+                    tab.html(result.html);
+                    deactivateLoader();
+
+                    let form = tab.find('.popup__form');
+                    $('input[type=tel]').mask('+7 (999) 999-99-99');
+
+                    form.validate({
+                        onfocusout: false,
+                        submitHandler: function (form) {
+                            activateLoader('loader_white');
+                            let $form = $(form),
+                                data =new FormData(),
+                                url = $form.attr('action'),
+                                file = form.querySelector('.file__input'),
+                                inputs = $form.find('input[type!=file],textarea');
+
+
+                            if (file.files.length>0) {
+                                data.append('file', file.files[0]);
+                            }
+                            inputs.each(function (x,i) {
+                                data.append(i.name, i.value);
+                            });
+
+                            $.ajax({
+                                dataType: "json",
+                                type: "POST",
+                                url: url,
+                                data: data,
+                                cache: false,
+                                contentType: false,
+                                processData: false,
+                                success: function (result) {
+                                    if (result.status) {
+                                        tab.html(result.html);
+                                        deactivateLoader();
+                                    } else {
+                                        alert('Что-то пошло не так, попробуйте еще раз!!!');
+                                    }
+                                },
+                                error: function (result) {
+                                    alert('Что-то пошло не так, попробуйте еще раз!!!');
+                                }
+                            });
+                        },
+                    });
+
+                } else {
+                    alert('Что-то пошло не так, попробуйте еще раз!!!');
+                }
+            },
+            error: function (result) {
+                alert('Что-то пошло не так, попробуйте еще раз!!!');
+            }
+        });
+
+    });
+
+
+
 
     //Изменение выбора файла
     $('.popup').on('change', '.file__input', function (e) {
@@ -324,7 +405,9 @@ $(function () {
         popup.addClass('active');
         setOverflow();
         btns.removeClass('active');
-        btn.addClass('active');
+        if (btn) {
+            btn.addClass('active');
+        }
         activateLoader(loaderClass);
         tab.html('');
     }

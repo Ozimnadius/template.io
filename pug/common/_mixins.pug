@@ -176,8 +176,6 @@ mixin itemCompare(props)
             span.item__control.item__control_close.jsClose
                 +icon('close','item__control-svg')
 
-
-
 mixin citem(cls)
     div(class=cls).citem
         //- top
@@ -322,3 +320,21 @@ mixin iactions(cls)
                 //- pag
                 .iactions__pag
                     .pag
+
+mixin rating(count)
+    span.rating
+        span.rating__list
+            span.rating__star.active
+                +icon('star','rating__star-svg')
+            span.rating__star.active
+                +icon('star','rating__star-svg')
+            span.rating__star.active
+                +icon('star','rating__star-svg')
+            span.rating__star
+                +icon('star','rating__star-svg')
+            span.rating__star
+                +icon('star','rating__star-svg')
+        if count
+            span.rating__count (3)
+
+

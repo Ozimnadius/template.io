@@ -60,6 +60,13 @@ switch ($action) {
         ));
         exit();
         break;
+    case 'reviewProduct':
+        echo json_encode(array(
+            'status' => true,
+            'html' => getReviewProductForm()
+        ));
+        exit();
+        break;
     case 'city':
         echo json_encode(array(
             'status' => true,
@@ -1067,6 +1074,106 @@ function getReviewSubmitForm()
                 Закрыть
             </button>
         </div>
+    </div>
+    <?
+    $html = ob_get_contents();
+    ob_end_clean();
+    return $html;
+}
+
+function getReviewProductForm()
+{
+    ob_start();
+    ?>
+    <div class="popup__top">
+        <div class="popup__title">Оставить свой отзыв</div>
+        <button class="popup__close jsFormClose" type="button">
+            <svg class="popup__close-svg">
+                <use xlink:href="/images/icons/sprite.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="popup__middle">
+        <form class="popup__form" action="ajax.php" method="post" enctype="multipart/form-data">
+            <div class="popup__fields">
+                <div class="popup__field">
+                    <input class="popup__input" type="text" name="name" data-rule-required="true"
+                           data-msg-required="Введите Имя">
+                    <div class="popup__placeholder">Ваще имя<i>*</i></div>
+                </div>
+                <div class="popup__field popup__field_m30">
+                    <input class="popup__input" type="text" name="prof">
+                    <div class="popup__placeholder">Должность</div>
+                </div>
+                <div class="popup__field popup__field_m30">
+                    <div class="popup__link">
+                        <span class="popup__link-label">Товар: </span>
+                        <a href="product.html" class="popup__link-link">Аккумуляторный шуруповёрт ANGLE EXACT 30 без аккум. и ЗУ Bosch Professional 0602490671</a>
+                    </div>
+                </div>
+
+                <div class="popup__field popup__field_m30">
+                    <div class="popup__label">Ваше фото</div>
+                    <label class="file">
+                        <input class="file__input" type="file" name="userPhoto"><span class="file__fake">
+                      <svg class="file__svg">
+                        <use xlink:href="/images/icons/sprite.svg#staple"></use>
+                      </svg><span class="file__title">Прикрепить</span>
+                      <button class="file__del" type="button">
+                        <svg class="file__del-svg">
+                          <use xlink:href="/images/icons/sprite.svg#close"></use>
+                        </svg>
+                      </button></span>
+                    </label>
+                </div>
+                <div class="popup__field">
+                    <div class="popup__label">Отзыв<i>*</i></div>
+                    <textarea class="popup__area" name="message" data-rule-required="true"
+                              data-msg-required="Добавьте отзыв"></textarea>
+                </div>
+            </div>
+            <div class="popup__rating">
+                <div class="rating2">
+                    <div class="rating2__wrapper">
+                        <input class="rating2__input" type="radio" name="rating" value="Отлично" id="rating-5">
+                        <label class="rating2__star" for="rating-5" data-rate="Отлично">
+                            <svg class="rating2__star-svg">
+                                <use xlink:href="/images/icons/sprite.svg#star"></use>
+                            </svg>
+                        </label>
+                        <input class="rating2__input" type="radio" name="rating" value="Хорошо" id="rating-4">
+                        <label class="rating2__star" for="rating-4" data-rate="Хорошо">
+                            <svg class="rating2__star-svg">
+                                <use xlink:href="/images/icons/sprite.svg#star"></use>
+                            </svg>
+                        </label>
+                        <input class="rating2__input" type="radio" name="rating" value="Нормально" id="rating-3">
+                        <label class="rating2__star" for="rating-3" data-rate="Нормально">
+                            <svg class="rating2__star-svg">
+                                <use xlink:href="/images/icons/sprite.svg#star"></use>
+                            </svg>
+                        </label>
+                        <input class="rating2__input" type="radio" name="rating" value="Плохо" id="rating-2">
+                        <label class="rating2__star" for="rating-2" data-rate="Плохо">
+                            <svg class="rating2__star-svg">
+                                <use xlink:href="/images/icons/sprite.svg#star"></use>
+                            </svg>
+                        </label>
+                        <input class="rating2__input" type="radio" name="rating" value="Очень плохо" id="rating-1">
+                        <label class="rating2__star" for="rating-1" data-rate="Очень плохо">
+                            <svg class="rating2__star-svg">
+                                <use xlink:href="/images/icons/sprite.svg#star"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class="rating2__txt">Без оценки</div>
+                </div>
+            </div>
+            <div class="popup__policy">Заполняя данную форму Вы соглашаетесь с<br><a href="policy.html">Политикой
+                    обработки персональных данных</a></div>
+            <button class="btn popup__submit" type="submit">Отправить</button>
+            <input type="hidden" name="action" value="reviewSubmit">
+        </form>
     </div>
     <?
     $html = ob_get_contents();

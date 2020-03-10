@@ -40,7 +40,7 @@ $(function () {
     if (compare) {
 
         let compareSlider = new Swiper('.compare__container', {
-            slidesPerView: 4,
+            slidesPerView: 2,
             effect: 'slide',
             spaceBetween: -1,
             loop: true,
@@ -56,13 +56,13 @@ $(function () {
                 prevEl: '.compare__prev',
             },
             breakpoints: {
-                // when window width is <= 768px
+                // when window width is >= 769px
                 768: {
-                    slidesPerView: 2,
-                },
-                // when window width is <= 1200px
-                1200: {
                     slidesPerView: 3,
+                },
+                // when window width is >= 1200px
+                1200: {
+                    slidesPerView: 4,
                 },
             },
             on: {
@@ -83,13 +83,13 @@ $(function () {
             loop: true,
             watchOverflow: true,
             breakpoints: {
-                // when window width is <= 768px
+                // when window width is >= 769px
                 768: {
-                    slidesPerView: 2,
-                },
-                // when window width is <= 1200px
-                1200: {
                     slidesPerView: 3,
+                },
+                // when window width is >= 1200px
+                1200: {
+                    slidesPerView: 4,
                 },
             },
             on: {
