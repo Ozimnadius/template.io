@@ -316,23 +316,28 @@
       margin-bottom: 25px;
     }
   }
+
+  &__item{
+    @include col;
+    @include size(8);
+    margin-bottom: 20px;
+    @include size-lg(12);
+    @include size-sm(24);
+  }
 }
 
 .iservice {
-  @include col;
-  @include size(8);
-  margin-bottom: 20px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
   border-radius: 6px;
   background-color: $bg;
   overflow: hidden;
   display: flex;
   height: 200px;
-  @include size-lg(12);
+
   @include md-block {
     height: 171px;
   }
-  @include size-sm(24);
+
   @include sm-block{
     height: 145px;
   }

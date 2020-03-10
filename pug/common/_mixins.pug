@@ -337,4 +337,13 @@ mixin rating(count)
         if count
             span.rating__count (3)
 
+mixin iservice(i)
+    a(href='service.html').iservice
+        span.iservice__left
+            span.iservice__title= i.title
+            +icon('arrow','iservice__svg')
+        span.iservice__right
+            +image(i.src,'iservice__img')
+
+
 

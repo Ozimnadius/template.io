@@ -6,7 +6,8 @@
 
   &__left {
     @include md-block {
-      display: block;
+      //display: block;
+      display: none;
     }
   }
 
@@ -496,6 +497,14 @@
     }
 
 
+  }
+}
+
+.category{
+  &__left{
+    @include md-block {
+      display: block;
+    }
   }
 }
 

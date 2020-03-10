@@ -63,12 +63,8 @@ block content
                     .iservices__bottom
                         .row
                             each i in iservices
-                                a(href='service.html').iservice
-                                    span.iservice__left
-                                        span.iservice__title= i.title
-                                        +icon('arrow','iservice__svg')
-                                    span.iservice__right
-                                        +image(i.src,'iservice__img')
+                                .iservices__item
+                                    +iservice(i)
         //- projects
         section.index__projects
             .iprojects
