@@ -396,6 +396,12 @@ h3 {
   font-size: 26px;
 }
 
+@media screen and (max-width: 767.9px) {
+  h3 {
+    font-size: 18px;
+  }
+}
+
 h4 {
   font-size: 24px;
 }
@@ -12360,6 +12366,232 @@ input, textarea {
   .services__item {
     width: calc(100% - 10px);
   }
+}
+
+.service__title {
+  margin-bottom: 10px;
+}
+
+.service__quote {
+  background-color: #f8f8f8;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-left: 7px solid #f0ac0d;
+  color: #191919;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 991.9px) {
+  .service__quote {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .service__quote {
+    font-size: 14px;
+  }
+}
+
+.service__top:after {
+  content: '';
+  display: inline-block;
+  clear: both;
+}
+
+.service__img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767.9px) {
+  .service__img {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.service__banner {
+  margin-bottom: 90px;
+}
+
+@media screen and (max-width: 991.9px) {
+  .service__banner {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .service__banner {
+    margin-bottom: 30px;
+  }
+}
+
+.service__gallery {
+  padding-bottom: 40px;
+  margin-bottom: 65px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+@media screen and (max-width: 991.9px) {
+  .service__gallery {
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .service__gallery {
+    margin-bottom: 35px;
+  }
+}
+
+.service__gallery-title {
+  color: #191919;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 90px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+@media screen and (max-width: 991.9px) {
+  .service__gallery-title {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .service__gallery-title {
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.sbanner {
+  background: #f8f8f8 url("../images/content/service/bg.svg") right center no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 25px 35px;
+}
+
+@media screen and (max-width: 767.9px) {
+  .sbanner {
+    padding: 0;
+    background-image: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.sbanner__left {
+  margin-right: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767.9px) {
+  .sbanner__left {
+    margin-right: 0;
+    padding: 40px 15px 30px 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.sbanner__img {
+  margin-right: 25px;
+  min-width: 76px;
+}
+
+@media screen and (max-width: 767.9px) {
+  .sbanner__img {
+    margin-right: 0;
+    margin-bottom: 20px;
+    min-width: 60px;
+    width: 60px;
+  }
+}
+
+.sbanner__txt {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 767.9px) {
+  .sbanner__right {
+    background-color: #e8e8e8;
+    padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.sbanner__oldprice {
+  color: #cecece;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 767.9px) {
+  .sbanner__oldprice {
+    font-size: 12px;
+  }
+}
+
+.sbanner__price {
+  color: #191919;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 767.9px) {
+  .sbanner__price {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.sbanner__btn {
+  width: 166px;
+  height: 38px;
+  background-color: #f0ac0d;
+  font-size: 12px;
 }
 
 .footer {

@@ -345,5 +345,25 @@ mixin iservice(i)
         span.iservice__right
             +image(i.src,'iservice__img')
 
+mixin precom(title)
+    .precom
+        .precom__top
+            .precom__title= title
+            .precom__nav
+                button(type='button').precom__prev.product__arr
+                    +icon('arr-l','product__arr-svg')
+                button(type='button').precom__next.product__arr
+                    +icon('arr-r','product__arr-svg')
+
+        .precom__bottom
+            div(data-speed='500'  data-pagination='true').precom__slider
+                .swiper-container.precom__container
+                    .swiper-wrapper
+                        each i in irecomItems
+                            .swiper-slide.precom__item
+                                +item(i)
+                .precom__pag
+                    .pag
+
 
 

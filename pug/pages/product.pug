@@ -263,24 +263,7 @@ block content
                                                                     span.rev__more-close Свернуть
                             //- recom
                             .product__section
-                                .precom
-                                    .precom__top
-                                        .precom__title С этип товаром покупают
-                                        .precom__nav
-                                            button(type='button').precom__prev.product__arr
-                                                +icon('arr-l','product__arr-svg')
-                                            button(type='button').precom__next.product__arr
-                                                +icon('arr-r','product__arr-svg')
-
-                                    .precom__bottom
-                                        div(data-speed='500'  data-pagination='true').precom__slider
-                                            .swiper-container.precom__container
-                                                .swiper-wrapper
-                                                    each i in irecomItems
-                                                        .swiper-slide.precom__item
-                                                            +item(i)
-                                            .precom__pag
-                                                .pag
+                                +precom('С этип товаром покупают')
 
 
 

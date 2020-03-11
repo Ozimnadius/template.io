@@ -1,9 +1,181 @@
-.services{
+.services {
 
-  &__item{
+  &__item {
     @include col;
     @include size(12);
     margin-bottom: 20px;
     @include size-sm(24);
   }
+}
+
+.service {
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__quote {
+    background-color: $bg2;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 7px solid $main1;
+
+    color: $headers;
+    font-size: 20px;
+    font-weight: 500;
+
+    @include md-block {
+      font-size: 18px;
+      padding: 15px 20px;
+    }
+    @include sm-block {
+      font-size: 14px;
+    }
+  }
+
+  &__top {
+
+    &:after {
+      content: '';
+      display: inline-block;
+      clear: both;
+    }
+  }
+
+  &__img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    @include sm-block {
+      float: none;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__banner {
+    margin-bottom: 90px;
+    @include md-block {
+      margin-bottom: 60px;
+    }
+    @include sm-block{
+      margin-bottom: 30px;
+    }
+  }
+
+  &__gallery {
+    padding-bottom: 40px;
+    margin-bottom: 65px;
+    border-bottom: 1px solid $border;
+    @include md-block {
+      padding-bottom: 0px;
+    }
+    @include sm-block{
+      margin-bottom: 35px;
+    }
+
+    &-title {
+      color: $headers;
+      font-size: 35px;
+      font-weight: 700;
+      margin-bottom: 90px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid $border;
+      @include md-block {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 40px;
+      }
+      @include sm-block{
+        margin-left: -10px;
+        margin-right: -10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+}
+
+.sbanner {
+  background: $bg2 url("../images/content/service/bg.svg") right center no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 25px 35px;
+
+  @include sm-block{
+    padding: 0;
+    background-image: none;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &__left {
+    margin-right: 90px;
+    display: flex;
+    align-items: center;
+    @include sm-block{
+      margin-right: 0;
+      padding: 40px 15px 30px 15px;
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    margin-right: 25px;
+    min-width: 76px;
+    @include sm-block{
+      margin-right: 0;
+      margin-bottom: 20px;
+      min-width: 60px;
+      width: 60px;
+    }
+  }
+
+  &__txt {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  &__right {
+    @include sm-block{
+      background-color: $border;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__oldprice {
+    color: $icon;
+    font-size: 14px;
+    text-decoration: line-through;
+    @include sm-block{
+      font-size: 12px;
+    }
+  }
+
+  &__price {
+    color: $headers;
+    font-size: 24px;
+    font-weight: 700;
+    @include sm-block{
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btn {
+    width: 166px;
+    height: 38px;
+    background-color: $main1;
+    font-size: 12px;
+  }
+
 }
