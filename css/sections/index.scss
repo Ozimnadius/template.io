@@ -959,6 +959,10 @@
     }
   }
 
+  &__item{
+    height: auto;
+  }
+
   &__pag {
     display: flex;
     justify-content: center;
@@ -968,7 +972,7 @@
 .iaction {
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 100%;
   box-sizing: border-box;
   box-shadow: 0 0 8px rgba($black, 0.15);
   border: 1px solid #ebebeb;
@@ -986,6 +990,12 @@
 
   &__img {
     height: 265px;
+    @include md-block{
+      height: 196px;
+    }
+    @include sm-block{
+      height: 123px;
+    }
 
     &-img {
       display: block;
@@ -998,19 +1008,35 @@
   &__bottom {
     flex-grow: 1;
     padding: 25px 22px 35px 22px;
+    @include md-block{
+      padding: 20px;
+    }
     @include sm-block{
-      padding-bottom: 30px;
+      padding: 15px 10px;
     }
   }
 
   &__date {
     display: block;
     margin-bottom: 10px;
+    @include md-block{
+      font-size: 14px;
+    }
+    @include sm-block{
+      font-size: 12px;
+      margin-bottom: 3px;
+    }
   }
 
   &__title {
     font-size: 20px;
     font-weight: 600;
+    @include md-block{
+      font-size: 16px;
+    }
+    @include sm-block{
+      font-size: 14px;
+    }
   }
 }
 

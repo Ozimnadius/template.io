@@ -4171,6 +4171,10 @@ input, textarea {
   }
 }
 
+.iactions__item {
+  height: auto;
+}
+
 .iactions__pag {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4188,7 +4192,7 @@ input, textarea {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: auto;
+  height: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
@@ -4216,6 +4220,18 @@ input, textarea {
   height: 265px;
 }
 
+@media screen and (max-width: 991.9px) {
+  .iaction__img {
+    height: 196px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .iaction__img {
+    height: 123px;
+  }
+}
+
 .iaction__img-img {
   display: block;
   width: 100%;
@@ -4231,9 +4247,15 @@ input, textarea {
   padding: 25px 22px 35px 22px;
 }
 
+@media screen and (max-width: 991.9px) {
+  .iaction__bottom {
+    padding: 20px;
+  }
+}
+
 @media screen and (max-width: 767.9px) {
   .iaction__bottom {
-    padding-bottom: 30px;
+    padding: 15px 10px;
   }
 }
 
@@ -4242,9 +4264,34 @@ input, textarea {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 991.9px) {
+  .iaction__date {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .iaction__date {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+}
+
 .iaction__title {
   font-size: 20px;
   font-weight: 600;
+}
+
+@media screen and (max-width: 991.9px) {
+  .iaction__title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .iaction__title {
+    font-size: 14px;
+  }
 }
 
 .inews {
@@ -12592,6 +12639,46 @@ input, textarea {
   height: 38px;
   background-color: #f0ac0d;
   font-size: 12px;
+}
+
+.actions__item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(33.33333% - 20px);
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767.9px) {
+  .actions__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 575.9px) {
+  .actions__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .actions__item {
+    width: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .actions__item .iaction {
+    color: #000000;
+  }
+}
+
+.actions__item .iaction__bottom {
+  background: #ffffff;
 }
 
 .footer {

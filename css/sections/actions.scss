@@ -1,0 +1,18 @@
+.actions{
+  &__item{
+    @include col;
+    @include size(8);
+    margin-bottom: 20px;
+    @include size-sm(12);
+
+    .iaction{
+      @include sm-block{
+        color: $black;
+      }
+
+      &__bottom{
+        background: $bg;
+      }
+    }
+  }
+}
