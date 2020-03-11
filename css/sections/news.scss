@@ -1,0 +1,142 @@
+.news {
+
+  &__list{
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    @include col;
+    @include size(8);
+    @include size-sm(12);
+  }
+
+  &__more{
+    @extend .catalog__more;
+    margin-top: 40px;
+    border: none;
+    @include md-block{
+      margin-top: 20px;
+    }
+  }
+
+  &__pag{
+
+  }
+
+}
+
+.nitem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  @include tr;
+  @include sm-block{
+    margin-bottom: 15px;
+  }
+  
+  &:hover{
+    background: $main1;
+    @include md-block{
+      background: transparent;
+    }
+
+    .nitem{
+
+      &__date{
+        color: $black;
+        @include md-block{
+          color: $text2;
+        }
+      }
+
+      &__txt{
+        color: $black;
+        @include md-block{
+          color: $text2;
+        }
+      }
+
+      &__link{
+        color: $black;
+        fill: $black;
+        @include md-block{
+          color: $main1;
+          fill: $main1;
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    padding-top: calc(196/304 * 100%);
+    position: relative;
+
+    &-img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__bottom{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+    @include tr;
+    @include md-block{
+      padding: 15px 0;
+    }
+    @include sm-block{
+      padding: 5px 0;
+    }
+  }
+
+  &__date {
+    color: $text2;
+    margin-bottom: 10px;
+    @include tr;
+    @include sm-block{
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title{
+    color: $headers;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    @include sm-block{
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__txt{
+    color: $text2;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    @include tr;
+    @include sm-block{
+      display: none;
+    }
+  }
+
+  &__link{
+    color: $main1;
+    fill: $main1;
+  }
+
+}
+
+.new {
+
+}

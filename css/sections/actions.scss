@@ -48,24 +48,7 @@
       height: 100%;
       object-fit: cover;
 
-      @include md-block{
-        display: none;
-      }
-      &_t{
-        display: none;
-        @include md-block{
-          display: block;
-        }
-        @include sm-block{
-          display: none;
-        }
-      }
-      &_m{
-        display: none;
-        @include sm-block{
-          display: block;
-        }
-      }
+
     }
   }
 

@@ -17,9 +17,11 @@ block content
                             each i in [1,2,3,4,5]
                                 .swiper-slide.ibanner__slide
                                     .ibanner__slide-imgs
-                                        +image('images/content/index/banner/img.jpg','ibanner__slide-img')
-                                        +image('images/content/index/banner/img-t.jpg','ibanner__slide-img ibanner__slide-img_t')
-                                        +image('images/content/index/banner/img-m.jpg','ibanner__slide-img ibanner__slide-img_m')
+                                        picture
+                                            source(srcset='images/content/index/banner/img.jpg' type='image/jpeg' media='(min-width:991.9px)')
+                                            source(srcset='images/content/index/banner/img-t.jpg' type='image/jpeg' media='(min-width:768.9px)')
+                                            source(srcset='images/content/index/banner/img-m.jpg' type='image/jpeg' media='(min-width:320px)')
+                                            img(src='images/content/index/banner/img.jpg' alt='lorem1').ibanner__slide-img
                                     .container.ibanner__slide-container
                                         .row.ibanner__slide-row
                                             .ibanner__slide-content

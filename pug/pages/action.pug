@@ -8,9 +8,11 @@ block content
     .catalog.service.action
         .action__banner.abanner
             .abanner__img
-                +image('images/content/action/bg.jpg','abanner__img-img')
-                +image('images/content/action/bg-t.jpg','abanner__img-img abanner__img-img_t')
-                +image('images/content/action/bg-m.jpg','abanner__img-img abanner__img-img_m')
+                picture
+                    source(srcset='images/content/action/bg.jpg' type='image/jpeg' media='(min-width:991.9px)')
+                    source(srcset='images/content/action/bg-t.jpg' type='image/jpeg' media='(min-width:768.9px)')
+                    source(srcset='images/content/action/bg-m.jpg' type='image/jpeg' media='(min-width:320px)')
+                    img(src='images/content/action/bg.jpg' alt='lorem1').abanner__img-img
             .container.abanner__container
                 .row.abanner__row
                     .abanner__content
