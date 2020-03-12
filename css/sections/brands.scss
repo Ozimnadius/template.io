@@ -1,0 +1,38 @@
+.brands{
+  &__item{
+    @include col;
+    @include size(6);
+    position: relative;
+    border: 1px solid $border;
+    margin-bottom: 20px;
+    @include tr;
+
+
+    &:hover{
+      box-shadow: 0 0 8px rgba($black, 0.1);
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      width: 100%;
+      padding-top: calc(180/223*100%);
+    }
+
+    &-wrap{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 30px;
+    }
+
+    &-img{
+      max-height: 100%;
+    }
+  }
+}
