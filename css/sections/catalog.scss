@@ -907,6 +907,7 @@
     padding: 18px 20px;
     padding-right: 35px;
     position: relative;
+    border-left: 4px solid transparent;
     @include tr;
 
     &:after {
@@ -940,6 +941,7 @@
 
     &.active {
       background-color: rgba($text, .1);
+      border-color: $main1;
 
       &:after {
         transform: rotate(-180deg);
