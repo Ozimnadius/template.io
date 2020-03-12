@@ -807,3 +807,21 @@
     }
   }
 }
+
+.share{
+  display: flex;
+  align-items: center;
+
+  &__txt{
+    font-size: 14px;
+    margin-right: 25px;
+  }
+
+
+  &__svg{
+    width: 25px;
+    height: 25px;
+    fill: transparent;
+    stroke: $main1;
+  }
+}

@@ -8,6 +8,10 @@
     @include col;
     @include size(8);
     @include size-sm(12);
+    margin-bottom: 20px;
+    @include sm-block{
+      margin-bottom: 15px;
+    }
   }
 
   &__more{
@@ -28,11 +32,9 @@
 .nitem {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  height: 100%;
   @include tr;
-  @include sm-block{
-    margin-bottom: 15px;
-  }
+
   
   &:hover{
     background: $main1;
@@ -130,13 +132,265 @@
     }
   }
 
+
   &__link{
+    margin-top: auto;
     color: $main1;
     fill: $main1;
   }
-
 }
 
 .new {
+  padding-bottom: 250px;
+  @include md-block{
+    padding-bottom: 150px;
+  }
+  @include sm-block{
+    padding-bottom: 130px;
+  }
 
+  &__bread{
+    margin-bottom: 35px;
+    @include sm-block{
+      margin-bottom: 10px;
+    }
+  }
+
+  &__left{
+    @include col;
+    @include size(18);
+    padding-right: 25px;
+    @include size-md(24);
+    @include md-block{
+      padding-right: 0;
+    }
+    @include size-sm(24);
+  }
+
+  &__title{
+    margin-bottom: 15px;
+    @include md-block{
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    &-item{
+      padding: 0 25px;
+      border-left: 1px solid $icon;
+      color: $icon;
+
+
+
+      &:first-child{
+        padding-left: 0;
+        border-color: transparent;
+      }
+
+
+    }
+  }
+
+  &__top{
+    padding-bottom: 25px;
+    border-bottom: 1px solid $border;
+    margin-bottom: 50px;
+    @include sm-block{
+      padding-bottom: 10px;
+      margin-bottom: 30px
+    }
+
+    &:after{
+      content: '';
+      display: inline-block;
+      clear: both;
+    }
+
+    &-left{
+      float: left;
+      width: calc(58% - 15px);
+      margin-right: 15px;
+      margin-bottom: 15px;
+      @include md-block{
+        width: calc(50% - 15px);
+      }
+      @include sm-block{
+        width: 100%;
+        margin-right: 0;
+        float: none;
+        margin-bottom: 20px;
+      }
+    }
+
+  }
+
+  &__img{
+    width: 100%;
+  }
+
+  &__right{
+    @include col;
+    @include size(6);
+    @include md-block{
+      display: none;
+    }
+  }
+
+  &__content{
+
+    &-top{
+      &:after{
+        content: '';
+        display: inline-block;
+        clear: both;
+      }
+    }
+
+    &-bottom{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include sm-block{
+          flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__from{
+    color: $text2;
+    font-weight: 300;
+    @include sm-block{
+      margin-bottom: 15px;
+    }
+  }
+
+  &__recom{
+    padding-bottom: 75px;
+    border-bottom: 1px solid $border;
+    margin-bottom: 50px;
+    @include sm-block{
+      padding-bottom: 30px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item{
+    margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.nservices{
+  &__title{
+    color: $black;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    @include sm-block{
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.nservice{
+  border: 1px solid #e8e8e8;
+  background-color: $bg;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  @include tr;
+  @include sm-block{
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  &:hover{
+    box-shadow: 0 0 8px rgba($black, 0.1);
+    @include sm-block{
+        box-shadow: none;
+    }
+  }
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  &__left{
+    display: block;
+    margin-right: 25px;
+    width: 120px;
+    min-width: 120px;
+    @include sm-block{
+      min-width: 95px;
+      width: 95px;
+      margin-right: 10px;
+    }
+  }
+
+  &__img{
+    display: block;
+    position: relative;
+    padding-top: (100/120*100%);
+
+    &-img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    @include sm-block{
+        flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__main{
+    display: flex;
+    flex-direction: column;
+    max-width: 530px;
+    margin-right: 20px;
+  }
+
+  &__title{
+    color: $black;
+    font-weight: 300;
+    margin-bottom: 10px;
+    @include sm-block{
+      margin-bottom: 15px;
+    }
+  }
+
+  &__txt{
+    color: $text2;
+    font-size: 12px;
+    font-weight: 300;
+    @include sm-block{
+      display: none;
+    }
+  }
+
+  &__link{
+    white-space: nowrap;
+    color: $main1;
+    fill: $main1;
+  }
 }

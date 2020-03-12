@@ -369,5 +369,18 @@ mixin precom(title)
                 .precom__pag
                     .pag
 
+mixin nitem()
+    a(href='new.html').nitem
+        span.nitem__top
+            span.nitem__img
+                +image('images/content/news/img.jpg', 'nitem__img-img')
+        span.nitem__bottom
+            span.nitem__date 20.12.2019
+            span.nitem__title Появился концепт iPhone 12 Pro с четырьмя камерами
+            span.nitem__txt Все быстро, удобно понятно. Доставка быстрая и бесплатная - огромный плюс. Кое-что из интересовавших меня товаров...
+            span.nitem__link.link
+                span.link__txt.nitem__link-txt Подробнее
+                +icon('arrow-s','link__svg nitem__link-svg')
+
 
 
