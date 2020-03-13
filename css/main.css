@@ -326,6 +326,12 @@ body {
   border-left: 6px solid #f0ac0d;
 }
 
+@media screen and (max-width: 767.9px) {
+  .content blockquote {
+    padding: 0 14px;
+  }
+}
+
 .content .yt {
   position: relative;
   max-width: 690px;
@@ -6150,7 +6156,7 @@ input, textarea {
 .aitem__link {
   display: block;
   font-weight: 300;
-  padding: 18px 20px;
+  padding: 18px 16px;
   padding-right: 35px;
   position: relative;
   border-left: 4px solid transparent;
@@ -13747,6 +13753,210 @@ input, textarea {
 @media screen and (max-width: 767.9px) {
   .brand__sub {
     font-size: 20px;
+  }
+}
+
+.about__title {
+  margin-bottom: 25px;
+}
+
+.about__row {
+  margin-bottom: 45px;
+}
+
+@media screen and (max-width: 767.9px) {
+  .about__row {
+    margin-bottom: 20px;
+  }
+}
+
+.about__left {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(35.55556% - 20px);
+}
+
+@media screen and (max-width: 767.9px) {
+  .about__left {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 575.9px) {
+  .about__left {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .about__left {
+    width: calc(100% - 10px);
+  }
+}
+
+.about__right {
+  padding-top: 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(64.44444% - 20px);
+}
+
+@media screen and (max-width: 767.9px) {
+  .about__right {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 575.9px) {
+  .about__right {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .about__right {
+    width: calc(100% - 10px);
+  }
+}
+
+.about__advantages {
+  margin-bottom: 20px;
+}
+
+.aadvantages .row {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.aadvantage {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(33.33333% - 20px);
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767.9px) {
+  .aadvantage {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 575.9px) {
+  .aadvantage {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 1359.9px) {
+  .aadvantage {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 991.9px) {
+  .aadvantage {
+    width: calc(33.33333% - 20px);
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .aadvantage {
+    width: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .aadvantage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.aadvantage__left {
+  min-width: 80px;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 25px;
+}
+
+@media screen and (max-width: 991.9px) {
+  .aadvantage__left {
+    min-width: 60px;
+    width: 60px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .aadvantage__left {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+.aadvantage__title {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 991.9px) {
+  .aadvantage__title {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .aadvantage__title {
+    text-align: center;
+  }
+}
+
+.aadvantage__txt {
+  color: #9a9a9a;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 991.9px) {
+  .aadvantage__txt {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .aadvantage__txt {
+    text-align: center;
   }
 }
 

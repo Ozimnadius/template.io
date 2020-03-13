@@ -182,6 +182,9 @@ $vh: 1080;
     margin-bottom: 30px;
     color: $headers;
     border-left: 6px solid $main1;
+    @include sm-block{
+      padding: 0 14px;
+    }
   }
 
   .yt{
