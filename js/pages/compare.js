@@ -1,4 +1,4 @@
-//index.js
+//compare.js
 $(function () {
 
     // VARIABLES
@@ -23,8 +23,6 @@ $(function () {
                     maxHeight = height;
                 }
             });
-
-            console.log(maxHeight);
 
 
             row.css('height',maxHeight+'px');

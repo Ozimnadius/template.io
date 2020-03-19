@@ -5,7 +5,7 @@ block variables
     - var main = false
 
 block content
-    .catalog.new
+    .new
         .container
             //- bread
             .new__bread.bread
@@ -17,7 +17,7 @@ block content
                     span.bread__link-txt Что за новый проект, который планируется строить в западном округе Москвы для Роскосмоса?
             .row
                 //- left
-                .new__left
+                main.new__left
                     //- title
                     h1.new__title Что за новый проект, который планируется строить в западном округе Москвы для Роскосмоса?
                     //- info
@@ -72,7 +72,7 @@ block content
                                                 span.link__txt Подробнее
                                                 +icon('arrow-s','link__svg')
                 //- right
-                .new__right
+                aside.new__right
                     .new__list
                         each i in [1,2,3,4,5]
                             .new__item
