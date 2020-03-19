@@ -35,11 +35,11 @@ $(function () {
 
     function init() {
 
-        var map = document.querySelector('#map'),
-            data = map.dataset;
+        var map = document.querySelector('#map');
 
         if (map) {
-            var center = data.center;
+            var data = map.dataset,
+                center = data.center;
 
             myMap = new ymaps.Map("map", {
                 center: [data.centerX,data.centerY],
@@ -58,12 +58,7 @@ $(function () {
             //     .remove('rulerControl');
             // myMap.controls.add('zoomControl');
 
-            myPin = new ymaps.GeoObjectCollection({}, {
-                // iconLayout: 'default#image',
-                // iconImageHref: '/img/icons/map-marker.svg',
-                // iconImageSize: [46, 57],
-                // iconImageOffset: [-15, -55]
-            });
+            myPin = new ymaps.GeoObjectCollection();
 
 
             myPlacemark = new ymaps.Placemark([data.baloonX,data.baloonY], {

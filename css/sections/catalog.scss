@@ -1663,3 +1663,42 @@
 
 }
 
+.search{
+
+  &__top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__input{
+    flex-grow: 1;
+
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid $border;
+    background-color: $bg2;
+
+    color: $black;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 0 15px;
+    @include sm-block{
+      border-radius: 4px 0 0 4px;
+    }
+  }
+
+  &__submit{
+    width: 90px;
+    height: 40px;
+    margin-left: 20px;
+    @include sm-block{
+      width: 43px;
+      height: 40px;
+      border-radius: 0 4px 4px 0;
+      font-size: 0;
+      margin-left: 0;
+      background: $main1 url("/images/icons/loop.png") center center no-repeat;
+    }
+  }
+}
+
