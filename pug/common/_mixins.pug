@@ -382,5 +382,32 @@ mixin nitem()
                 span.link__txt.nitem__link-txt Подробнее
                 +icon('arrow-s','link__svg nitem__link-svg')
 
+mixin pdoc()
+    .pdocs
+        each i in productDocs
+            .pdoc
+                .pdoc__left
+                    +image(i.src,'pdoc__img')
+                .pdoc__right
+                    .pdoc__title= i.title
+                    a(href='/' download=true).pdoc__link Скачать
+
+mixin nservices()
+    .nservices
+        .nservices__title Услуги по теме
+        .nservices__list
+            each i in nservices
+                a(href='service.html').nservice
+                    span.nservice__left
+                        span.nservice__img
+                            +image(i.src,'nservice__img-img')
+                    span.nservice__right
+                        span.nservice__main
+                            span.nservice__title= i.title
+                            span.nservice__txt= i.txt
+                        span.nservice__link
+                            span.link__txt Подробнее
+                            +icon('arrow-s','link__svg')
+
 
 

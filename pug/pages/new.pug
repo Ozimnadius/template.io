@@ -56,21 +56,7 @@ block content
                         +precom('Товары по теме')
                     //- services
                     .new__services
-                        .nservices
-                            .nservices__title Услуги по теме
-                            .nservices__list
-                                each i in nservices
-                                    a(href='service.html').nservice
-                                        span.nservice__left
-                                            span.nservice__img
-                                                +image(i.src,'nservice__img-img')
-                                        span.nservice__right
-                                            span.nservice__main
-                                                span.nservice__title= i.title
-                                                span.nservice__txt= i.txt
-                                            span.nservice__link
-                                                span.link__txt Подробнее
-                                                +icon('arrow-s','link__svg')
+                        +nservices()
                 //- right
                 aside.new__right
                     .new__list

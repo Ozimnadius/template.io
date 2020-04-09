@@ -172,15 +172,7 @@ block content
                                 .product__section-title Документация
                                 .product__section-content
                                     .product__docs
-                                        .pdocs
-                                            each i in productDocs
-                                                .pdoc
-                                                    .pdoc__left
-                                                        +image(i.src,'pdoc__img')
-                                                    .pdoc__right
-                                                        .pdoc__title= i.title
-                                                        a(href='/' download=true).pdoc__link Скачать
-
+                                        +pdoc()
                             //- gallery
                             .product__section
                                 .product__section-title Галерея
