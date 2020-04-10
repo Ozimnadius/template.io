@@ -955,6 +955,24 @@
   &:last-child {
     border-bottom: 1px solid transparent;
   }
+
+  &__exit {
+    display: flex;
+    align-items: center;
+
+    &-svg {
+      width: 16px;
+      height: 12px;
+      fill: $main1;
+      margin-right: 10px;
+    }
+
+    &-txt {
+      color: $main1;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
 }
 
 .asubmenu {

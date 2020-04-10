@@ -244,6 +244,32 @@ mixin amenu (menu,submenu)
                         each j in submenu
                             a(href='category.html').asubmenu__item= j
 
+mixin amenu2()
+    .amenu
+        //- title
+        .amenu__title КОМПАНИЯ
+
+        //- list
+        .amenu__list
+            each i in asideMenu3
+                .aitem.amenu__item
+                    a(href=i.href class=i.cls).aitem__link= i.title
+
+mixin amenu3()
+    .amenu
+        //- title
+        .amenu__title Личный кабинет
+
+        //- list
+        .amenu__list
+            each i in asideMenu4
+                .aitem.amenu__item
+                    a(href=i.href class=i.cls).aitem__link= i.title
+            .aitem.amenu__item
+                a(href='').aitem__exit.aitem__link
+                    +icon('arr-s-l','aitem__exit-svg')
+                    span.aitem__exit-txt Выйти
+
 mixin pagination()
     .pagination
         a(href='/').pagination__item.pagination__item_left
