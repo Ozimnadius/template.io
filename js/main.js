@@ -9,4 +9,5 @@
 //@prepros-append pages/basket.js
 //@prepros-append pages/compare.js
 //@prepros-append pages/contacts.js
+//@prepros-append pages/cabinet.js
 //@prepros-append pages/footer.js
