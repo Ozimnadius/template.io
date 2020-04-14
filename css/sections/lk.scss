@@ -271,7 +271,7 @@
 
   &__title {
     margin-bottom: 40px;
-    @include sm-block{
+    @include sm-block {
       margin-bottom: 20px;
     }
   }
@@ -279,14 +279,14 @@
   &__fields {
     border: 1px solid $border;
     padding: 40px 30px;
-    @include md-block{
+    @include md-block {
       margin-left: -20px;
       margin-right: -20px;
       padding: 30px 20px;
       border-right: none;
       border-left: none;
     }
-    @include sm-block{
+    @include sm-block {
       margin-left: -10px;
       margin-right: -10px;
       padding: 20px 10px;
@@ -298,6 +298,13 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &-title {
+      color: $headers;
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 15px;
     }
   }
 
@@ -312,8 +319,8 @@
     @include size-sm(24);
   }
 
-  &__left{
-    @include sm-block{
+  &__left {
+    @include sm-block {
       margin-bottom: 10px;
     }
   }
@@ -323,7 +330,7 @@
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 10px;
-    @include sm-block{
+    @include sm-block {
       font-size: 14px;
       margin-bottom: 5px;
     }
@@ -333,12 +340,28 @@
     }
   }
 
-  &__txt{
+  &__txt {
     color: $text2;
     font-weight: 300;
+    a{
+      color: $main1;
+    }
+
   }
 
-  &__btn{
+  &__policy{
+    font-size: 14px;
+    line-height: lh(14,20);
+    a {
+      color: $main1;
+    }
+  }
+
+  &__btns{
+    display: flex;
+  }
+
+  &__btn {
     width: 194px;
     height: 39px;
     border-radius: 2px;
@@ -347,6 +370,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__sub {
+    color: $headers;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+
+    &_r {
+      color: #eb5757;
+    }
+
+  }
+
+  &__add{
+    width: 126px;
+    height: 39px;
+    border-radius: 2px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    text-transform: none;
+  }
+
+  &__reset{
+    width: 126px;
+    height: 39px;
+    border-radius: 2px;
+    font-size: 14px;
+    text-transform: none;
   }
 
 }

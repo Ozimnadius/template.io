@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Portfolio | Личные данные</title>
+    <title>Portfolio | Подписки</title>
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- Для изменений после верстки-->
@@ -247,43 +247,48 @@
                 <div class="catalog__bread bread right__bread"><a class="bread__link" href="/">
                     <svg class="bread__link-svg">
                       <use xlink:href="/images/icons/sprite.svg#home"></use>
-                    </svg></a><a class="bread__link" href="cabinet.html"><span class="bread__link-txt">Личный кабинет</span></a><span class="bread__link active"><span class="bread__link-txt">Личные данные</span></span></div>
-                <h1 class="data__title">Личный счет</h1>
+                    </svg></a><a class="bread__link" href="cabinet.html"><span class="bread__link-txt">Личный кабинет</span></a><span class="bread__link active"><span class="bread__link-txt">Подписки</span></span></div>
+                <h1 class="data__title">Подписки</h1>
                 <form class="data__fields">
                   <div class="data__field">
-                    <div class="data__label">Фамилия Имя Отчество<span class="data__label_r">*</span></div>
                     <div class="data__row">
                       <div class="data__left">
-                        <input class="data__input input" type="text" name="name" value="Иванов Алексей Сергеевич">
+                        <div class="data__label">Авторизация<br>Адрес подписки будет принадлежать пользователю: Алексей [stroishop@mail.ru]</div>
                       </div>
                       <div class="data__right">
-                        <div class="data__txt">Заполните чтобы мы знали как к вам обращаться</div>
+                        <div class="data__txt">Вы можете&nbsp;<a href="/">закончить сеанс</a>, чтобы авторизоваться под другим пользователем.</div>
                       </div>
                     </div>
                   </div>
                   <div class="data__field">
-                    <div class="data__label">Email<span class="data__label_r">*</span></div>
+                    <div class="data__field-title">Настройки подписки</div>
+                    <div class="data__label">Ваш e-mail<span class="data__label_r">*</span></div>
                     <div class="data__row">
                       <div class="data__left">
                         <input class="data__input input" type="email" name="email" value="stroishop@mail.ru">
                       </div>
                       <div class="data__right">
-                        <div class="data__txt">Для отправки уведомлений о статусе заказа. Используйте как логин для входа в личный кабинет</div>
+                        <div class="data__txt">После добавления или изменения адреса подписки вам будет выслан код подтверждения. Подписка будет не активной до ввода кода подтверждения.</div>
                       </div>
                     </div>
                   </div>
                   <div class="data__field">
-                    <div class="data__label">Телефон<span class="data__label_r">*</span></div>
-                    <div class="data__row">
-                      <div class="data__left">
-                        <input class="data__input input" type="tel" name="tel" value="+7 (900) 520 55 66">
-                      </div>
-                      <div class="data__right">
-                        <div class="data__txt">Необходим для уточнения деталей заказа</div>
-                      </div>
+                    <div class="data__sub">Рубрики подписки<span class="data__sub_r">*</span></div>
+                    <div class="data__checks checks">
+                      <label class="check">
+                        <input class="check__input" type="checkbox" name="brend" value="Новости магазина" checked><span class="check__fake"><span class="check__check">
+                            <svg class="check__check-svg">
+                              <use xlink:href="/images/icons/sprite.svg#check2"></use>
+                            </svg></span><span class="check__title">Новости магазина</span></span>
+                      </label>
                     </div>
                   </div>
-                  <div class="data__field"><a class="data__btn btn" href="/">Сохранить изменения</a></div>
+                  <div class="data__field">
+                    <div class="data__policy">Заполняя данную форму Вы соглашаетесь с&nbsp;<a href="/">Политикой обработки персональных данных</a></div>
+                  </div>
+                  <div class="data__field">
+                    <div class="data__btns"><a class="btn data__add" href="/">Добавить</a><a class="btn2 data__reset" href="/">Сброс</a></div>
+                  </div>
                 </form>
               </main>
             </div>
