@@ -81,6 +81,24 @@ switch ($action) {
         ));
         exit();
         break;
+    case 'jsCompare':
+        echo json_encode(array(
+            'status' => true
+        ));
+        exit();
+        break;
+    case 'jsFavorite':
+        echo json_encode(array(
+            'status' => true
+        ));
+        exit();
+        break;
+    case 'jsAdd':
+        echo json_encode(array(
+            'status' => true
+        ));
+        exit();
+        break;
     default:
         echo json_encode(array(
             'status' => false,

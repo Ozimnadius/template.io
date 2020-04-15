@@ -7283,6 +7283,10 @@ input, textarea {
   }
 }
 
+.product__control.active {
+  fill: #f0ac0d;
+}
+
 .product__control:last-child {
   margin-right: 0;
 }
@@ -12445,6 +12449,19 @@ input, textarea {
 
 .compare__item2.swiper-slide-active .cchar__title {
   opacity: 1;
+}
+
+.compare__reset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.compare__reset svg {
+  fill: #ffffff;
 }
 
 .cchars_title .cchar__title {

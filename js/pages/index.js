@@ -230,20 +230,4 @@ $(function () {
     }
 
     $('input[type=tel]').mask('+7 (999) 999-99-99');
-
-    // Валидация формы в подвале
-    $('.ffeed').validate({
-        onfocusout: false,
-        submitHandler: function (form) {
-            alert('submit');
-        },
-        invalidHandler: function (event, validator) {
-            // debugger;
-        },
-        errorPlacement: function (error, element) {
-            element[0].placeholder = error[0].innerText;
-            // debugger;
-        }
-    });
-
 });

@@ -30,8 +30,9 @@ block content
                                 |В сравнении:&nbsp;
                                 b 4 товара
                         .compare__th
-                            +icon('close','compare__th-svg compare__th-svg_close')
-                            .compare__th-txt Очистить
+                            a(href='/').compare__reset
+                                +icon('close','compare__th-svg compare__th-svg_close')
+                                .compare__th-txt Очистить
 
 
                     //- slider

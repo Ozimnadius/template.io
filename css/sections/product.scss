@@ -122,6 +122,10 @@
       margin-right: auto;
     }
 
+    &.active{
+      fill: $main1;
+    }
+
     &:last-child {
       margin-right: 0;
     }

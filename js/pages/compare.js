@@ -32,8 +32,6 @@ $(function () {
 
 
     //VENDORS
-
-
     const compare = document.querySelector('.compare__slider');
     if (compare) {
 

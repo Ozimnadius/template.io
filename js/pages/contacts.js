@@ -1,31 +1,3 @@
-//contacts.js
-$(function () {
-
-    // VARIABLES
-
-    // EVENTS
-
-    // FUNCTIONS
-
-    //VENDORS
-
-    // Валидация формы
-    $('.ccall').validate({
-        onfocusout: false,
-        submitHandler: function (form) {
-            alert('submit');
-        },
-        invalidHandler: function (event, validator) {
-            // debugger;
-        },
-        errorPlacement: function (error, element) {
-            element[0].placeholder = error[0].innerText;
-            // debugger;
-        }
-    });
-
-});
-
 /*YANDEX*/
 $(function () {
     ymaps.ready(init);
