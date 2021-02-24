@@ -35,9 +35,10 @@ function imageResize(src) {
 const wWidth = $(window).width();
 
 // Валидация телефона
-$.validator.methods.tel = function (value, element) {
-    return validateTel(value);
-};
+// $.validator.methods.tel = function (value, element) {
+//     return validateTel(value);
+// };
+
 function validateTel(value) {
     let re = new RegExp(/\d/g),
         str = value.match(re);
