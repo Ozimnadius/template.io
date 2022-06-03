@@ -32,7 +32,7 @@
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.4.1",
     "jquery-throttle-debounce": "^1.0.0",
-    "jquery-validation": "^1.19.1",
+    "jquery-validation": "^1.19.4",
     "jquery.maskedinput": "^1.4.1",
     "normalize.css": "^7.0.0",
     "smart-grid": "^2.1.2",
